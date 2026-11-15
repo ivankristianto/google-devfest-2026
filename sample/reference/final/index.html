@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ngobrolin WEB</title>
+  <meta name="description" content="Salinan lokal situs podcast Ngobrolin WEB untuk workshop performa web.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./"><span class="brand-mark" aria-hidden="true"></span>Ngobrolin WEB</a>
+    <nav aria-label="Utama">
+      <ul>
+        <li><a href="#episode">Episode</a></li>
+        <li><a href="#topik">Topik</a></li>
+        <li><a href="#panelis">Panelis</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+      </ul>
+    </nav>
+    <form class="search" role="search" action="#hasil">
+      <label class="visually-hidden" for="search">Cari di transkrip</label>
+      <input id="search" name="q" type="search" autocomplete="off" spellcheck="false" placeholder="Cari kata atau judul episode">
+      <p id="search-status" class="search-status" role="status">Ketik kata atau judul episode untuk mencari di 9.982 baris transkrip.</p>
+    </form>
+  </header>
+
+  <div class="announcement-slot" id="announcement-slot"></div>
+
+  <main>
+    <section class="featured home" id="terbaru" aria-labelledby="featured-title">
+      <div class="hero-media">
+        <img id="hero-image" src="/shared/images/hero-episode.jpg" width="1280" height="720" fetchpriority="high"
+          alt="Thumbnail episode Selamat Tinggal Deno: judul episode di samping foto tiga panelis.">
+      </div>
+      <div class="featured-text">
+        <p class="eyebrow">Episode terbaru · 11 November 2026 · 1 jam 29 menit</p>
+        <h1 id="featured-title">Selamat Tinggal Deno</h1>
+        <p class="lede">Bagaimana nasib Deno setelah diakuisisi Cloudflare? Apakah semakin berjaya, atau malah akan dihentikan? Analisis cetek ala tim Ngobrolin WEB.</p>
+        <p class="actions">
+          <a class="button" href="https://www.youtube.com/watch?v=4PCOin52Y_w">Tonton di YouTube</a>
+          <button class="button button-quiet" type="button" data-query="Selamat Tinggal Deno">Baca transkrip</button>
+        </p>
+      </div>
+    </section>
+
+    <section class="episodes home" id="episode" aria-labelledby="episodes-title">
+      <h2 id="episodes-title">Episode sebelumnya</h2>
+      <ol class="cards">
+        <li class="card">
+          <img src="/shared/images/episode-1.jpg" width="320" height="180" alt="" loading="lazy">
+          <p class="card-title">Coding Harness</p>
+          <p class="card-meta">4 November 2026 · 1 jam 56 menit</p>
+        </li>
+        <li class="card">
+          <img src="/shared/images/episode-2.jpg" width="320" height="180" alt="" loading="lazy">
+          <p class="card-title">Menangani Kerentanan Aplikasi</p>
+          <p class="card-meta">28 Oktober 2026 · 1 jam 21 menit</p>
+        </li>
+        <li class="card">
+          <img src="/shared/images/episode-3.jpg" width="320" height="180" alt="" loading="lazy">
+          <p class="card-title">State of Devs</p>
+          <p class="card-meta">21 Oktober 2026 · 1 jam 54 menit</p>
+        </li>
+        <li class="card">
+          <img src="/shared/images/episode-4.jpg" width="320" height="180" alt="" loading="lazy">
+          <p class="card-title">Laracon</p>
+          <p class="card-meta">14 Oktober 2026 · 1 jam 34 menit</p>
+        </li>
+        <li class="card">
+          <img src="/shared/images/episode-5.jpg" width="320" height="180" alt="" loading="lazy">
+          <p class="card-title">Bedah EffectTS</p>
+          <p class="card-meta">7 Oktober 2026 · 1 jam 26 menit</p>
+        </li>
+        <li class="card">
+          <img src="/shared/images/episode-6.jpg" width="320" height="180" alt="" loading="lazy">
+          <p class="card-title">Ngobrolin Rails World Conference</p>
+          <p class="card-meta">30 September 2026 · 1 jam 13 menit</p>
+        </li>
+        <li class="card">
+          <img src="/shared/images/episode-7.jpg" width="320" height="180" alt="" loading="lazy">
+          <p class="card-title">Diskusi Bebas</p>
+          <p class="card-meta">23 September 2026 · 1 jam 20 menit</p>
+        </li>
+        <li class="card">
+          <img src="/shared/images/episode-8.jpg" width="320" height="180" alt="" loading="lazy">
+          <p class="card-title">Bedah Buku Panduan Coding</p>
+          <p class="card-meta">9 September 2026 · 1 jam 31 menit</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="topics home" id="topik" aria-labelledby="topics-title">
+      <div>
+        <h2 id="topics-title">Cari di transkrip</h2>
+        <p>Setiap episode ditranskrip penuh. Pilih topik, atau ketik sendiri di kotak cari di atas.</p>
+      </div>
+      <ul class="chips">
+        <li><button type="button" data-query="coding">coding</button></li>
+        <li><button type="button" data-query="deno">Deno</button></li>
+        <li><button type="button" data-query="laravel">Laravel</button></li>
+        <li><button type="button" data-query="css">CSS</button></li>
+        <li><button type="button" data-query="rails">Rails</button></li>
+        <li><button type="button" data-query="server">server</button></li>
+        <li><button type="button" data-query="model">model</button></li>
+        <li><button type="button" data-query="framework">framework</button></li>
+      </ul>
+    </section>
+
+    <section class="hosts home" id="panelis" aria-labelledby="hosts-title">
+      <h2 id="hosts-title">Panelis</h2>
+      <ul class="host-list">
+        <li>
+          <img src="/shared/images/host-eka.jpg" width="72" height="72" alt="" loading="lazy">
+          <div><p class="host-name">Eka <span class="tag">GDE Web</span></p><p>Pengembang Web, Atma Connect</p><p class="host-focus">Aksesibilitas dan standar web</p></div>
+        </li>
+        <li>
+          <img src="/shared/images/host-ivan.jpg" width="72" height="72" alt="" loading="lazy">
+          <div><p class="host-name">Ivan <span class="tag">GDE Web</span></p><p>Senior Web Engineer, Human Made</p><p class="host-focus">Platform konten dan Core Web</p></div>
+        </li>
+        <li>
+          <img src="/shared/images/host-riza.jpg" width="72" height="72" alt="" loading="lazy">
+          <div><p class="host-name">Riza Fahmi <span class="tag">GDE Web</span></p><p>Co-founder Hacktiv8</p><p class="host-focus">Tooling modern dan ekosistem web</p></div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="community home" aria-labelledby="community-title">
+      <h2 id="community-title">Punya pertanyaan atau topik diskusi?</h2>
+      <p class="actions">
+        <a href="https://github.com/orgs/ngobrolin/discussions">GitHub Discussions</a>
+        <a class="button" href="https://www.youtube.com/@RizaFahmi">Subscribe YouTube</a>
+      </p>
+    </section>
+
+    <section class="results-view" id="hasil" aria-labelledby="results-title">
+      <h2 id="results-title">Hasil pencarian</h2>
+      <ol id="results" class="results"></ol>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="tentang">
+    <div>
+      <p class="footer-brand">Ngobrolin WEB</p>
+      <p>Podcast video tentang pengembangan web dalam bahasa Indonesia. Episode baru setiap Selasa malam jam 20:00 WIB.</p>
+    </div>
+    <div>
+      <p class="footer-title">Jelajahi</p>
+      <ul>
+        <li><a href="#terbaru">Episode terbaru</a></li>
+        <li><a href="#episode">Episode sebelumnya</a></li>
+        <li><a href="#panelis">Panelis</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-title">Tentang halaman ini</p>
+      <p>Salinan lokal untuk workshop performa web, bukan situs aslinya. Transkrip dibuat otomatis, jadi banyak salah dengar.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

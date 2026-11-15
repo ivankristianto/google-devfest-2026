@@ -1,0 +1,12 @@
+:root {
+  --slidev-code-font-family: var(--df-font-mono);
+  --slidev-code-font-size: var(--df-size-code);
+  --slidev-code-line-height: 1.35;
+  --slidev-code-padding: 12px 22px;
+  --slidev-code-radius: 16px;
+  --slidev-code-background: var(--df-offwhite);
+  --slidev-code-margin: 0;
+}
+
+.df-slide .slidev-code-wrapper { margin: 0; }
+.df-slide .slidev-code { overflow: hidden; }

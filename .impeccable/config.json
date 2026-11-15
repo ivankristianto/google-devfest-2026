@@ -1,0 +1,25 @@
+{
+  "buildPath": "code",
+  "hook": {
+    "enabled": true,
+    "limits": {
+      "maxFindings": 5,
+      "maxChars": 8000
+    }
+  },
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "broken-image",
+        "value": "*",
+        "files": [
+          "sample/starter/index.html"
+        ],
+        "createdAt": "2026-11-14T14:44:46.745Z",
+        "reason": "Project CLAUDE.md: the LCP fault is a hero img whose src is assigned late from JavaScript"
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "slidev-theme-devfest-local",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Local Slidev theme reproducing the DevFest speaker template layouts",
+  "engines": {
+    "slidev": ">=53.0.0"
+  },
+  "slidev": {
+    "colorSchema": "light",
+    "highlighter": "shiki",
+    "defaults": {
+      "aspectRatio": "16/9",
+      "canvasWidth": 1280,
+      "transition": "none",
+      "fonts": {
+        "sans": "Google Sans",
+        "mono": "Roboto Mono",
+        "provider": "none"
+      },
+      "themeConfig": {
+        "brandMarks": true
+      }
+    }
+  }
+}

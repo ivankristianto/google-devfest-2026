@@ -1,0 +1,34 @@
+:root {
+  --df-blue: #4285f4;
+  --df-green: #34a853;
+  --df-red: #ea4335;
+  --df-yellow: #fbbc04;
+  --df-halftone-blue: #57caff;
+  --df-halftone-green: #5cdb6d;
+  --df-halftone-red: #ff7daf;
+  --df-halftone-yellow: #ffd427;
+  --df-pastel-blue: #c3ecf6;
+  --df-pastel-green: #ccf6c5;
+  --df-pastel-red: #f8d8d8;
+  --df-pastel-yellow: #ffe7a5;
+  --df-offwhite: #f0f0f0;
+  --df-ink: #1e1e1e;
+  --df-white: #ffffff;
+
+  --df-stroke: 3px;
+  --df-font-sans: 'Google Sans', ui-sans-serif, system-ui, sans-serif;
+  --df-font-mono: 'Roboto Mono', ui-monospace, Menlo, monospace;
+
+  /* Template sizes in pt times 1280/720 px per pt. */
+  --df-size-cover: 80px;
+  --df-size-section: 80px;
+  --df-size-title: 53px;
+  --df-size-body: 44px;
+  --df-size-body-dense: 36px;
+  --df-size-subhead: 32px;
+  --df-size-small: 28px;
+  --df-size-code: 24px;
+  --df-size-credit: 18px;
+
+  --slidev-theme-primary: var(--df-blue);
+}

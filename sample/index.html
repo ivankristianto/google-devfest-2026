@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Workshop sample index</title>
+  <style>
+    :root {
+      --blue: #4285f4;
+      --green: #34a853;
+      --red: #ea4335;
+      --yellow: #fbbc04;
+      --pastel-blue: #c3ecf6;
+      --offwhite: #f0f0f0;
+      --white: #ffffff;
+      --ink: #1e1e1e;
+      --ink-soft: #505050;
+      --stroke: 3px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, Menlo, Consolas, monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; background: var(--offwhite); color: var(--ink); font: 1rem/1.5 var(--sans); }
+    main { max-width: 46rem; margin-inline: auto; padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 3vw, 2rem); }
+    h1 { margin: 0 0 0.5rem; font-size: clamp(1.75rem, 4vw, 2.5rem); line-height: 1.15; letter-spacing: -0.01em; }
+    h2 { margin: 2.5rem 0 0.75rem; font: 0.875rem/1.5 var(--mono); color: var(--ink-soft); }
+    p { margin: 0; }
+    .lede { max-width: 52ch; color: var(--ink-soft); }
+    ul { margin: 0; padding: 0; list-style: none; border-top: var(--stroke) solid var(--ink); }
+    li { border-bottom: 1px solid var(--ink); }
+    a {
+      display: grid;
+      grid-template-columns: 0.5rem minmax(0, 1fr);
+      gap: 0 1rem;
+      padding: 0.875rem 0.75rem 0.875rem 0;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    a::before { content: ""; grid-row: span 2; background: var(--spine, var(--ink)); }
+    a:hover { background: var(--pastel-blue); }
+    a:focus-visible { outline: var(--stroke) solid var(--blue); outline-offset: 2px; }
+    .name { font-weight: 700; font-size: 1.125rem; }
+    .what { color: var(--ink-soft); }
+    .path { font: 0.8125rem/1.5 var(--mono); color: var(--ink-soft); }
+    code { font-family: var(--mono); font-size: 0.9375em; }
+    .starter a { background: var(--white); border-inline: var(--stroke) solid var(--ink); padding-left: 0.75rem; }
+    .starter a:hover { background: var(--pastel-blue); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Ngobrolin WEB</h1>
+    <p class="lede">The workshop sample: a copy of a podcast site with three deliberate faults, one per Core Web Vitals metric.</p>
+
+    <h2>Start here</h2>
+    <ul class="starter">
+      <li><a href="/starter/">
+        <span class="name">Starter <span class="path">/starter/</span></span>
+        <span class="what">The broken app with all three faults in place. This is the one you repair.</span>
+      </a></li>
+    </ul>
+
+    <h2>Reference checkpoints</h2>
+    <ul>
+      <li><a href="/reference/lcp/" style="--spine: var(--blue)">
+        <span class="name">LCP fixed <span class="path">/reference/lcp/</span></span>
+        <span class="what">The INP and CLS faults remain.</span>
+      </a></li>
+      <li><a href="/reference/inp-yield-only/" style="--spine: var(--yellow)">
+        <span class="name">INP, yield only <span class="path">/reference/inp-yield-only/</span></span>
+        <span class="what">Adds <code>scheduler.yield()</code> and stops there. The interaction is still slow.</span>
+      </a></li>
+      <li><a href="/reference/inp/" style="--spine: var(--red)">
+        <span class="name">INP fixed <span class="path">/reference/inp/</span></span>
+        <span class="what">The LCP and CLS faults remain.</span>
+      </a></li>
+      <li><a href="/reference/cls/" style="--spine: var(--green)">
+        <span class="name">CLS fixed <span class="path">/reference/cls/</span></span>
+        <span class="what">The LCP and INP faults remain.</span>
+      </a></li>
+      <li><a href="/reference/final/">
+        <span class="name">Final <span class="path">/reference/final/</span></span>
+        <span class="what">All three fixed.</span>
+      </a></li>
+    </ul>
+  </main>
+</body>
+</html>
