@@ -355,7 +355,10 @@ split: 4fr 7fr
 3. Find the **LCP** marker: which element, and when did its download start?
 
 ::right::
-<Placeholder label="Performance panel after a reload: LCP marker on the hero image, its request starting late" note="Rehearsal capture. Credit: own capture, Chrome DevTools." />
+<figure class="df-shot">
+  <img src="/captures/lcp-measure.png" width="840" height="383" alt="Chrome DevTools Performance panel after a reload of the starter: LCP 0.67 s, and the LCP breakdown insight shows 652 ms of resource load delay before the hero image download starts">
+  <Credit>Own capture, Chrome 157 DevTools, 4x CPU slowdown</Credit>
+</figure>
 
 ::foot::
 Watch first, then do the same.
@@ -367,7 +370,8 @@ Watch first, then do the same.
 - The LCP marker sits on the timings track. Click it to see which element it is: the hero image.
 - Then find the image request in the network track. It starts late, long after the HTML has arrived.
 - Ask the room: why would the browser start downloading the most important image so late?
-- Check track names against the Chrome version on screen before the event.
+- The capture is the LCP breakdown insight in the Insights sidebar. Click it and the timeline zooms to the load and marks each part. Almost all of the 0.67 s is "Resource load delay": the browser waited about 650 ms before it even asked for the image.
+- Check track names against the Chrome version on screen before the event. The capture is from Chrome 157.
 -->
 
 ---
@@ -456,7 +460,19 @@ split: 4fr 7fr
 </div>
 
 ::right::
-<Placeholder label="before and after load traces, LCP image request" note="Rehearsal capture. Credit: own capture, Chrome DevTools." />
+<figure class="df-shot">
+  <div class="df-shot-pair">
+    <div>
+      <p class="df-shot-cap">Before</p>
+      <img src="/captures/lcp-before.png" width="222" height="114" alt="LCP breakdown before the fix: resource load delay 650 ms">
+    </div>
+    <div>
+      <p class="df-shot-cap">After</p>
+      <img src="/captures/lcp-after.png" width="222" height="114" alt="LCP breakdown after the fix: resource load delay 9 ms">
+    </div>
+  </div>
+  <Credit>LCP breakdown, own capture, Chrome 157 DevTools</Credit>
+</figure>
 <LabValue compact value="720 → 96 ms" what="LCP, before → after" />
 
 ::foot::
@@ -467,7 +483,8 @@ Your machine helps find the cause. Real visitors decide the score.
 
 - Ask the agent: measure again the same way and show before and after. Then repeat the recording ourselves.
 - The image request now starts with the page, and the LCP marker moves left.
-- The yellow box is from my prep runs: headless Chromium, CPU slowed 4x, median of 5 runs. Your numbers will differ.
+- The two tables are the same LCP breakdown insight, before and after. Resource load delay drops from about 650 ms to under 10 ms. The other rows barely change.
+- The yellow box is from my prep runs: headless Chromium, CPU slowed 4x, median of 5 runs. The captures are single runs in Chrome with DevTools open, so their numbers don't match the box exactly. Your numbers will differ too.
 - Say this once, clearly: numbers from our own machine are lab numbers. They help us find causes. The score that counts comes from real visitors (field data), after you ship.
 -->
 
@@ -502,7 +519,10 @@ split: 4fr 7fr
 3. Find the **interaction**: what runs under it?
 
 ::right::
-<Placeholder label="Performance panel: the typing interaction with one long task under it" note="Rehearsal capture. Credit: own capture, Chrome DevTools." />
+<figure class="df-shot">
+  <img src="/captures/inp-measure.png" width="840" height="383" alt="Chrome DevTools Performance panel while typing coding in the starter: INP 971 ms, and the INP breakdown shows 810 ms of processing, one long task that is mostly Layout">
+  <Credit>Own capture, Chrome 157 DevTools, 4x CPU slowdown</Credit>
+</figure>
 
 ::foot::
 INP needs a real key press. A reload alone won't show it.
@@ -513,6 +533,7 @@ INP needs a real key press. A reload alone won't show it.
 - This is a different kind of recording: no reload. Start recording, type, stop.
 - Find the interaction on the interactions track. Under it is one long block of work on the main thread.
 - Don't guess which code is slow yet. Look at what the block contains: scripting, then style and layout.
+- In the capture, the INP breakdown insight is open: 810 ms of processing under one key press. The short yellow part on the left is our search code (renderResults). The long purple bar is Layout. Most of the time goes to the browser laying out the rows, not to our JavaScript.
 - Lighthouse page loads and Total Blocking Time are not INP. INP needs a real interaction.
 -->
 
@@ -599,7 +620,10 @@ split: 4fr 7fr
 </div>
 
 ::right::
-<Placeholder label="round 1 interaction trace, batches still drawn in one long pass" note="Rehearsal capture. Credit: own capture, Chrome DevTools." />
+<figure class="df-shot" style="--shot-h: 220px">
+  <img src="/captures/inp-round1.png" width="840" height="383" alt="Round 1 interaction trace: INP 630 ms, and one long Layout block still sits under the key press, so the next key waits 514 ms">
+  <Credit>Own capture, Chrome 157 DevTools, 4x CPU slowdown</Credit>
+</figure>
 <LabValue compact value="704 ms" what="slowest key press, round 1" />
 
 ::foot::
@@ -610,6 +634,7 @@ A fix in the diff is a guess until the trace confirms it.
 
 - Repeat the same typing and compare.
 - The code follows the guide. The page is still slow. In our prep trace, the batches still ended up being drawn in one long pass.
+- In the capture: processing is now 0 ms, so our code did break up. But one long Layout bar is still there, and the next key press waited 514 ms behind it (input delay). The batches piled up and got laid out together. The capture's INP is 630 ms, one run with DevTools open, so it differs a little from the yellow box.
 - Say what the trace on screen shows today. Don't turn it into a rule about scheduler.yield().
 - Lab value from prep: headless Chromium, CPU 4x slower, median of 5, slowest key press 704 ms (it was 1864 ms before). Not field INP.
 - Check: same result count, every transcript line reachable.
@@ -680,7 +705,10 @@ split: 4fr 7fr
 3. Find the **layout shift**: what moved, and what pushed it?
 
 ::right::
-<Placeholder label="Performance panel: layout shift cluster when the announcement arrives" note="Rehearsal capture. Credit: own capture, Chrome DevTools." />
+<figure class="df-shot" style="--shot-h: 330px">
+  <img src="/captures/cls-measure.png" width="590" height="365" alt="Hovering the layout shift in the Performance panel: a 0.1308 shift, previewed with the yellow announcement arriving above the latest episode and pushing it down">
+  <Credit>Own capture, Chrome 157 DevTools</Credit>
+</figure>
 
 ::foot::
 A click or a key press right before a shift stops it counting.
@@ -691,6 +719,8 @@ A click or a key press right before a shift stops it counting.
 - Same recording as LCP, but now we look at the layout shifts track.
 - Hands off: shifts right after a click or key press are excluded from CLS, so touching the page hides the problem.
 - The things that moved are the victims. The announcement that arrived late is the cause.
+- To get the capture's view: open the "Layout shift culprits" insight, then hover the purple diamond on the Layout shifts track. DevTools plays the shift on a small screenshot. Score 0.1308, at about 2.5 s, with nobody touching the page.
+- The insight found no culprit for this shift. The preview shows the cause anyway: the announcement our script inserts.
 -->
 
 ---
@@ -778,7 +808,15 @@ split: 4fr 7fr
 </div>
 
 ::right::
-<Placeholder label="before and after load traces, layout shift cluster" note="Rehearsal capture. Credit: own capture, Chrome DevTools." />
+<figure class="df-shot">
+  <div class="df-shot-rows">
+    <p class="df-shot-cap">Before</p>
+    <img src="/captures/cls-before.png" width="840" height="132" alt="Reload of the starter: CLS 0.13 and a layout shift marker at about 2.5 s">
+    <p class="df-shot-cap">After</p>
+    <img src="/captures/cls-after.png" width="840" height="132" alt="Reload after the fix: CLS 0 and no layout shifts track at all">
+  </div>
+  <Credit>Own capture, Chrome 157 DevTools, 4x CPU slowdown</Credit>
+</figure>
 <LabValue compact value="0.131 → 0" what="CLS at 1280 px wide" />
 
 ::foot::
@@ -789,6 +827,7 @@ The announcement still shows. It just has its own space now.
 
 - Record the same hands-off reload.
 - The layout shift is gone, and the announcement is still there.
+- In the "after" capture there is no Layout shifts track at all, and CLS reads 0. In this recording, no track meant no shifts.
 - Resize to a phone width (390 px in prep) and check again.
 - Lab values from prep, same setup as before.
 -->

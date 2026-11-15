@@ -206,3 +206,14 @@
 .df-found p { display: grid; grid-template-columns: 110px 1fr; gap: 20px; align-items: baseline; line-height: 1.25; }
 .df-questions ol { margin-top: 4px; }
 .df-questions li { margin-bottom: 0.15em; }
+
+/* DevTools captures are 2x PNGs; they shrink to the column and keep their ratio. */
+.df-shot { margin: 0; display: flex; flex-direction: column; gap: 6px; min-height: 0; }
+.df-shot img {
+  display: block; align-self: flex-start; width: auto; height: auto; max-width: 100%; max-height: var(--shot-h, none);
+  border: 2px solid var(--df-ink); border-radius: 10px; background: var(--df-white);
+}
+.df-shot-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.df-shot-pair img { width: 100%; }
+.df-shot-rows { display: grid; grid-template-columns: auto 1fr; gap: 8px 14px; align-items: center; }
+.df-shot-cap { font-family: var(--df-font-mono); font-weight: 300; font-size: 20px; line-height: 1.2; margin: 0 0 4px; }
