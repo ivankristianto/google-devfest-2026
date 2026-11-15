@@ -24,7 +24,10 @@ date: 'Wednesday 18 November 2026'
 <!--
 00:00 to 00:30
 
-- Welcome to the session. Title only; the next slide is about me.
+**Point:** the hour in three verbs: measure, guide, fix.
+
+- Welcome. Read the title and stop on the three verbs. Measure, ask an agent with expert guidance, fix, then measure again. That's the whole hour.
+- This is hands-on. You'll fix a real page with an AI agent, on your own laptop.
 -->
 
 ---
@@ -77,17 +80,18 @@ My first guided fix left the page slow. Today you'll see why.
 <!--
 00:30 to 02:00
 
-- Hello, I'm Ivan, a GDE for Web Performance.
-- The photo is the biggest thing on this slide, so it's the slide's LCP element. CLS today: I'll try to stay in frame.
-- When I first followed a Modern Web Guidance guide, my test page stayed slow. Today you'll see why.
-- The test I mention is written up at https://ivankristianto.com/testing-modern-web-guidance. It used an older guidance release and a different agent, so don't quote its numbers as today's.
-- Today we fix three problems on a copy of a podcast site, Ngobrolin WEB, together, with an AI agent.
-- I do every step on my screen first. You do the same on yours right after. If you fall behind, watch; the repo lets you repeat it all later.
+**Point:** who's talking, and a first taste of the words LCP and CLS.
+
+- I'm Ivan. GDE for Web Performance since 2018, web engineer at Human Made, and co-host of the ngobrolin web podcast. The page we fix today is a copy of that podcast's site.
+- The photo is the biggest thing on this slide. Browsers call the biggest thing on screen the LCP element. Remember the word, it's back in ten minutes.
+- "CLS today: 0" is a joke about content jumping around. It'll make sense by the end.
+- Footer: the first time I gave an agent expert guidance to fix a slow page, the code looked right and the page stayed slow. You'll watch that happen in the second case, and see how we caught it.
+- How we work: I do each step on my screen, then you do it on yours. Fall behind? Just watch. Everything is in the repo to redo later.
 -->
 
 ---
 
-# Try the broken shop
+# Try the broken site
 
 <div class="flex flex-col gap-7 mt-2">
   <div class="flex items-center gap-6"><span class="df-label blue">LCP</span> The main image shows up late.</div>
@@ -101,10 +105,14 @@ Run <code>npm run sample:serve</code>, open 127.0.0.1:4173/starter/
 <!--
 02:00 to 03:00
 
-- Open http://127.0.0.1:4173/starter/ after npm run sample:serve.
-- Show each problem once. Reload and watch the image arrive late. Type "coding" in search and feel the lag. Reload and watch the page jump when the announcement lands.
-- Don't explain the labels yet. The next slide does.
-- The image delay is artificial and labelled as such in the source. Say so if someone asks.
+**Point:** feel the three problems before we name them.
+
+- Show: open 127.0.0.1:4173/starter/ in Chrome. Attendees start it with the command in the footer.
+- Show: reload. The big episode image arrives after the rest of the page.
+- Show: click the search box and type "coding". The page lags behind your typing.
+- Show: reload and keep your hands off. A couple of seconds in, a yellow announcement drops in at the top and pushes everything down.
+- Three problems, three labels. The next slide says what the labels mean.
+- If asked: part of the image delay is added on purpose so it's easy to see. It's marked in the code.
 -->
 
 ---
@@ -126,9 +134,13 @@ Together they are the Core Web Vitals.
 <!--
 03:00 to 05:00
 
-- Largest Contentful Paint, Interaction to Next Paint, Cumulative Layout Shift. Say the full names once, then use the short ones.
-- One sentence each, in the words of the person using the page.
-- The "good" values come from web.dev. Google checks them on real visits, at the 75th percentile, split by mobile and desktop. We come back to the difference between real visits and our own machine after the first fix.
+**Point:** three numbers, each one something a visitor can feel.
+
+- LCP, Largest Contentful Paint: how long until the biggest thing on screen shows up. Good is 2.5 seconds or less.
+- INP, Interaction to Next Paint: after you tap or press a key, how long until the page visibly reacts. Good is 200 milliseconds or less.
+- CLS, Cumulative Layout Shift: how much content moves on its own while you read. It's a score, not a time. Good is 0.1 or less.
+- Tie back to the last slide: the late image is LCP, the stuck typing is INP, the jumping announcement is CLS.
+- Together they're the Core Web Vitals. Google reads them from real visitors' Chrome. Today we measure on our own laptops, which is not the same thing. More on that after the first fix.
 -->
 
 ---
@@ -163,12 +175,14 @@ Overview video: youtu.be/PsrHq5F_BAc (Chrome for Developers, 7 min)
 <!--
 05:00 to 06:30 (slides 5 to 7: about 5 minutes on guidance)
 
-- The problem it solves: an agent writes the code it saw most often while training. On the web, a lot of that is older than today's best practice.
-- Modern Web Guidance is a set of expert-written guides, each about one task. Chrome, Edge, Firefox, MDN and the community take part (https://developer.chrome.com/blog/modern-web-guidance-v1).
-- 203 guides is the count in the 1.0 release notes. The list command prints 208 entries because it also has broad guides like "performance".
-- The quote is from the description in the skill file that the installer writes. It is the reason the skill tells the agent to look things up first.
-- The install command writes .agents/skills/modern-web-guidance/ into the project. Antigravity reads skills from there (https://antigravity.google/docs/skills/).
-- Video: https://www.youtube.com/watch?v=PsrHq5F_BAc. The definition is at 1:06, expert review and local search at 1:55.
+**Point:** why an agent needs guidance, and how you add it to a project.
+
+- Coding agents learned from years of web code. Much of it is old. Ask for a fix and you often get the most common answer, not the current one.
+- Modern Web Guidance is a set of short guides written by web experts, one per task. People from Chrome, Edge, Firefox and MDN worked on it. Version 1.0 has 203 guides.
+- The yellow box is the skill describing itself: browsers change fast, and what the model learned goes stale.
+- The command installs it into your project. The agent finds it there by itself, so you don't have to mention it in every prompt.
+- Footer: a seven-minute overview video from Chrome, for later.
+- If asked about the count: the list command shows 208 entries because it also counts a few broad topic guides.
 -->
 
 ---
@@ -196,12 +210,14 @@ After a change, the agent's answer ends by naming each guide it used.
 <!--
 06:30 to 08:00
 
-- These four steps come from the skill file itself.
-- Search: the agent turns the task into a short phrase. Real output from modern-web-guidance 1.0.0 on 2026-11-13: optimize-image-priority came back first.
-- Retrieve: it loads only that guide, not the whole library.
-- Check: it compares its code with the guide's rules before it finishes.
-- Credit: the skill tells the agent to end the answer that delivers a change with a "Modern Web Guidance" section, one line per guide, quoting the rule. At the plan stage, AGENTS.md asks it to name the guide in the plan. Either way, no guide named means no guidance used.
-- Rerun the search before the event in case results changed.
+**Point:** the agent looks things up before it writes code, and tells you what it used.
+
+- Walk the four boxes left to right.
+- Search: the agent turns your task into a short phrase. The command under the boxes is the same search, and you can run it yourself. For "prioritize hero image", the first result is optimize-image-priority.
+- Retrieve: it reads that one guide in full, not the whole library.
+- Check: before it finishes, it compares its code with the guide's rules.
+- Credit: it names each guide it used. No guide named means no guide used. That's your fastest check later.
+- Before the event: rerun the search, results can change between releases.
 -->
 
 ---
@@ -240,11 +256,19 @@ Shortened from optimize-image-priority. The guide can't see our page; we measure
 <!--
 08:00 to 09:30
 
-- Click through the three parts. This is the guide our agent will use for the first problem.
-- Steps: find the LCP image, then raise its priority.
-- Rules: the guide marks some as MANDATORY and some as DO NOT. Lazy-loading the LCP image is a classic mistake.
-- Browser support: each guide says which browsers support the feature and what happens in the ones that don't. Here, browsers without fetchpriority just ignore it.
-- The catch: this guide says "raise the priority". It cannot know that our page only sets the image source from JavaScript after a delay. Only a measurement shows that. That's why we always measure first.
+**Point:** a guide is specific and practical, but it can't see your page.
+
+- This is the guide the agent will use in our first case, shortened.
+- Steps: find the LCP image, then raise its priority with fetchpriority="high".
+
+[click]
+
+- Rules: some are musts, some are "do not". This one: don't lazy-load the LCP image while also asking for high priority. People do that a lot.
+
+[click]
+
+- Browser support: which browsers have the feature, and what happens in the others. Here, older browsers ignore the attribute. Nothing breaks.
+- Footer, the catch: the guide says "raise the priority". It doesn't know our page only sets the image from JavaScript, late. A measurement shows that. That's why we always measure first.
 -->
 
 ---
@@ -278,14 +302,16 @@ CLI fallback: <code>agy --mode=plan</code>
 <!--
 09:30 to 11:00
 
-- Measure: record the problem in Chrome DevTools before anyone changes code.
-- Ask: in the Antigravity App, type /plan and the prompt from the slide. The agent reads the page and the guidance and proposes a change. It does not change code yet.
-- Check: we read the plan together with the same three questions every time.
-- Apply: click Proceed. The agent changes the code and shows the diff.
-- Again: the same recording, the same way, on a fresh reload.
-- Controls from the Antigravity docs, checked 2026-11-13: /plan then Proceed in the App (https://antigravity.google/docs/plan/). CLI fallback: agy --mode=plan, or Shift+Tab to change mode (https://antigravity.google/docs/cli/modes/).
-- The docs don't promise that plan mode blocks edits, so we always read the plan before Proceed.
-- The repo has an AGENTS.md that the agent reads on every turn: only edit sample/starter/, measure before and after, say so when it can't see the page. That is why the prompts can stay short.
+**Point:** five steps and three questions, the same in every case.
+
+- Measure: record the problem in Chrome DevTools before anyone touches code. That's our "before".
+- Ask: in Antigravity, type /plan, then the prompt. The agent reads the page and the guide and writes a plan. No code changes yet.
+- Check: read the plan together with the three questions on screen. Read them out.
+- Apply: if the plan passes, click Proceed. The agent edits the code and shows the diff.
+- Again: same recording, same way, fresh reload. That's our "after".
+- Why we read before Proceed: plan mode is not a promise that nothing gets edited. Reading the plan is the human part of the job.
+- Why the prompts are short: the repo has a rules file, AGENTS.md, that the agent reads every turn. Only edit the starter folder, measure before and after, say so when you can't see the page.
+- Footer: in the terminal version, agy --mode=plan does the same. Shift+Tab switches modes.
 -->
 
 ---
@@ -316,13 +342,15 @@ Stuck? Watch my screen. You can repeat it all after the session.
 <!--
 11:00 to 14:00
 
-- Installs, first sign-in and code redemption happen before the event (the organizer handles redemption). This slot is a quick check.
-- Model selector sits under the prompt box (https://antigravity.google/docs/models/).
-- Guidance: if .agents/skills/modern-web-guidance is missing, run npx modern-web-guidance@latest install in the repo root.
-- Quick test: ask the agent to open http://127.0.0.1:4173/starter/ and tell you the page title.
-- Browser: on a personal account the App uses its built-in browser. Business accounts and the CLI use /browser with Chrome (https://antigravity.google/docs/commands/browser/).
-- Fallback if the App won't start: the CLI, agy, with the same sign-in.
-- Hands up, or a reaction in chat, when all five are ticked.
+**Point:** everyone at the same starting line before the first case.
+
+- Go down the five checks. Hands up, or a reaction in chat, when all five are done.
+- The model selector is under the prompt box. Pick Gemini 4 Hydrogen.
+- No .agents/skills/modern-web-guidance folder? Run npx modern-web-guidance@latest install in the repo folder.
+- Last check: ask the agent to open 127.0.0.1:4173/starter/ and tell you the page title.
+- App won't start? Use the terminal version, agy, with the same sign-in.
+- For me: personal accounts use the App's built-in browser. Business accounts and agy use /browser with Chrome.
+- Sign-in and code redemption were done before today. Anyone stuck there watches my screen and repeats later.
 -->
 
 ---
@@ -337,7 +365,10 @@ subhead: 'LCP: how long until the main content shows.'
 <!--
 14:00 (Case 1, about 10 minutes)
 
-- First case, so we go slowly. Each step will feel familiar by the third case.
+**Point:** first case, LCP. We go slowly.
+
+- First case: the main image shows up late. That's LCP.
+- We go slowly this time so the steps feel familiar by the third case.
 -->
 
 ---
@@ -366,12 +397,14 @@ Watch first, then do the same.
 <!--
 14:00 to 16:00
 
-- This is the first time we open the Performance panel. Show where the record-and-reload button is.
-- The LCP marker sits on the timings track. Click it to see which element it is: the hero image.
-- Then find the image request in the network track. It starts late, long after the HTML has arrived.
-- Ask the room: why would the browser start downloading the most important image so late?
-- The capture is the LCP breakdown insight in the Insights sidebar. Click it and the timeline zooms to the load and marks each part. Almost all of the 0.67 s is "Resource load delay": the browser waited about 650 ms before it even asked for the image.
-- Check track names against the Chrome version on screen before the event. The capture is from Chrome 157.
+**Point:** the Performance panel tells you which element is the LCP and why it was late.
+
+- Show: DevTools, Performance panel. The circular arrow at the top is Record and reload. Click it and wait until it stops.
+- Insights on the left: LCP is 0.67 seconds. That's under 2.5, so why bother? Because about 650 ms of it is waiting. This is localhost on a fast laptop. On a real network and a slower phone, that wait grows.
+- Click LCP breakdown. It splits LCP into four parts. "Resource load delay" is about 650 ms: time before the browser even asked for the image.
+- The timeline marks the same gap. The small blue mark at the far right of the Network track is the image request, near the end.
+- Ask the room: why would the browser wait so long to fetch the most important image?
+- Before the event: check the panel names match the Chrome on screen.
 -->
 
 ---
@@ -398,9 +431,13 @@ Copy it from workshop/prompts.md
 <!--
 16:00 to 18:00
 
-- Type /plan in the prompt box first, then paste.
-- While the agent works, point out when it searches and retrieves a guide. We expect optimize-image-priority.
-- AGENTS.md carries the rest: stay in sample/starter/, measure before and after, say so when you can't see the page.
+**Point:** a good prompt says what to measure and what must not change.
+
+- Type /plan in the prompt box, then paste.
+- Read it line by line. Each line has a job: which case, what to record, which guidance to use, ask for the smallest fix, and the one thing that must stay the same.
+- "Same image at the same size" stops a fix that trades the LCP problem for a layout shift.
+- While it runs, point out when the agent searches and opens a guide. We expect optimize-image-priority.
+- Attendees copy the prompt from workshop/prompts.md.
 -->
 
 ---
@@ -435,11 +472,14 @@ Expected guide: optimize-image-priority. Plan looks right? Click Proceed.
 <!--
 18:00 to 21:00
 
-- Show the code: the image tag has no src. JavaScript fetches a JSON file, waits, then sets the src. The browser can't start downloading something it doesn't know about.
-- The guide says raise the priority. That alone doesn't fix this, because the image isn't in the HTML yet. A good plan puts the src in the HTML, and can add fetchpriority="high" too.
-- Same image, same width and height, or we'd swap an LCP problem for a CLS one.
-- Click Proceed. Read the diff together. Edits stay inside sample/starter/.
-- If the run stalls, open sample/reference/lcp/ and say it is prepared.
+**Point:** read the cause in the code yourself, then judge the plan.
+
+- Top code: the image address comes from JavaScript. It fetches a JSON file, waits, and only then sets src.
+- Bottom code: the img tag in the HTML has a width and height but no src. The browser can't download an image nobody told it about.
+- Read the three checks on the left against the plan.
+- Watch for a plan that only adds fetchpriority="high". The guide suggests it, but alone it does nothing here: there's still no src until the script runs. A good plan puts src in the HTML, and may add fetchpriority as well.
+- Plan passes? Click Proceed. Read the diff together. Every edit should be inside sample/starter/.
+- If the run stalls: open sample/reference/lcp/ and say it's prepared.
 -->
 
 ---
@@ -481,11 +521,13 @@ Your machine helps find the cause. Real visitors decide the score.
 <!--
 21:00 to 24:00
 
-- Ask the agent: measure again the same way and show before and after. Then repeat the recording ourselves.
-- The image request now starts with the page, and the LCP marker moves left.
-- The two tables are the same LCP breakdown insight, before and after. Resource load delay drops from about 650 ms to under 10 ms. The other rows barely change.
-- The yellow box is from my prep runs: headless Chromium, CPU slowed 4x, median of 5 runs. The captures are single runs in Chrome with DevTools open, so their numbers don't match the box exactly. Your numbers will differ too.
-- Say this once, clearly: numbers from our own machine are lab numbers. They help us find causes. The score that counts comes from real visitors (field data), after you ship.
+**Point:** the second recording proves the fix, and a laptop number is not the real-visitor score.
+
+- Ask the agent: "Measure again the same way and show before and after." Then record it yourself too.
+- Left table before, right table after. Resource load delay drops from about 650 ms to under 10. The image request now starts with the page.
+- Check the page by eye: same image, same size.
+- Yellow box: my practice runs, median of five, slower CPU. The tables are one run with DevTools open, so the numbers differ a little. Yours will too. Look at the size of the change.
+- Footer, say it clearly once: this is a lab number from your machine, good for finding causes. The score Google uses comes from real visitors, over the weeks after you ship.
 -->
 
 ---
@@ -500,8 +542,10 @@ subhead: 'INP: how long the page takes to react to a tap or a key.'
 <!--
 24:00 (Case 2, about 13 minutes, two rounds)
 
-- Same loop. This time the problem happens when we type, not when the page loads.
-- This case has two rounds. The first fix looks right and isn't enough. I lead round 2.
+**Point:** second case, INP. Two rounds, and the first one fails.
+
+- Same loop, but the problem happens when you type, not when the page loads.
+- Heads up: two rounds. The first fix follows the guide and still isn't enough. That's the most useful moment of the hour.
 -->
 
 ---
@@ -530,11 +574,14 @@ INP needs a real key press. A reload alone won't show it.
 <!--
 24:00 to 26:00
 
-- This is a different kind of recording: no reload. Start recording, type, stop.
-- Find the interaction on the interactions track. Under it is one long block of work on the main thread.
-- Don't guess which code is slow yet. Look at what the block contains: scripting, then style and layout.
-- In the capture, the INP breakdown insight is open: 810 ms of processing under one key press. The short yellow part on the left is our search code (renderResults). The long purple bar is Layout. Most of the time goes to the browser laying out the rows, not to our JavaScript.
-- Lighthouse page loads and Total Blocking Time are not INP. INP needs a real interaction.
+**Point:** INP needs a real key press, and the trace shows where the time goes.
+
+- A different recording, no reload. Reload first and let the page settle. Click the search box, press Record, type "coding", press Stop.
+- Insights: INP about 970 ms. Good is 200.
+- Click INP breakdown. Three parts: input delay, processing, presentation. Processing is over 800 ms of work under one key press.
+- Under it in the flame chart: the short yellow part on the left is our code, renderResults. The long purple bar is Layout, the browser working out where every result row goes. "coding" matches 1,686 lines; the first letter alone matches over 8,000.
+- So our JavaScript isn't the expensive part. Putting the rows on the page is.
+- A Lighthouse load test or Total Blocking Time won't show this. INP needs a real interaction.
 -->
 
 ---
@@ -561,8 +608,11 @@ Copy it from workshop/prompts.md
 <!--
 26:00 to 27:30
 
+**Point:** protect the feature in the prompt.
+
 - /plan, then paste.
-- We expect the agent to retrieve break-up-long-tasks.
+- Two lines protect the feature: every result stays reachable, and fast typing shows only the latest search. Without them, an easy "fix" shows the first 50 results and calls it fast.
+- We expect break-up-long-tasks.
 -->
 
 ---
@@ -595,11 +645,14 @@ Expected guide: break-up-long-tasks. Plan looks right? Click Proceed.
 <!--
 27:30 to 30:00 (round 1)
 
-- Show the code: it builds a long HTML string, pausing every 50 ms, then writes all of it to the page in one go at the end.
-- The agent will probably propose splitting the work into batches with scheduler.yield() between them. That's a reasonable first plan. Approve it if it keeps the three checks, and say we will measure it.
-- Not acceptable: showing only the first 50 results. That looks fast and hides transcript lines.
-- Click Proceed, read the diff.
-- If the run stalls, open sample/reference/inp-yield-only/ and say it is prepared.
+**Point:** this code already pauses. The pauses are in the wrong place.
+
+- Show the code. The loop builds one long HTML string and pauses every 50 ms to let the browser breathe.
+- The last line is the expensive one: results.innerHTML = html. Every row goes in at once, and the browser lays them all out in one go. The pauses never touched that part.
+- The agent will likely propose batches of rows with scheduler.yield() between them. That's a fair first plan. Approve it if it passes the three checks, and say out loud: we'll measure it.
+- Reject anything that caps results, like showing only the first 50.
+- Proceed, read the diff.
+- If the run stalls: open sample/reference/inp-yield-only/ and say it's prepared.
 -->
 
 ---
@@ -632,12 +685,14 @@ A fix in the diff is a guess until the trace confirms it.
 <!--
 30:00 to 32:00
 
-- Repeat the same typing and compare.
-- The code follows the guide. The page is still slow. In our prep trace, the batches still ended up being drawn in one long pass.
-- In the capture: processing is now 0 ms, so our code did break up. But one long Layout bar is still there, and the next key press waited 514 ms behind it (input delay). The batches piled up and got laid out together. The capture's INP is 630 ms, one run with DevTools open, so it differs a little from the yellow box.
-- Say what the trace on screen shows today. Don't turn it into a rule about scheduler.yield().
-- Lab value from prep: headless Chromium, CPU 4x slower, median of 5, slowest key press 704 ms (it was 1864 ms before). Not field INP.
-- Check: same result count, every transcript line reachable.
+**Point:** code that follows the guide can still leave the page slow. Only the trace tells you.
+
+- Record the same typing on a fresh reload.
+- In the capture: processing is now 0 ms, so our code did break up. But there's still one long purple Layout bar, and the next key press waited 514 ms behind it. That wait is the input delay.
+- What happened: the batches went into the page faster than the browser drew them. They piled up and were laid out together, in one long pass.
+- Yellow box: slowest key press 704 ms in practice runs, down from about 1,860. Better, still far from 200. The capture shows 630 ms from one run with DevTools open.
+- Say what today's trace shows. Don't turn it into "scheduler.yield() doesn't work". It worked. It wasn't enough here.
+- Check: same result count, every line still there.
 -->
 
 ---
@@ -666,13 +721,15 @@ Round 2 prompt: workshop/prompts.md
 <!--
 32:00 to 37:00
 
-- I drive this round. Watch first; try it yourself afterwards from workshop/prompts.md.
-- /plan with the round 2 prompt. Give the agent the round 1 trace and ask why the batches didn't help.
-- The change we expect: wait for the next frame (requestAnimationFrame), then yield. Now the browser can draw each batch before the next one starts.
+**Point:** give the browser a frame to draw each batch.
+
+- I drive this round. You watch, and repeat it later from workshop/prompts.md.
+- /plan with the round 2 prompt. It asks the agent whether the browser gets to draw between batches.
+- The code: same batches, one new line. await nextFrame() waits until the browser draws a frame, then we yield. Each batch reaches the screen before the next one starts.
 - Same three checks: every result, latest search only, guide named. Proceed, read the diff, record the same typing.
-- Lab value from prep: 32 ms, against 704 ms for round 1. Lab only.
-- If the run stalls, open sample/reference/inp/ and say it is prepared.
-- My earlier experiment with an older guidance release is at https://ivankristianto.com/testing-modern-web-guidance. Its numbers are not today's.
+- Yellow box: 32 ms in practice runs, from 704 in round 1.
+- If asked about the trade-off: long lists now fill in over many frames. The first rows show right away, the last ones a moment later.
+- If the run stalls: open sample/reference/inp/ and say it's prepared.
 -->
 
 ---
@@ -687,7 +744,10 @@ subhead: 'CLS: how much the content jumps while you read.'
 <!--
 37:00 (Case 3, about 10 minutes)
 
-- Last case. You know the loop now, so this one goes faster.
+**Point:** last case, CLS. It goes faster.
+
+- Last case. You know the loop now, so this one moves quicker.
+- The page jumps. That's CLS.
 -->
 
 ---
@@ -716,11 +776,14 @@ A click or a key press right before a shift stops it counting.
 <!--
 37:00 to 39:00
 
-- Same recording as LCP, but now we look at the layout shifts track.
-- Hands off: shifts right after a click or key press are excluded from CLS, so touching the page hides the problem.
-- The things that moved are the victims. The announcement that arrived late is the cause.
-- To get the capture's view: open the "Layout shift culprits" insight, then hover the purple diamond on the Layout shifts track. DevTools plays the shift on a small screenshot. Score 0.1308, at about 2.5 s, with nobody touching the page.
-- The insight found no culprit for this shift. The preview shows the cause anyway: the announcement our script inserts.
+**Point:** find what moved and what pushed it, without touching the page.
+
+- Same recording as LCP: Record and reload. Then hands off the mouse and keyboard.
+- Why hands off: a shift right after a click or key press doesn't count toward CLS. Touch the page and you hide the problem from yourself.
+- Open "Layout shift culprits" in Insights, then hover the purple diamond on the Layout shifts track. DevTools plays the shift on a small screenshot.
+- Score 0.1308, at about 2.5 seconds. The yellow announcement lands at the top and pushes the episode down.
+- The things that moved are the victims. The announcement is the cause.
+- The insight found no culprit for this shift. The preview shows the cause anyway.
 -->
 
 ---
@@ -747,8 +810,12 @@ Copy it from workshop/prompts.md
 <!--
 39:00 to 40:30
 
+**Point:** keep the feature, and test more than one screen size.
+
 - /plan, then paste.
-- During research, "prevent layout shifts" returned broader guides, not one CLS guide. Read what the agent retrieves.
+- "Keeps the announcement" rules out the easy non-fix: deleting it.
+- "A desktop width and a phone width": text wraps differently on a phone, so the space it needs changes.
+- There may not be one guide just for this. Read which guides the agent names.
 -->
 
 ---
@@ -784,10 +851,14 @@ Plan looks right? Click Proceed.
 <!--
 40:30 to 44:00
 
-- Show the code: the announcement is created by JavaScript and inserted above the page after it has drawn. Nothing held its place.
-- Removing the announcement is not a fix. It fails the "page still works" check.
-- The space has to fit at the workshop width and on a phone.
-- Proceed, read the diff. If the run stalls, use sample/reference/cls/ and say it is prepared.
+**Point:** the fix is to save the space before the content arrives.
+
+- Top code: the script creates the announcement and inserts it before main, after the page has drawn. Nothing held its place.
+- Bottom code: its CSS has padding and margins, but nothing reserves its height before it exists.
+- Read the four checks on the left against the plan. The space has to fit on a phone too.
+- Not a fix: removing the announcement. It fails "does the page still work the same".
+- Proceed, read the diff.
+- If the run stalls: open sample/reference/cls/ and say it's prepared.
 -->
 
 ---
@@ -825,11 +896,13 @@ The announcement still shows. It just has its own space now.
 <!--
 44:00 to 47:00
 
+**Point:** no shift, and the announcement is still there.
+
 - Record the same hands-off reload.
-- The layout shift is gone, and the announcement is still there.
-- In the "after" capture there is no Layout shifts track at all, and CLS reads 0. In this recording, no track meant no shifts.
-- Resize to a phone width (390 px in prep) and check again.
-- Lab values from prep, same setup as before.
+- Top row before: CLS 0.13 and a diamond on the Layout shifts track. Bottom row after: CLS 0, and in this recording no Layout shifts track at all.
+- Check the page: the announcement still appears.
+- Resize to a phone width, about 390 pixels, and check again. In practice runs, phone CLS went from 0.237 to 0.
+- Yellow box: practice runs, same setup as before.
 -->
 
 ---
@@ -848,8 +921,13 @@ Each time, the second recording decided.
 <!--
 47:00 to 49:00
 
-- One sentence per case. If today's live run ended somewhere else, say what we actually saw.
-- The guide gave the agent good advice every time. The measurement told us whether it fixed our page. In INP it didn't, the first time.
+**Point:** one lesson per case, and the habit behind all three.
+
+- LCP: the browser can't download what it hasn't been told about. Put the important image in the HTML.
+- INP: splitting the work is half the job. The browser also needs a chance to draw between pieces.
+- CLS: if something will appear later, save its space now.
+- Footer: each time, the second recording decided whether we were done. The guide gave good advice every time. It couldn't see our page.
+- If today's live run ended somewhere else, say what we actually saw.
 -->
 
 ---
@@ -868,8 +946,10 @@ Measure, ask, check, apply, measure again.
 <!--
 49:00 to 50:00, then questions until 60:00
 
-- The repo has the shop, the prompts and AGENTS.md. Repeat all three cases at your own pace, including INP round 2.
-- Links: official video https://www.youtube.com/watch?v=PsrHq5F_BAc, articles https://ivankristianto.com/chrome-modern-web-guidance and https://ivankristianto.com/testing-modern-web-guidance.
-- On your own site: record a real journey, ask for a plan, check it, apply, record again. After you ship, look at real-visitor data.
-- Questions. If a case ran over, finish it here from its prepared checkpoint.
+**Point:** what to try on your own site next week.
+
+- The repo has the site, the prompts and the rules file. Redo all three cases at your own pace, round 2 included.
+- On your own site: pick one slow thing a visitor would notice. Record it. Ask for a plan with guidance. Check it with the three questions. Apply. Record again.
+- After you ship, watch real-visitor data. Your laptop finds the cause; visitors decide the score.
+- Questions until the hour. If a case ran over, finish it here from its prepared folder.
 -->
