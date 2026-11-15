@@ -10,6 +10,9 @@ transition: none
 aspectRatio: 16/9
 canvasWidth: 1280
 duration: 60min
+# The published deck has no presenter view and offers the PDF. Local dev keeps presenter mode.
+presenter: dev
+download: true
 themeConfig:
   brandMarks: true
 layout: cover

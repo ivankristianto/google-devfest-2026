@@ -11,7 +11,8 @@
     "slides:build": "slidev build slides.md",
     "slides:export": "slidev export slides.md",
     "sample:serve": "node scripts/serve-sample.mjs",
-    "sample:test": "playwright test --config sample/tests/playwright.config.js"
+    "sample:test": "playwright test --config sample/tests/playwright.config.js",
+    "slides:pages": "slidev build slides.md --without-notes --base /google-devfest-2026/"
   },
   "devDependencies": {
     "@playwright/test": "1.64.1",
