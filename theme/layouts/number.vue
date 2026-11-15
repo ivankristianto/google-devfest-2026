@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import { useEntrance } from '../composables/entrance'
 defineProps<{ above?: string, value?: string, below?: string }>()
+const entering = useEntrance()
 </script>
 
 <template>
-  <div class="df-slide df-number">
+  <div class="df-slide df-number" :class="{ 'df-enter': entering }">
     <div class="df-pill top">{{ above }}</div>
     <Scallops :x="96" :top="248" :bottom="472" :count="4" :depth="26" side="left" />
     <Scallops :x="620" :top="248" :bottom="472" :count="4" :depth="26" side="right" />

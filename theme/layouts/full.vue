@@ -1,5 +1,11 @@
+<script setup lang="ts">
+import { useEntrance } from '../composables/entrance'
+
+const entering = useEntrance()
+</script>
+
 <template>
-  <div class="df-slide df-full">
+  <div class="df-slide df-full" :class="{ 'df-enter': entering }">
     <Frame shape="content" />
     <div class="df-full-body"><slot /></div>
     <div class="df-full-sub"><slot name="sub" /></div>

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useEntrance } from '../composables/entrance'
 import { computed } from 'vue'
 
 const props = defineProps<{ number?: string, subhead?: string, color?: 'blue' | 'yellow' | 'red' }>()
@@ -9,10 +10,11 @@ const fills: Record<string, string> = {
   red: 'var(--df-halftone-red)',
 }
 const arrowFill = computed(() => (props.color && fills[props.color]) || 'var(--df-pastel-yellow)')
+const entering = useEntrance()
 </script>
 
 <template>
-  <div class="df-slide df-section">
+  <div class="df-slide df-section" :class="{ 'df-enter': entering }">
     <Frame shape="section" />
     <div class="df-section-number">{{ number }}</div>
     <svg class="df-section-art" viewBox="0 0 1280 720" aria-hidden="true">

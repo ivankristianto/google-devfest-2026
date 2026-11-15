@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useEntrance } from '../composables/entrance'
 defineProps<{
   location?: string
   name?: string
@@ -6,10 +7,11 @@ defineProps<{
   date?: string
   titleSize?: 'short' | 'long'
 }>()
+const entering = useEntrance()
 </script>
 
 <template>
-  <div class="df-slide df-cover">
+  <div class="df-slide df-cover" :class="{ 'df-enter': entering }">
     <Frame shape="cover" />
     <DevFestLockup class="df-cover-lockup" :location="location" />
     <div class="df-cover-title" :class="titleSize || 'long'">

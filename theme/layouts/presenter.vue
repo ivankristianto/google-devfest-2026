@@ -1,5 +1,11 @@
+<script setup lang="ts">
+import { useEntrance } from '../composables/entrance'
+
+const entering = useEntrance()
+</script>
+
 <template>
-  <div class="df-slide df-presenter">
+  <div class="df-slide df-presenter" :class="{ 'df-enter': entering }">
     <div class="df-presenter-card">
       <div class="df-presenter-body"><slot /></div>
     </div>

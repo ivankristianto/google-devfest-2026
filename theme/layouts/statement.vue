@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useEntrance } from '../composables/entrance'
 import { computed } from 'vue'
 
 const props = defineProps<{ color?: 'offwhite' | 'blue' | 'green' | 'yellow' | 'red', location?: string }>()
@@ -10,10 +11,11 @@ const dots: Record<string, string> = {
   red: 'var(--df-red)',
 }
 const dot = computed(() => dots[props.color || 'offwhite'])
+const entering = useEntrance()
 </script>
 
 <template>
-  <div class="df-slide df-statement" :class="color && color !== 'offwhite' ? `bg-${color}` : ''">
+  <div class="df-slide df-statement" :class="[color && color !== 'offwhite' ? `bg-${color}` : '', { 'df-enter': entering }]">
     <Scallops :x="123" :top="64" :bottom="655" side="left" />
     <Scallops :x="758" :top="64" :bottom="655" side="right" />
     <div class="df-statement-text"><slot /></div>

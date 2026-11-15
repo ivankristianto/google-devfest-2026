@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import { useEntrance } from '../composables/entrance'
 defineProps<{ dense?: boolean }>()
+const entering = useEntrance()
 </script>
 
 <template>
-  <div class="df-slide df-default" :class="{ 'df-dense': dense }">
+  <div class="df-slide df-default" :class="[{ 'df-dense': dense }, { 'df-enter': entering }]">
     <Frame shape="content" />
     <div class="df-default-body">
       <slot />

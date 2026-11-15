@@ -1,0 +1,50 @@
+/* Entrance motion, active only while a layout root has .df-enter (theme/composables/entrance.ts).
+   Hidden states live in keyframes with fill-mode backwards, so a missed selector shows the final slide.
+   Uses the standalone translate and scale properties so existing rotate() transforms survive. */
+
+@keyframes df-rise { from { opacity: 0; translate: 0 10px; } }
+@keyframes df-fade { from { opacity: 0; } }
+@keyframes df-nudge { from { opacity: 0; translate: -16px 0; } }
+@keyframes df-pop { from { opacity: 0; scale: 0.85; } }
+
+@media (prefers-reduced-motion: no-preference) {
+  .df-enter {
+    --df-ease: cubic-bezier(0.2, 0.7, 0.3, 1);
+    --df-base: 0ms;
+    --df-step: 60ms;
+  }
+  .df-enter * { --df-i: 0; }
+  .df-enter :nth-child(2) { --df-i: 1; }
+  .df-enter :nth-child(3) { --df-i: 2; }
+  .df-enter :nth-child(4) { --df-i: 3; }
+  .df-enter :nth-child(5) { --df-i: 4; }
+  .df-enter :nth-child(6) { --df-i: 5; }
+  .df-enter :nth-child(7) { --df-i: 6; }
+  .df-enter :nth-child(8) { --df-i: 7; }
+  .df-enter :nth-child(9) { --df-i: 8; }
+
+  .df-enter .df-trace-left { --df-base: 80ms; }
+  .df-enter .df-trace-right { --df-base: 160ms; }
+  .df-enter .df-section-text { --df-base: 80ms; }
+  .df-enter .df-flow { --df-base: 100ms; --df-step: 40ms; }
+
+  /* Titles and content blocks. Lists, flows and legends stagger their items instead of moving as one block. */
+  .df-enter :is(.df-trace-head, .df-cover-title, .df-full-body, .df-number-value, .df-statement-text),
+  .df-enter .df-section-text > *,
+  .df-enter :is(.df-trace-left, .df-trace-right, .df-default-body, .df-presenter-body) > :not(ol, ul, .df-checks, .df-flow, .df-found, .df-legend),
+  .df-enter :is(.df-trace-left, .df-default-body, .df-presenter-body) :is(ol, ul) > li,
+  .df-enter :is(.df-flow, .df-found, .df-legend) > *,
+  .df-enter .df-metrics tbody tr {
+    animation: df-rise 360ms var(--df-ease) backwards;
+    animation-delay: calc(var(--df-base) + var(--df-i) * var(--df-step));
+  }
+
+  .df-enter :is(.df-trace-foot, .df-default-foot, .df-cover-byline, .df-full-sub) {
+    animation: df-fade 400ms ease-out 280ms backwards;
+  }
+
+  .df-enter .df-section-number { animation: df-nudge 420ms var(--df-ease) backwards; }
+
+  /* The intro photo's "LCP element" tag lands last, like the metric it names. */
+  .df-enter .intro-tag { animation: df-pop 300ms var(--df-ease) 420ms backwards; }
+}

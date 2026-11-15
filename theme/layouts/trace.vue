@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import { useEntrance } from '../composables/entrance'
 withDefaults(defineProps<{ split?: string, codeSize?: string }>(), { split: '4fr 7fr' })
+const entering = useEntrance()
 </script>
 
 <template>
-  <div class="df-slide df-trace" :style="codeSize ? { '--slidev-code-font-size': codeSize } : {}">
+  <div class="df-slide df-trace" :class="{ 'df-enter': entering }" :style="codeSize ? { '--slidev-code-font-size': codeSize } : {}">
     <Frame shape="content" />
     <div class="df-trace-head"><slot name="title" /></div>
     <div class="df-trace-grid" :style="{ gridTemplateColumns: split }">
