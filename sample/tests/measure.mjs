@@ -13,12 +13,15 @@ const MOBILE = { width: 390, height: 844 };
 const CPU_RATE = 4;
 const QUERY = 'coding';
 const KEY_INTERVAL_MS = 120;
+// DevTools' "Slow 4G" preset (bytes per second, ms). The LCP case is measured with it.
+const SLOW_4G = { latency: 562.5, downloadThroughput: 180000, uploadThroughput: 84375 };
+const SCENARIOS = ['load', 'slow4g', 'mobile', 'interaction'];
 
 const args = Object.fromEntries(process.argv.slice(2).reduce((acc, a, i, all) => (a.startsWith('--') ? [...acc, [a.slice(2), all[i + 1]]] : acc), []));
 const RUNS = Number(args.runs || 5);
 const VARIANTS = (args.variants || Object.keys(VARIANT_PATHS).join(',')).split(',');
 const OUT = resolve(ROOT, args.out || 'evidence/measurements');
-const ONLY = args.only ? args.only.split(',') : ['load', 'mobile', 'interaction'];
+const ONLY = args.only ? args.only.split(',') : SCENARIOS;
 const pathOf = (v) => VARIANT_PATHS[v] || `/reference/${v}/`;
 
 const LINES = JSON.parse(readFileSync(resolve(ROOT, 'sample/shared/transcript.json'), 'utf8'));
@@ -75,7 +78,7 @@ const initScript = () => {
   }).observe(document, { childList: true, subtree: true });
 };
 
-async function newPage(browser, viewport) {
+async function newPage(browser, viewport, network) {
   const context = await browser.newContext({ viewport, deviceScaleFactor: 1 });
   const page = await context.newPage();
   await page.addInitScript(initScript);
@@ -83,6 +86,7 @@ async function newPage(browser, viewport) {
   await cdp.send('Network.enable');
   await cdp.send('Network.setCacheDisabled', { cacheDisabled: true });
   await cdp.send('Emulation.setCPUThrottlingRate', { rate: CPU_RATE });
+  if (network) await cdp.send('Network.emulateNetworkConditions', { offline: false, ...network });
   const requests = [];
   cdp.on('Network.requestWillBeSent', (e) => requests.push({ url: e.request.url.split('/').pop(), priority: e.request.initialPriority, ts: e.timestamp }));
   return { context, page, cdp, requests };
@@ -92,13 +96,13 @@ async function settleLoad(page) {
   await page.waitForFunction(() => {
     const img = document.getElementById('hero-image');
     return window.__m.announcementAt !== null && img && img.complete && img.naturalWidth > 0;
-  }, null, { timeout: 30000 });
+  }, null, { timeout: 60000 });
   await page.waitForTimeout(1500);
 }
 
-async function loadRun(browser, url, viewport) {
-  const { context, page, requests } = await newPage(browser, viewport);
-  await page.goto(url, { waitUntil: 'load' });
+async function loadRun(browser, url, viewport, network) {
+  const { context, page, requests } = await newPage(browser, viewport, network);
+  await page.goto(url, { waitUntil: 'load', timeout: 60000 });
   await settleLoad(page);
   const data = await page.evaluate(() => {
     const hero = document.getElementById('hero-image');
@@ -259,13 +263,20 @@ function summarise(results) {
   const lines = [];
   const env = results.env;
   lines.push('# Fault measurements', '');
-  lines.push(`Lab runs, not field data. Chromium ${env.browserVersion} (Playwright ${env.playwright}), headless, viewport ${VIEWPORT.width}x${VIEWPORT.height}, CPU throttled ${CPU_RATE}x, cache disabled, no network throttling, served by \`npm run sample:serve\`. Sample commit ${env.commit}. ${RUNS} fresh visits per variant and scenario. Date ${env.date}.`, '');
+  lines.push(`Lab runs, not field data. Chromium ${env.browserVersion} (Playwright ${env.playwright}), headless, viewport ${VIEWPORT.width}x${VIEWPORT.height}, CPU throttled ${CPU_RATE}x, cache disabled, no network throttling except where a table says Slow 4G, served by \`npm run sample:serve\`. Sample commit ${env.commit}. ${RUNS} fresh visits per variant and scenario. Date ${env.date}.`, '');
   const fmt = (vals, d = 0) => `${vals.map((v) => round(v, d)).join(', ')} (median ${round(median(vals), d)})`;
   lines.push('## Load: LCP and hero discovery (no input)', '');
   lines.push('| Variant | LCP element | LCP ms | Hero request start ms | Hero priority | CLS (no input) |', '|---|---|---|---|---|---|');
   for (const v of VARIANTS) {
     const r = results.variants[v].load;
     lines.push(`| ${v} | ${[...new Set(r.map((x) => `${x.lcpElement} ${x.lcpUrl}`))].join('; ')} | ${fmt(r.map((x) => x.lcpMs))} | ${fmt(r.map((x) => x.heroRequestStartMs))} | ${[...new Set(r.map((x) => x.heroInitialPriority))].join(', ')} | ${fmt(r.map((x) => x.cls), 3)} |`);
+  }
+  lines.push('', '## Load under Slow 4G network throttling (no input)', '');
+  lines.push(`DevTools Slow 4G preset: ${SLOW_4G.latency} ms latency, ${round(SLOW_4G.downloadThroughput * 8 / 1000)} kbit/s down. This is how the LCP case is measured in the workshop.`, '');
+  lines.push('| Variant | LCP element | LCP ms | Hero request start ms |', '|---|---|---|---|');
+  for (const v of VARIANTS) {
+    const r = results.variants[v].slow4g;
+    lines.push(`| ${v} | ${[...new Set(r.map((x) => `${x.lcpElement} ${x.lcpUrl}`))].join('; ')} | ${fmt(r.map((x) => x.lcpMs))} | ${fmt(r.map((x) => x.heroRequestStartMs))} |`);
   }
   lines.push('', `## CLS at a second width (${MOBILE.width}x${MOBILE.height}, no input)`, '');
   lines.push('| Variant | CLS |', '|---|---|');
@@ -293,21 +304,22 @@ const results = {
     playwright: JSON.parse(readFileSync(resolve(ROOT, 'node_modules/@playwright/test/package.json'), 'utf8')).version,
     commit: execFileSync('git', ['rev-parse', '--short', 'HEAD'], { cwd: ROOT }).toString().trim(),
     date: new Date().toISOString().slice(0, 10),
-    viewport: VIEWPORT, mobile: MOBILE, cpuThrottle: CPU_RATE, runs: RUNS, query: QUERY, keyIntervalMs: KEY_INTERVAL_MS,
+    viewport: VIEWPORT, mobile: MOBILE, cpuThrottle: CPU_RATE, slow4g: SLOW_4G, runs: RUNS, query: QUERY, keyIntervalMs: KEY_INTERVAL_MS,
   },
   variants: {},
 };
 try {
   for (const v of VARIANTS) {
     const url = ORIGIN + pathOf(v);
-    const out = (results.variants[v] = { load: [], mobile: [], interaction: [] });
+    const out = (results.variants[v] = { load: [], slow4g: [], mobile: [], interaction: [] });
     for (let i = 0; i < RUNS; i++) {
       if (ONLY.includes('load')) out.load.push(await loadRun(browser, url, VIEWPORT));
+      if (ONLY.includes('slow4g')) out.slow4g.push(await loadRun(browser, url, VIEWPORT, SLOW_4G));
       if (ONLY.includes('mobile')) out.mobile.push(await loadRun(browser, url, MOBILE));
       if (ONLY.includes('interaction')) out.interaction.push(await interactionRun(browser, url));
       const l = out.load.at(-1) || {};
       const it = out.interaction.at(-1) || {};
-      process.stdout.write(`${v} run ${i + 1}: LCP ${l.lcpMs} ms (${l.lcpElement}), hero req ${l.heroRequestStartMs} ms, CLS ${l.cls}, mobile CLS ${(out.mobile.at(-1) || {}).cls}, worst interaction ${it.worstInteractionMs} ms ${JSON.stringify(it.interactionsMs)} max inserts per layout ${it.trace && it.trace.maxParsesPerLayout}, shift without input ${it.lateShift}\n`);
+      process.stdout.write(`${v} run ${i + 1}: LCP ${l.lcpMs} ms (${l.lcpElement}), Slow 4G LCP ${(out.slow4g.at(-1) || {}).lcpMs} ms, hero req ${l.heroRequestStartMs} ms, CLS ${l.cls}, mobile CLS ${(out.mobile.at(-1) || {}).cls}, worst interaction ${it.worstInteractionMs} ms ${JSON.stringify(it.interactionsMs)} max inserts per layout ${it.trace && it.trace.maxParsesPerLayout}, shift without input ${it.lateShift}\n`);
     }
   }
 } finally {
@@ -316,5 +328,6 @@ try {
 }
 mkdirSync(OUT, { recursive: true });
 writeFileSync(resolve(OUT, 'results.json'), JSON.stringify(results, null, 2) + '\n');
-if (ONLY.length === 3) writeFileSync(resolve(OUT, 'summary.md'), summarise(results));
-console.log(`\nWrote ${resolve(OUT, ONLY.length === 3 ? 'summary.md' : 'results.json').replace(ROOT + '/', '')}`);
+const full = SCENARIOS.every((x) => ONLY.includes(x));
+if (full) writeFileSync(resolve(OUT, 'summary.md'), summarise(results));
+console.log(`\nWrote ${resolve(OUT, full ? 'summary.md' : 'results.json').replace(ROOT + '/', '')}`);

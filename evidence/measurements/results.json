@@ -3,8 +3,8 @@
     "browserVersion": "156.0.8078.4",
     "channel": "chromium",
     "playwright": "1.64.1",
-    "commit": "1b82fe5",
-    "date": "2026-11-14",
+    "commit": "48b1647",
+    "date": "2026-11-15",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -14,6 +14,11 @@
       "height": 844
     },
     "cpuThrottle": 4,
+    "slow4g": {
+      "latency": 562.5,
+      "downloadThroughput": 180000,
+      "uploadThroughput": 84375
+    },
     "runs": 5,
     "query": "coding",
     "keyIntervalMs": 120
@@ -22,25 +27,25 @@
     "starter": {
       "load": [
         {
-          "lcpMs": 760,
+          "lcpMs": 740,
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 225704,
-          "fcpMs": 124,
-          "heroRequestStartMs": 747,
-          "heroResponseEndMs": 748,
-          "heroRequestAfterDocMs": 747,
+          "fcpMs": 104,
+          "heroRequestStartMs": 732,
+          "heroResponseEndMs": 734,
+          "heroRequestAfterDocMs": 732,
           "heroInitialPriority": "Low",
           "heroRendered": {
             "w": 634,
             "h": 356
           },
-          "announcementAtMs": 2589,
+          "announcementAtMs": 2578,
           "announcementHeight": 191,
           "cls": 0.1308,
           "shifts": [
             {
-              "t": 2594,
+              "t": 2586,
               "value": 0.1308,
               "hadRecentInput": false,
               "sources": [
@@ -54,25 +59,25 @@
           ]
         },
         {
-          "lcpMs": 716,
+          "lcpMs": 704,
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 225704,
-          "fcpMs": 84,
-          "heroRequestStartMs": 706,
-          "heroResponseEndMs": 707,
-          "heroRequestAfterDocMs": 706,
+          "fcpMs": 100,
+          "heroRequestStartMs": 696,
+          "heroResponseEndMs": 697,
+          "heroRequestAfterDocMs": 696,
           "heroInitialPriority": "Low",
           "heroRendered": {
             "w": 634,
             "h": 356
           },
-          "announcementAtMs": 2565,
+          "announcementAtMs": 2571,
           "announcementHeight": 191,
           "cls": 0.1308,
           "shifts": [
             {
-              "t": 2579,
+              "t": 2583,
               "value": 0.1308,
               "hadRecentInput": false,
               "sources": [
@@ -86,574 +91,15 @@
           ]
         },
         {
-          "lcpMs": 716,
+          "lcpMs": 736,
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 225704,
           "fcpMs": 96,
-          "heroRequestStartMs": 708,
-          "heroResponseEndMs": 709,
-          "heroRequestAfterDocMs": 707,
+          "heroRequestStartMs": 716,
+          "heroResponseEndMs": 717,
+          "heroRequestAfterDocMs": 716,
           "heroInitialPriority": "Low",
-          "heroRendered": {
-            "w": 634,
-            "h": 356
-          },
-          "announcementAtMs": 2565,
-          "announcementHeight": 191,
-          "cls": 0.1308,
-          "shifts": [
-            {
-              "t": 2579,
-              "value": 0.1308,
-              "hadRecentInput": false,
-              "sources": [
-                {
-                  "node": "main",
-                  "from": 99,
-                  "to": 290
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "lcpMs": 720,
-          "lcpElement": "img#hero-image",
-          "lcpUrl": "hero-episode.jpg",
-          "lcpSize": 225704,
-          "fcpMs": 88,
-          "heroRequestStartMs": 713,
-          "heroResponseEndMs": 713,
-          "heroRequestAfterDocMs": 712,
-          "heroInitialPriority": "Low",
-          "heroRendered": {
-            "w": 634,
-            "h": 356
-          },
-          "announcementAtMs": 2566,
-          "announcementHeight": 191,
-          "cls": 0.1308,
-          "shifts": [
-            {
-              "t": 2569,
-              "value": 0.1308,
-              "hadRecentInput": false,
-              "sources": [
-                {
-                  "node": "main",
-                  "from": 99,
-                  "to": 290
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "lcpMs": 760,
-          "lcpElement": "img#hero-image",
-          "lcpUrl": "hero-episode.jpg",
-          "lcpSize": 225704,
-          "fcpMs": 124,
-          "heroRequestStartMs": 745,
-          "heroResponseEndMs": 746,
-          "heroRequestAfterDocMs": 745,
-          "heroInitialPriority": "Low",
-          "heroRendered": {
-            "w": 634,
-            "h": 356
-          },
-          "announcementAtMs": 2595,
-          "announcementHeight": 191,
-          "cls": 0.1308,
-          "shifts": [
-            {
-              "t": 2604,
-              "value": 0.1308,
-              "hadRecentInput": false,
-              "sources": [
-                {
-                  "node": "main",
-                  "from": 99,
-                  "to": 290
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "mobile": [
-        {
-          "lcpMs": 716,
-          "lcpElement": "img#hero-image",
-          "lcpUrl": "hero-episode.jpg",
-          "lcpSize": 72316,
-          "fcpMs": 84,
-          "heroRequestStartMs": 708,
-          "heroResponseEndMs": 709,
-          "heroRequestAfterDocMs": 708,
-          "heroInitialPriority": "Low",
-          "heroRendered": {
-            "w": 358,
-            "h": 201
-          },
-          "announcementAtMs": 2568,
-          "announcementHeight": 265,
-          "cls": 0.2373,
-          "shifts": [
-            {
-              "t": 2582,
-              "value": 0.2373,
-              "hadRecentInput": false,
-              "sources": [
-                {
-                  "node": "main",
-                  "from": 206,
-                  "to": 471
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "lcpMs": 720,
-          "lcpElement": "img#hero-image",
-          "lcpUrl": "hero-episode.jpg",
-          "lcpSize": 72316,
-          "fcpMs": 84,
-          "heroRequestStartMs": 707,
-          "heroResponseEndMs": 708,
-          "heroRequestAfterDocMs": 706,
-          "heroInitialPriority": "Low",
-          "heroRendered": {
-            "w": 358,
-            "h": 201
-          },
-          "announcementAtMs": 2566,
-          "announcementHeight": 265,
-          "cls": 0.2373,
-          "shifts": [
-            {
-              "t": 2578,
-              "value": 0.2373,
-              "hadRecentInput": false,
-              "sources": [
-                {
-                  "node": "main",
-                  "from": 206,
-                  "to": 471
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "lcpMs": 728,
-          "lcpElement": "img#hero-image",
-          "lcpUrl": "hero-episode.jpg",
-          "lcpSize": 72316,
-          "fcpMs": 88,
-          "heroRequestStartMs": 711,
-          "heroResponseEndMs": 712,
-          "heroRequestAfterDocMs": 711,
-          "heroInitialPriority": "Low",
-          "heroRendered": {
-            "w": 358,
-            "h": 201
-          },
-          "announcementAtMs": 2569,
-          "announcementHeight": 265,
-          "cls": 0.2373,
-          "shifts": [
-            {
-              "t": 2572,
-              "value": 0.2373,
-              "hadRecentInput": false,
-              "sources": [
-                {
-                  "node": "main",
-                  "from": 206,
-                  "to": 471
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "lcpMs": 716,
-          "lcpElement": "img#hero-image",
-          "lcpUrl": "hero-episode.jpg",
-          "lcpSize": 72316,
-          "fcpMs": 84,
-          "heroRequestStartMs": 707,
-          "heroResponseEndMs": 707,
-          "heroRequestAfterDocMs": 706,
-          "heroInitialPriority": "Low",
-          "heroRendered": {
-            "w": 358,
-            "h": 201
-          },
-          "announcementAtMs": 2566,
-          "announcementHeight": 265,
-          "cls": 0.2373,
-          "shifts": [
-            {
-              "t": 2580,
-              "value": 0.2373,
-              "hadRecentInput": false,
-              "sources": [
-                {
-                  "node": "main",
-                  "from": 206,
-                  "to": 471
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "lcpMs": 724,
-          "lcpElement": "img#hero-image",
-          "lcpUrl": "hero-episode.jpg",
-          "lcpSize": 72316,
-          "fcpMs": 84,
-          "heroRequestStartMs": 707,
-          "heroResponseEndMs": 708,
-          "heroRequestAfterDocMs": 707,
-          "heroInitialPriority": "Low",
-          "heroRendered": {
-            "w": 358,
-            "h": 201
-          },
-          "announcementAtMs": 2566,
-          "announcementHeight": 265,
-          "cls": 0.2373,
-          "shifts": [
-            {
-              "t": 2585,
-              "value": 0.2373,
-              "hadRecentInput": false,
-              "sources": [
-                {
-                  "node": "main",
-                  "from": 206,
-                  "to": 471
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "interaction": [
-        {
-          "query": "coding",
-          "expected": 1686,
-          "shown": 1686,
-          "status": "1.686 baris cocok dengan “coding”.",
-          "keysSeen": 6,
-          "interactionCount": 6,
-          "worstInteractionMs": 1888,
-          "worst": {
-            "name": "keydown",
-            "durationMs": 1888,
-            "inputDelayMs": 5,
-            "processingMs": 3,
-            "presentationMs": 1880
-          },
-          "interactionsMs": [
-            1888,
-            1768,
-            1648,
-            1528,
-            1408,
-            1288
-          ],
-          "lateShift": 0,
-          "trace": {
-            "maxParsesPerLayout": 2,
-            "totalsMs": {
-              "script": 197,
-              "style": 272,
-              "layout": 1177,
-              "gc": 36,
-              "other": 0,
-              "parseHTML": 160,
-              "paint": 24
-            },
-            "longTaskCount": 2,
-            "longestTasks": [
-              {
-                "ms": 1128,
-                "script": 149,
-                "layout": 669,
-                "style": 160,
-                "parseHTML": 95,
-                "gc": 20,
-                "other": 0,
-                "paint": 23
-              },
-              {
-                "ms": 746,
-                "script": 44,
-                "style": 112,
-                "layout": 508,
-                "gc": 17,
-                "other": 0,
-                "parseHTML": 65
-              }
-            ]
-          }
-        },
-        {
-          "query": "coding",
-          "expected": 1686,
-          "shown": 1686,
-          "status": "1.686 baris cocok dengan “coding”.",
-          "keysSeen": 6,
-          "interactionCount": 6,
-          "worstInteractionMs": 1856,
-          "worst": {
-            "name": "keydown",
-            "durationMs": 1856,
-            "inputDelayMs": 1,
-            "processingMs": 1,
-            "presentationMs": 1855
-          },
-          "interactionsMs": [
-            1856,
-            1736,
-            1616,
-            1496,
-            1376,
-            1256
-          ],
-          "lateShift": 0,
-          "trace": {
-            "maxParsesPerLayout": 2,
-            "totalsMs": {
-              "script": 182,
-              "style": 269,
-              "layout": 1176,
-              "gc": 30,
-              "other": 0,
-              "parseHTML": 160,
-              "paint": 22
-            },
-            "longTaskCount": 2,
-            "longestTasks": [
-              {
-                "ms": 1117,
-                "script": 144,
-                "layout": 670,
-                "style": 158,
-                "parseHTML": 96,
-                "gc": 18,
-                "other": 0,
-                "paint": 22
-              },
-              {
-                "ms": 733,
-                "script": 37,
-                "style": 112,
-                "layout": 506,
-                "gc": 13,
-                "other": 0,
-                "parseHTML": 65
-              }
-            ]
-          }
-        },
-        {
-          "query": "coding",
-          "expected": 1686,
-          "shown": 1686,
-          "status": "1.686 baris cocok dengan “coding”.",
-          "keysSeen": 6,
-          "interactionCount": 6,
-          "worstInteractionMs": 1840,
-          "worst": {
-            "name": "keydown",
-            "durationMs": 1840,
-            "inputDelayMs": 1,
-            "processingMs": 0,
-            "presentationMs": 1839
-          },
-          "interactionsMs": [
-            1840,
-            1720,
-            1600,
-            1480,
-            1360,
-            1240
-          ],
-          "lateShift": 0,
-          "trace": {
-            "maxParsesPerLayout": 2,
-            "totalsMs": {
-              "script": 183,
-              "style": 270,
-              "layout": 1162,
-              "gc": 30,
-              "other": 1,
-              "parseHTML": 156,
-              "paint": 22
-            },
-            "longTaskCount": 2,
-            "longestTasks": [
-              {
-                "ms": 1103,
-                "script": 144,
-                "layout": 659,
-                "style": 158,
-                "parseHTML": 93,
-                "gc": 17,
-                "other": 1,
-                "paint": 22
-              },
-              {
-                "ms": 732,
-                "script": 38,
-                "style": 113,
-                "layout": 503,
-                "gc": 13,
-                "other": 0,
-                "parseHTML": 63
-              }
-            ]
-          }
-        },
-        {
-          "query": "coding",
-          "expected": 1686,
-          "shown": 1686,
-          "status": "1.686 baris cocok dengan “coding”.",
-          "keysSeen": 6,
-          "interactionCount": 6,
-          "worstInteractionMs": 1864,
-          "worst": {
-            "name": "keydown",
-            "durationMs": 1864,
-            "inputDelayMs": 0,
-            "processingMs": 1,
-            "presentationMs": 1863
-          },
-          "interactionsMs": [
-            1864,
-            1752,
-            1624,
-            1512,
-            1384,
-            1272
-          ],
-          "lateShift": 0,
-          "trace": {
-            "maxParsesPerLayout": 2,
-            "totalsMs": {
-              "script": 188,
-              "style": 271,
-              "layout": 1178,
-              "gc": 31,
-              "other": 0,
-              "parseHTML": 160,
-              "paint": 22
-            },
-            "longTaskCount": 2,
-            "longestTasks": [
-              {
-                "ms": 1120,
-                "script": 148,
-                "layout": 669,
-                "style": 159,
-                "parseHTML": 96,
-                "gc": 15,
-                "other": 0,
-                "paint": 22
-              },
-              {
-                "ms": 740,
-                "script": 37,
-                "style": 113,
-                "layout": 509,
-                "gc": 16,
-                "other": 0,
-                "parseHTML": 64
-              }
-            ]
-          }
-        },
-        {
-          "query": "coding",
-          "expected": 1686,
-          "shown": 1686,
-          "status": "1.686 baris cocok dengan “coding”.",
-          "keysSeen": 6,
-          "interactionCount": 6,
-          "worstInteractionMs": 1888,
-          "worst": {
-            "name": "keydown",
-            "durationMs": 1888,
-            "inputDelayMs": 1,
-            "processingMs": 1,
-            "presentationMs": 1887
-          },
-          "interactionsMs": [
-            1888,
-            1768,
-            1648,
-            1528,
-            1408,
-            1288
-          ],
-          "lateShift": 0,
-          "trace": {
-            "maxParsesPerLayout": 2,
-            "totalsMs": {
-              "script": 193,
-              "style": 276,
-              "layout": 1184,
-              "gc": 35,
-              "other": 0,
-              "parseHTML": 160,
-              "paint": 23
-            },
-            "longTaskCount": 2,
-            "longestTasks": [
-              {
-                "ms": 1131,
-                "script": 153,
-                "layout": 672,
-                "style": 161,
-                "parseHTML": 95,
-                "gc": 18,
-                "other": 0,
-                "paint": 23
-              },
-              {
-                "ms": 747,
-                "script": 38,
-                "style": 116,
-                "layout": 512,
-                "gc": 17,
-                "other": 0,
-                "parseHTML": 65
-              }
-            ]
-          }
-        }
-      ]
-    },
-    "lcp": {
-      "load": [
-        {
-          "lcpMs": 96,
-          "lcpElement": "img#hero-image",
-          "lcpUrl": "hero-episode.jpg",
-          "lcpSize": 225704,
-          "fcpMs": 96,
-          "heroRequestStartMs": 10,
-          "heroResponseEndMs": 12,
-          "heroRequestAfterDocMs": 10,
-          "heroInitialPriority": "High",
           "heroRendered": {
             "w": 634,
             "h": 356
@@ -677,25 +123,778 @@
           ]
         },
         {
-          "lcpMs": 108,
+          "lcpMs": 728,
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 225704,
-          "fcpMs": 108,
+          "fcpMs": 100,
+          "heroRequestStartMs": 713,
+          "heroResponseEndMs": 714,
+          "heroRequestAfterDocMs": 713,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 2570,
+          "announcementHeight": 191,
+          "cls": 0.1308,
+          "shifts": [
+            {
+              "t": 2577,
+              "value": 0.1308,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 99,
+                  "to": 290
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lcpMs": 740,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 88,
+          "heroRequestStartMs": 716,
+          "heroResponseEndMs": 717,
+          "heroRequestAfterDocMs": 716,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 2568,
+          "announcementHeight": 191,
+          "cls": 0.1308,
+          "shifts": [
+            {
+              "t": 2570,
+              "value": 0.1308,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 99,
+                  "to": 290
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "slow4g": [
+        {
+          "lcpMs": 5448,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 1288,
+          "heroRequestStartMs": 3357,
+          "heroResponseEndMs": 5431,
+          "heroRequestAfterDocMs": 3356,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 3784,
+          "announcementHeight": 191,
+          "cls": 0.1308,
+          "shifts": [
+            {
+              "t": 3796,
+              "value": 0.1308,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 99,
+                  "to": 290
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lcpMs": 5428,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 1288,
+          "heroRequestStartMs": 3348,
+          "heroResponseEndMs": 5421,
+          "heroRequestAfterDocMs": 3347,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 3782,
+          "announcementHeight": 191,
+          "cls": 0.1308,
+          "shifts": [
+            {
+              "t": 3790,
+              "value": 0.1308,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 99,
+                  "to": 290
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lcpMs": 5448,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 1288,
+          "heroRequestStartMs": 3365,
+          "heroResponseEndMs": 5439,
+          "heroRequestAfterDocMs": 3365,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 3784,
+          "announcementHeight": 191,
+          "cls": 0.1308,
+          "shifts": [
+            {
+              "t": 3794,
+              "value": 0.1308,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 99,
+                  "to": 290
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lcpMs": 5444,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 1284,
+          "heroRequestStartMs": 3358,
+          "heroResponseEndMs": 5429,
+          "heroRequestAfterDocMs": 3358,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 3781,
+          "announcementHeight": 191,
+          "cls": 0.1308,
+          "shifts": [
+            {
+              "t": 3793,
+              "value": 0.1308,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 99,
+                  "to": 290
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lcpMs": 5444,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 1292,
+          "heroRequestStartMs": 3365,
+          "heroResponseEndMs": 5439,
+          "heroRequestAfterDocMs": 3365,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 3784,
+          "announcementHeight": 191,
+          "cls": 0.1308,
+          "shifts": [
+            {
+              "t": 3795,
+              "value": 0.1308,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 99,
+                  "to": 290
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "mobile": [
+        {
+          "lcpMs": 732,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 72316,
+          "fcpMs": 88,
+          "heroRequestStartMs": 716,
+          "heroResponseEndMs": 716,
+          "heroRequestAfterDocMs": 715,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 358,
+            "h": 201
+          },
+          "announcementAtMs": 2569,
+          "announcementHeight": 265,
+          "cls": 0.2373,
+          "shifts": [
+            {
+              "t": 2578,
+              "value": 0.2373,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 206,
+                  "to": 471
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lcpMs": 716,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 72316,
+          "fcpMs": 100,
+          "heroRequestStartMs": 699,
+          "heroResponseEndMs": 699,
+          "heroRequestAfterDocMs": 698,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 358,
+            "h": 201
+          },
+          "announcementAtMs": 2573,
+          "announcementHeight": 265,
+          "cls": 0.2373,
+          "shifts": [
+            {
+              "t": 2580,
+              "value": 0.2373,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 206,
+                  "to": 471
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lcpMs": 724,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 72316,
+          "fcpMs": 88,
+          "heroRequestStartMs": 718,
+          "heroResponseEndMs": 718,
+          "heroRequestAfterDocMs": 717,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 358,
+            "h": 201
+          },
+          "announcementAtMs": 2569,
+          "announcementHeight": 265,
+          "cls": 0.2373,
+          "shifts": [
+            {
+              "t": 2588,
+              "value": 0.2373,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 206,
+                  "to": 471
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lcpMs": 736,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 72316,
+          "fcpMs": 100,
+          "heroRequestStartMs": 714,
+          "heroResponseEndMs": 715,
+          "heroRequestAfterDocMs": 713,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 358,
+            "h": 201
+          },
+          "announcementAtMs": 2572,
+          "announcementHeight": 265,
+          "cls": 0.2373,
+          "shifts": [
+            {
+              "t": 2581,
+              "value": 0.2373,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 206,
+                  "to": 471
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lcpMs": 732,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 72316,
+          "fcpMs": 92,
+          "heroRequestStartMs": 706,
+          "heroResponseEndMs": 707,
+          "heroRequestAfterDocMs": 706,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 358,
+            "h": 201
+          },
+          "announcementAtMs": 2566,
+          "announcementHeight": 265,
+          "cls": 0.2373,
+          "shifts": [
+            {
+              "t": 2578,
+              "value": 0.2373,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 206,
+                  "to": 471
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "interaction": [
+        {
+          "query": "coding",
+          "expected": 1686,
+          "shown": 1686,
+          "status": "1.686 baris cocok dengan “coding”.",
+          "keysSeen": 6,
+          "interactionCount": 6,
+          "worstInteractionMs": 1992,
+          "worst": {
+            "name": "keydown",
+            "durationMs": 1992,
+            "inputDelayMs": 1,
+            "processingMs": 1,
+            "presentationMs": 1989
+          },
+          "interactionsMs": [
+            1992,
+            1872,
+            1752,
+            1632,
+            1512,
+            1392
+          ],
+          "lateShift": 0,
+          "trace": {
+            "maxParsesPerLayout": 2,
+            "totalsMs": {
+              "script": 203,
+              "style": 291,
+              "layout": 1237,
+              "gc": 42,
+              "other": 0,
+              "parseHTML": 180,
+              "paint": 25
+            },
+            "longTaskCount": 2,
+            "longestTasks": [
+              {
+                "ms": 1170,
+                "script": 153,
+                "layout": 695,
+                "style": 167,
+                "parseHTML": 98,
+                "gc": 20,
+                "other": 0,
+                "paint": 24
+              },
+              {
+                "ms": 816,
+                "script": 47,
+                "style": 123,
+                "layout": 542,
+                "gc": 21,
+                "other": 0,
+                "parseHTML": 82
+              }
+            ]
+          }
+        },
+        {
+          "query": "coding",
+          "expected": 1686,
+          "shown": 1686,
+          "status": "1.686 baris cocok dengan “coding”.",
+          "keysSeen": 6,
+          "interactionCount": 6,
+          "worstInteractionMs": 2008,
+          "worst": {
+            "name": "keydown",
+            "durationMs": 2008,
+            "inputDelayMs": 0,
+            "processingMs": 1,
+            "presentationMs": 2007
+          },
+          "interactionsMs": [
+            2008,
+            1888,
+            1768,
+            1648,
+            1528,
+            1408
+          ],
+          "lateShift": 0,
+          "trace": {
+            "maxParsesPerLayout": 2,
+            "totalsMs": {
+              "paint": 25,
+              "other": 0,
+              "script": 212,
+              "style": 282,
+              "layout": 1264,
+              "gc": 39,
+              "parseHTML": 174
+            },
+            "longTaskCount": 2,
+            "longestTasks": [
+              {
+                "ms": 1209,
+                "script": 168,
+                "layout": 711,
+                "style": 167,
+                "parseHTML": 105,
+                "gc": 23,
+                "other": 0,
+                "paint": 24
+              },
+              {
+                "ms": 795,
+                "script": 41,
+                "style": 115,
+                "layout": 553,
+                "gc": 16,
+                "other": 0,
+                "parseHTML": 69
+              }
+            ]
+          }
+        },
+        {
+          "query": "coding",
+          "expected": 1686,
+          "shown": 1686,
+          "status": "1.686 baris cocok dengan “coding”.",
+          "keysSeen": 6,
+          "interactionCount": 6,
+          "worstInteractionMs": 1944,
+          "worst": {
+            "name": "keydown",
+            "durationMs": 1944,
+            "inputDelayMs": 0,
+            "processingMs": 1,
+            "presentationMs": 1943
+          },
+          "interactionsMs": [
+            1944,
+            1824,
+            1704,
+            1584,
+            1464,
+            1344
+          ],
+          "lateShift": 0,
+          "trace": {
+            "maxParsesPerLayout": 2,
+            "totalsMs": {
+              "script": 201,
+              "style": 280,
+              "layout": 1219,
+              "gc": 34,
+              "other": 0,
+              "parseHTML": 167,
+              "paint": 25
+            },
+            "longTaskCount": 2,
+            "longestTasks": [
+              {
+                "ms": 1171,
+                "script": 158,
+                "layout": 695,
+                "style": 164,
+                "parseHTML": 99,
+                "gc": 19,
+                "other": 0,
+                "paint": 25
+              },
+              {
+                "ms": 765,
+                "script": 41,
+                "style": 117,
+                "layout": 524,
+                "gc": 15,
+                "other": 0,
+                "parseHTML": 67
+              }
+            ]
+          }
+        },
+        {
+          "query": "coding",
+          "expected": 1686,
+          "shown": 1686,
+          "status": "1.686 baris cocok dengan “coding”.",
+          "keysSeen": 6,
+          "interactionCount": 6,
+          "worstInteractionMs": 1936,
+          "worst": {
+            "name": "keydown",
+            "durationMs": 1936,
+            "inputDelayMs": 1,
+            "processingMs": 1,
+            "presentationMs": 1935
+          },
+          "interactionsMs": [
+            1936,
+            1816,
+            1696,
+            1576,
+            1456,
+            1336
+          ],
+          "lateShift": 0,
+          "trace": {
+            "maxParsesPerLayout": 2,
+            "totalsMs": {
+              "script": 200,
+              "style": 281,
+              "layout": 1212,
+              "gc": 35,
+              "other": 0,
+              "parseHTML": 163,
+              "paint": 25
+            },
+            "longTaskCount": 2,
+            "longestTasks": [
+              {
+                "ms": 1169,
+                "script": 158,
+                "layout": 693,
+                "style": 164,
+                "parseHTML": 98,
+                "gc": 18,
+                "other": 0,
+                "paint": 24
+              },
+              {
+                "ms": 758,
+                "script": 40,
+                "style": 117,
+                "layout": 519,
+                "gc": 17,
+                "other": 0,
+                "parseHTML": 66
+              }
+            ]
+          }
+        },
+        {
+          "query": "coding",
+          "expected": 1686,
+          "shown": 1686,
+          "status": "1.686 baris cocok dengan “coding”.",
+          "keysSeen": 6,
+          "interactionCount": 6,
+          "worstInteractionMs": 1904,
+          "worst": {
+            "name": "keydown",
+            "durationMs": 1904,
+            "inputDelayMs": 1,
+            "processingMs": 1,
+            "presentationMs": 1903
+          },
+          "interactionsMs": [
+            1904,
+            1784,
+            1664,
+            1552,
+            1424,
+            1304
+          ],
+          "lateShift": 0,
+          "trace": {
+            "maxParsesPerLayout": 2,
+            "totalsMs": {
+              "script": 197,
+              "style": 277,
+              "layout": 1190,
+              "gc": 36,
+              "other": 1,
+              "parseHTML": 160,
+              "paint": 26
+            },
+            "longTaskCount": 2,
+            "longestTasks": [
+              {
+                "ms": 1151,
+                "script": 154,
+                "layout": 679,
+                "style": 161,
+                "parseHTML": 95,
+                "gc": 20,
+                "other": 1,
+                "paint": 25
+              },
+              {
+                "ms": 749,
+                "script": 40,
+                "style": 115,
+                "layout": 512,
+                "gc": 17,
+                "other": 0,
+                "parseHTML": 65
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "lcp": {
+      "load": [
+        {
+          "lcpMs": 88,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 88,
           "heroRequestStartMs": 10,
-          "heroResponseEndMs": 13,
-          "heroRequestAfterDocMs": 10,
+          "heroResponseEndMs": 11,
+          "heroRequestAfterDocMs": 9,
           "heroInitialPriority": "High",
           "heroRendered": {
             "w": 634,
             "h": 356
           },
-          "announcementAtMs": 2577,
+          "announcementAtMs": 2567,
           "announcementHeight": 191,
           "cls": 0.1308,
           "shifts": [
             {
-              "t": 2583,
+              "t": 2581,
+              "value": 0.1308,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 99,
+                  "to": 290
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lcpMs": 88,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 88,
+          "heroRequestStartMs": 9,
+          "heroResponseEndMs": 11,
+          "heroRequestAfterDocMs": 9,
+          "heroInitialPriority": "High",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 2566,
+          "announcementHeight": 191,
+          "cls": 0.1308,
+          "shifts": [
+            {
+              "t": 2571,
+              "value": 0.1308,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 99,
+                  "to": 290
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lcpMs": 84,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 84,
+          "heroRequestStartMs": 9,
+          "heroResponseEndMs": 11,
+          "heroRequestAfterDocMs": 9,
+          "heroInitialPriority": "High",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 2564,
+          "announcementHeight": 191,
+          "cls": 0.1308,
+          "shifts": [
+            {
+              "t": 2569,
               "value": 0.1308,
               "hadRecentInput": false,
               "sources": [
@@ -715,46 +914,14 @@
           "lcpSize": 225704,
           "fcpMs": 88,
           "heroRequestStartMs": 10,
-          "heroResponseEndMs": 13,
+          "heroResponseEndMs": 12,
           "heroRequestAfterDocMs": 10,
           "heroInitialPriority": "High",
           "heroRendered": {
             "w": 634,
             "h": 356
           },
-          "announcementAtMs": 2566,
-          "announcementHeight": 191,
-          "cls": 0.1308,
-          "shifts": [
-            {
-              "t": 2570,
-              "value": 0.1308,
-              "hadRecentInput": false,
-              "sources": [
-                {
-                  "node": "main",
-                  "from": 99,
-                  "to": 290
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "lcpMs": 100,
-          "lcpElement": "img#hero-image",
-          "lcpUrl": "hero-episode.jpg",
-          "lcpSize": 225704,
-          "fcpMs": 100,
-          "heroRequestStartMs": 10,
-          "heroResponseEndMs": 11,
-          "heroRequestAfterDocMs": 10,
-          "heroInitialPriority": "High",
-          "heroRendered": {
-            "w": 634,
-            "h": 356
-          },
-          "announcementAtMs": 2566,
+          "announcementAtMs": 2570,
           "announcementHeight": 191,
           "cls": 0.1308,
           "shifts": [
@@ -773,12 +940,12 @@
           ]
         },
         {
-          "lcpMs": 84,
+          "lcpMs": 100,
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 225704,
-          "fcpMs": 84,
-          "heroRequestStartMs": 10,
+          "fcpMs": 100,
+          "heroRequestStartMs": 9,
           "heroResponseEndMs": 11,
           "heroRequestAfterDocMs": 9,
           "heroInitialPriority": "High",
@@ -791,7 +958,169 @@
           "cls": 0.1308,
           "shifts": [
             {
-              "t": 2569,
+              "t": 2581,
+              "value": 0.1308,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 99,
+                  "to": 290
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "slow4g": [
+        {
+          "lcpMs": 2336,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 1352,
+          "heroRequestStartMs": 585,
+          "heroResponseEndMs": 2331,
+          "heroRequestAfterDocMs": 585,
+          "heroInitialPriority": "High",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 3785,
+          "announcementHeight": 191,
+          "cls": 0.1308,
+          "shifts": [
+            {
+              "t": 3800,
+              "value": 0.1308,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 99,
+                  "to": 290
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lcpMs": 2352,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 1336,
+          "heroRequestStartMs": 584,
+          "heroResponseEndMs": 2331,
+          "heroRequestAfterDocMs": 584,
+          "heroInitialPriority": "High",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 3783,
+          "announcementHeight": 191,
+          "cls": 0.1308,
+          "shifts": [
+            {
+              "t": 3795,
+              "value": 0.1308,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 99,
+                  "to": 290
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lcpMs": 2352,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 1344,
+          "heroRequestStartMs": 583,
+          "heroResponseEndMs": 2329,
+          "heroRequestAfterDocMs": 583,
+          "heroInitialPriority": "High",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 3784,
+          "announcementHeight": 191,
+          "cls": 0.1308,
+          "shifts": [
+            {
+              "t": 3795,
+              "value": 0.1308,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 99,
+                  "to": 290
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lcpMs": 2264,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 1348,
+          "heroRequestStartMs": 583,
+          "heroResponseEndMs": 2247,
+          "heroRequestAfterDocMs": 583,
+          "heroInitialPriority": "High",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 3832,
+          "announcementHeight": 191,
+          "cls": 0.1308,
+          "shifts": [
+            {
+              "t": 3845,
+              "value": 0.1308,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 99,
+                  "to": 290
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lcpMs": 2352,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 1336,
+          "heroRequestStartMs": 584,
+          "heroResponseEndMs": 2329,
+          "heroRequestAfterDocMs": 584,
+          "heroInitialPriority": "High",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 3783,
+          "announcementHeight": 191,
+          "cls": 0.1308,
+          "shifts": [
+            {
+              "t": 3795,
               "value": 0.1308,
               "hadRecentInput": false,
               "sources": [
@@ -807,57 +1136,25 @@
       ],
       "mobile": [
         {
-          "lcpMs": 92,
+          "lcpMs": 96,
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 72316,
-          "fcpMs": 92,
+          "fcpMs": 96,
           "heroRequestStartMs": 10,
-          "heroResponseEndMs": 12,
-          "heroRequestAfterDocMs": 10,
+          "heroResponseEndMs": 11,
+          "heroRequestAfterDocMs": 9,
           "heroInitialPriority": "High",
           "heroRendered": {
             "w": 358,
             "h": 201
           },
-          "announcementAtMs": 2567,
+          "announcementAtMs": 2569,
           "announcementHeight": 265,
           "cls": 0.2373,
           "shifts": [
             {
-              "t": 2573,
-              "value": 0.2373,
-              "hadRecentInput": false,
-              "sources": [
-                {
-                  "node": "main",
-                  "from": 206,
-                  "to": 471
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "lcpMs": 100,
-          "lcpElement": "img#hero-image",
-          "lcpUrl": "hero-episode.jpg",
-          "lcpSize": 72316,
-          "fcpMs": 100,
-          "heroRequestStartMs": 10,
-          "heroResponseEndMs": 12,
-          "heroRequestAfterDocMs": 10,
-          "heroInitialPriority": "High",
-          "heroRendered": {
-            "w": 358,
-            "h": 201
-          },
-          "announcementAtMs": 2567,
-          "announcementHeight": 265,
-          "cls": 0.2373,
-          "shifts": [
-            {
-              "t": 2581,
+              "t": 2580,
               "value": 0.2373,
               "hadRecentInput": false,
               "sources": [
@@ -876,8 +1173,8 @@
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 72316,
           "fcpMs": 84,
-          "heroRequestStartMs": 10,
-          "heroResponseEndMs": 11,
+          "heroRequestStartMs": 11,
+          "heroResponseEndMs": 12,
           "heroRequestAfterDocMs": 10,
           "heroInitialPriority": "High",
           "heroRendered": {
@@ -889,7 +1186,7 @@
           "cls": 0.2373,
           "shifts": [
             {
-              "t": 2579,
+              "t": 2581,
               "value": 0.2373,
               "hadRecentInput": false,
               "sources": [
@@ -903,25 +1200,25 @@
           ]
         },
         {
-          "lcpMs": 92,
+          "lcpMs": 88,
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 72316,
-          "fcpMs": 92,
-          "heroRequestStartMs": 11,
-          "heroResponseEndMs": 12,
-          "heroRequestAfterDocMs": 11,
+          "fcpMs": 88,
+          "heroRequestStartMs": 10,
+          "heroResponseEndMs": 11,
+          "heroRequestAfterDocMs": 10,
           "heroInitialPriority": "High",
           "heroRendered": {
             "w": 358,
             "h": 201
           },
-          "announcementAtMs": 2566,
+          "announcementAtMs": 2570,
           "announcementHeight": 265,
           "cls": 0.2373,
           "shifts": [
             {
-              "t": 2571,
+              "t": 2583,
               "value": 0.2373,
               "hadRecentInput": false,
               "sources": [
@@ -941,8 +1238,8 @@
           "lcpSize": 72316,
           "fcpMs": 100,
           "heroRequestStartMs": 11,
-          "heroResponseEndMs": 13,
-          "heroRequestAfterDocMs": 10,
+          "heroResponseEndMs": 12,
+          "heroRequestAfterDocMs": 11,
           "heroInitialPriority": "High",
           "heroRendered": {
             "w": 358,
@@ -953,7 +1250,39 @@
           "cls": 0.2373,
           "shifts": [
             {
-              "t": 2581,
+              "t": 2585,
+              "value": 0.2373,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 206,
+                  "to": 471
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lcpMs": 100,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 72316,
+          "fcpMs": 100,
+          "heroRequestStartMs": 11,
+          "heroResponseEndMs": 12,
+          "heroRequestAfterDocMs": 10,
+          "heroInitialPriority": "High",
+          "heroRendered": {
+            "w": 358,
+            "h": 201
+          },
+          "announcementAtMs": 2566,
+          "announcementHeight": 265,
+          "cls": 0.2373,
+          "shifts": [
+            {
+              "t": 2582,
               "value": 0.2373,
               "hadRecentInput": false,
               "sources": [
@@ -975,52 +1304,111 @@
           "status": "1.686 baris cocok dengan “coding”.",
           "keysSeen": 6,
           "interactionCount": 6,
-          "worstInteractionMs": 1872,
+          "worstInteractionMs": 2008,
           "worst": {
             "name": "keydown",
-            "durationMs": 1872,
+            "durationMs": 2008,
             "inputDelayMs": 0,
             "processingMs": 1,
-            "presentationMs": 1871
+            "presentationMs": 2007
           },
           "interactionsMs": [
-            1872,
-            1752,
-            1632,
-            1512,
-            1392,
-            1272
+            2008,
+            1888,
+            1768,
+            1648,
+            1528,
+            1408
           ],
           "lateShift": 0,
           "trace": {
             "maxParsesPerLayout": 2,
             "totalsMs": {
-              "script": 186,
-              "style": 272,
-              "layout": 1187,
-              "gc": 31,
+              "script": 211,
+              "style": 294,
+              "layout": 1246,
+              "gc": 40,
               "other": 1,
-              "parseHTML": 161,
+              "parseHTML": 171,
+              "paint": 24
+            },
+            "longTaskCount": 2,
+            "longestTasks": [
+              {
+                "ms": 1205,
+                "script": 165,
+                "layout": 705,
+                "style": 171,
+                "parseHTML": 103,
+                "gc": 23,
+                "other": 0,
+                "paint": 24
+              },
+              {
+                "ms": 792,
+                "script": 43,
+                "style": 123,
+                "layout": 541,
+                "gc": 17,
+                "other": 0,
+                "parseHTML": 68
+              }
+            ]
+          }
+        },
+        {
+          "query": "coding",
+          "expected": 1686,
+          "shown": 1686,
+          "status": "1.686 baris cocok dengan “coding”.",
+          "keysSeen": 6,
+          "interactionCount": 6,
+          "worstInteractionMs": 1904,
+          "worst": {
+            "name": "keydown",
+            "durationMs": 1904,
+            "inputDelayMs": 0,
+            "processingMs": 1,
+            "presentationMs": 1903
+          },
+          "interactionsMs": [
+            1904,
+            1784,
+            1664,
+            1544,
+            1424,
+            1304
+          ],
+          "lateShift": 0,
+          "trace": {
+            "maxParsesPerLayout": 2,
+            "totalsMs": {
+              "script": 194,
+              "style": 277,
+              "layout": 1201,
+              "gc": 30,
+              "other": 1,
+              "parseHTML": 159,
               "paint": 23
             },
             "longTaskCount": 2,
             "longestTasks": [
               {
-                "ms": 1123,
-                "script": 147,
-                "layout": 674,
-                "style": 159,
-                "parseHTML": 96,
-                "gc": 15,
+                "ms": 1142,
+                "script": 152,
+                "layout": 681,
+                "style": 163,
+                "parseHTML": 94,
+                "gc": 16,
                 "other": 1,
                 "paint": 23
               },
               {
-                "ms": 745,
-                "script": 37,
-                "style": 113,
-                "layout": 513,
-                "gc": 16,
+                "ms": 752,
+                "script": 39,
+                "style": 114,
+                "layout": 520,
+                "gc": 14,
                 "other": 0,
                 "parseHTML": 65
               }
@@ -1034,52 +1422,111 @@
           "status": "1.686 baris cocok dengan “coding”.",
           "keysSeen": 6,
           "interactionCount": 6,
-          "worstInteractionMs": 1848,
+          "worstInteractionMs": 1896,
           "worst": {
             "name": "keydown",
-            "durationMs": 1848,
-            "inputDelayMs": 1,
-            "processingMs": 1,
-            "presentationMs": 1847
+            "durationMs": 1896,
+            "inputDelayMs": 0,
+            "processingMs": 0,
+            "presentationMs": 1896
           },
           "interactionsMs": [
-            1848,
-            1728,
-            1608,
-            1488,
-            1368,
-            1248
+            1896,
+            1776,
+            1656,
+            1536,
+            1416,
+            1296
           ],
           "lateShift": 0,
           "trace": {
             "maxParsesPerLayout": 2,
             "totalsMs": {
-              "script": 182,
-              "style": 267,
-              "layout": 1169,
-              "gc": 30,
               "other": 0,
+              "script": 195,
+              "style": 276,
+              "layout": 1190,
+              "gc": 34,
               "parseHTML": 162,
-              "paint": 21
+              "paint": 24
             },
             "longTaskCount": 2,
             "longestTasks": [
               {
-                "ms": 1109,
-                "script": 142,
-                "layout": 666,
-                "style": 155,
-                "parseHTML": 96,
-                "gc": 18,
+                "ms": 1139,
+                "script": 153,
+                "layout": 675,
+                "style": 160,
+                "parseHTML": 95,
+                "gc": 20,
                 "other": 0,
-                "paint": 21
+                "paint": 24
               },
               {
-                "ms": 732,
+                "ms": 752,
+                "script": 40,
+                "style": 115,
+                "layout": 515,
+                "gc": 14,
+                "other": 0,
+                "parseHTML": 67
+              }
+            ]
+          }
+        },
+        {
+          "query": "coding",
+          "expected": 1686,
+          "shown": 1686,
+          "status": "1.686 baris cocok dengan “coding”.",
+          "keysSeen": 6,
+          "interactionCount": 6,
+          "worstInteractionMs": 1904,
+          "worst": {
+            "name": "keydown",
+            "durationMs": 1904,
+            "inputDelayMs": 1,
+            "processingMs": 1,
+            "presentationMs": 1903
+          },
+          "interactionsMs": [
+            1904,
+            1784,
+            1664,
+            1544,
+            1424,
+            1304
+          ],
+          "lateShift": 0,
+          "trace": {
+            "maxParsesPerLayout": 2,
+            "totalsMs": {
+              "script": 188,
+              "style": 276,
+              "layout": 1196,
+              "gc": 35,
+              "other": 1,
+              "parseHTML": 163,
+              "paint": 23
+            },
+            "longTaskCount": 2,
+            "longestTasks": [
+              {
+                "ms": 1144,
+                "script": 148,
+                "layout": 683,
+                "style": 160,
+                "parseHTML": 98,
+                "gc": 17,
+                "other": 1,
+                "paint": 23
+              },
+              {
+                "ms": 751,
                 "script": 39,
-                "style": 112,
-                "layout": 503,
-                "gc": 12,
+                "style": 116,
+                "layout": 512,
+                "gc": 18,
                 "other": 0,
                 "parseHTML": 66
               }
@@ -1093,170 +1540,52 @@
           "status": "1.686 baris cocok dengan “coding”.",
           "keysSeen": 6,
           "interactionCount": 6,
-          "worstInteractionMs": 1880,
+          "worstInteractionMs": 1904,
           "worst": {
             "name": "keydown",
-            "durationMs": 1880,
-            "inputDelayMs": 0,
-            "processingMs": 0,
-            "presentationMs": 1880
-          },
-          "interactionsMs": [
-            1880,
-            1760,
-            1640,
-            1520,
-            1400,
-            1280
-          ],
-          "lateShift": 0,
-          "trace": {
-            "maxParsesPerLayout": 2,
-            "totalsMs": {
-              "script": 186,
-              "style": 274,
-              "layout": 1191,
-              "gc": 32,
-              "other": 1,
-              "parseHTML": 160,
-              "paint": 21
-            },
-            "longTaskCount": 2,
-            "longestTasks": [
-              {
-                "ms": 1135,
-                "script": 147,
-                "layout": 677,
-                "style": 161,
-                "gc": 20,
-                "other": 1,
-                "parseHTML": 96,
-                "paint": 21
-              },
-              {
-                "ms": 740,
-                "script": 37,
-                "style": 113,
-                "layout": 514,
-                "gc": 11,
-                "other": 0,
-                "parseHTML": 64
-              }
-            ]
-          }
-        },
-        {
-          "query": "coding",
-          "expected": 1686,
-          "shown": 1686,
-          "status": "1.686 baris cocok dengan “coding”.",
-          "keysSeen": 6,
-          "interactionCount": 6,
-          "worstInteractionMs": 1872,
-          "worst": {
-            "name": "keydown",
-            "durationMs": 1872,
-            "inputDelayMs": 0,
+            "durationMs": 1904,
+            "inputDelayMs": 1,
             "processingMs": 1,
-            "presentationMs": 1871
+            "presentationMs": 1903
           },
           "interactionsMs": [
-            1872,
-            1752,
-            1632,
-            1512,
-            1392,
-            1272
+            1904,
+            1784,
+            1664,
+            1544,
+            1424,
+            1304
           ],
           "lateShift": 0,
           "trace": {
             "maxParsesPerLayout": 2,
             "totalsMs": {
-              "script": 188,
+              "script": 197,
               "style": 277,
-              "layout": 1174,
-              "gc": 38,
+              "layout": 1199,
+              "gc": 28,
               "other": 0,
-              "parseHTML": 158,
-              "paint": 22
+              "parseHTML": 161,
+              "paint": 24
             },
             "longTaskCount": 2,
             "longestTasks": [
               {
-                "ms": 1120,
-                "script": 150,
-                "layout": 664,
-                "style": 161,
-                "parseHTML": 94,
-                "gc": 19,
+                "ms": 1151,
+                "script": 155,
+                "layout": 685,
+                "style": 162,
+                "parseHTML": 96,
+                "gc": 15,
                 "other": 0,
-                "paint": 22
+                "paint": 24
               },
               {
                 "ms": 746,
-                "script": 36,
-                "style": 117,
-                "layout": 510,
-                "gc": 18,
-                "other": 0,
-                "parseHTML": 64
-              }
-            ]
-          }
-        },
-        {
-          "query": "coding",
-          "expected": 1686,
-          "shown": 1686,
-          "status": "1.686 baris cocok dengan “coding”.",
-          "keysSeen": 6,
-          "interactionCount": 6,
-          "worstInteractionMs": 1864,
-          "worst": {
-            "name": "keydown",
-            "durationMs": 1864,
-            "inputDelayMs": 0,
-            "processingMs": 1,
-            "presentationMs": 1863
-          },
-          "interactionsMs": [
-            1864,
-            1744,
-            1624,
-            1504,
-            1384,
-            1264
-          ],
-          "lateShift": 0,
-          "trace": {
-            "maxParsesPerLayout": 2,
-            "totalsMs": {
-              "script": 183,
-              "style": 274,
-              "layout": 1175,
-              "gc": 32,
-              "other": 0,
-              "parseHTML": 159,
-              "paint": 23
-            },
-            "longTaskCount": 2,
-            "longestTasks": [
-              {
-                "ms": 1119,
-                "script": 144,
-                "layout": 665,
-                "style": 160,
-                "parseHTML": 95,
-                "gc": 21,
-                "other": 0,
-                "paint": 23
-              },
-              {
-                "ms": 736,
-                "script": 37,
-                "style": 113,
-                "layout": 510,
-                "gc": 11,
+                "script": 39,
+                "style": 115,
+                "layout": 515,
+                "gc": 13,
                 "other": 0,
                 "parseHTML": 64
               }
@@ -1268,25 +1597,25 @@
     "inp": {
       "load": [
         {
-          "lcpMs": 720,
+          "lcpMs": 732,
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 225704,
-          "fcpMs": 92,
-          "heroRequestStartMs": 712,
-          "heroResponseEndMs": 713,
-          "heroRequestAfterDocMs": 712,
+          "fcpMs": 96,
+          "heroRequestStartMs": 718,
+          "heroResponseEndMs": 719,
+          "heroRequestAfterDocMs": 718,
           "heroInitialPriority": "Low",
           "heroRendered": {
             "w": 634,
             "h": 356
           },
-          "announcementAtMs": 2565,
+          "announcementAtMs": 2567,
           "announcementHeight": 191,
           "cls": 0.1308,
           "shifts": [
             {
-              "t": 2568,
+              "t": 2578,
               "value": 0.1308,
               "hadRecentInput": false,
               "sources": [
@@ -1304,16 +1633,112 @@
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 225704,
-          "fcpMs": 84,
+          "fcpMs": 88,
           "heroRequestStartMs": 708,
-          "heroResponseEndMs": 709,
-          "heroRequestAfterDocMs": 708,
+          "heroResponseEndMs": 708,
+          "heroRequestAfterDocMs": 707,
           "heroInitialPriority": "Low",
           "heroRendered": {
             "w": 634,
             "h": 356
           },
           "announcementAtMs": 2566,
+          "announcementHeight": 191,
+          "cls": 0.1308,
+          "shifts": [
+            {
+              "t": 2581,
+              "value": 0.1308,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 99,
+                  "to": 290
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lcpMs": 720,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 96,
+          "heroRequestStartMs": 710,
+          "heroResponseEndMs": 711,
+          "heroRequestAfterDocMs": 710,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 2567,
+          "announcementHeight": 191,
+          "cls": 0.1308,
+          "shifts": [
+            {
+              "t": 2580,
+              "value": 0.1308,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 99,
+                  "to": 290
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lcpMs": 716,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 84,
+          "heroRequestStartMs": 710,
+          "heroResponseEndMs": 711,
+          "heroRequestAfterDocMs": 710,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 2568,
+          "announcementHeight": 191,
+          "cls": 0.1308,
+          "shifts": [
+            {
+              "t": 2581,
+              "value": 0.1308,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 99,
+                  "to": 290
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lcpMs": 720,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 100,
+          "heroRequestStartMs": 709,
+          "heroResponseEndMs": 711,
+          "heroRequestAfterDocMs": 709,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 2568,
           "announcementHeight": 191,
           "cls": 0.1308,
           "shifts": [
@@ -1330,27 +1755,29 @@
               ]
             }
           ]
-        },
+        }
+      ],
+      "slow4g": [
         {
-          "lcpMs": 720,
+          "lcpMs": 5448,
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 225704,
-          "fcpMs": 84,
-          "heroRequestStartMs": 707,
-          "heroResponseEndMs": 708,
-          "heroRequestAfterDocMs": 707,
+          "fcpMs": 1292,
+          "heroRequestStartMs": 3366,
+          "heroResponseEndMs": 5441,
+          "heroRequestAfterDocMs": 3366,
           "heroInitialPriority": "Low",
           "heroRendered": {
             "w": 634,
             "h": 356
           },
-          "announcementAtMs": 2566,
+          "announcementAtMs": 3789,
           "announcementHeight": 191,
           "cls": 0.1308,
           "shifts": [
             {
-              "t": 2583,
+              "t": 3798,
               "value": 0.1308,
               "hadRecentInput": false,
               "sources": [
@@ -1364,25 +1791,25 @@
           ]
         },
         {
-          "lcpMs": 736,
+          "lcpMs": 5444,
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 225704,
-          "fcpMs": 96,
-          "heroRequestStartMs": 714,
-          "heroResponseEndMs": 715,
-          "heroRequestAfterDocMs": 713,
+          "fcpMs": 1288,
+          "heroRequestStartMs": 3356,
+          "heroResponseEndMs": 5430,
+          "heroRequestAfterDocMs": 3356,
           "heroInitialPriority": "Low",
           "heroRendered": {
             "w": 634,
             "h": 356
           },
-          "announcementAtMs": 2568,
+          "announcementAtMs": 3782,
           "announcementHeight": 191,
           "cls": 0.1308,
           "shifts": [
             {
-              "t": 2583,
+              "t": 3793,
               "value": 0.1308,
               "hadRecentInput": false,
               "sources": [
@@ -1396,25 +1823,89 @@
           ]
         },
         {
-          "lcpMs": 700,
+          "lcpMs": 5432,
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 225704,
-          "fcpMs": 100,
-          "heroRequestStartMs": 691,
-          "heroResponseEndMs": 692,
-          "heroRequestAfterDocMs": 691,
+          "fcpMs": 1284,
+          "heroRequestStartMs": 3348,
+          "heroResponseEndMs": 5421,
+          "heroRequestAfterDocMs": 3348,
           "heroInitialPriority": "Low",
           "heroRendered": {
             "w": 634,
             "h": 356
           },
-          "announcementAtMs": 2565,
+          "announcementAtMs": 3782,
           "announcementHeight": 191,
           "cls": 0.1308,
           "shifts": [
             {
-              "t": 2581,
+              "t": 3795,
+              "value": 0.1308,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 99,
+                  "to": 290
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lcpMs": 5448,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 1284,
+          "heroRequestStartMs": 3357,
+          "heroResponseEndMs": 5431,
+          "heroRequestAfterDocMs": 3357,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 3781,
+          "announcementHeight": 191,
+          "cls": 0.1308,
+          "shifts": [
+            {
+              "t": 3795,
+              "value": 0.1308,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 99,
+                  "to": 290
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lcpMs": 5428,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 1288,
+          "heroRequestStartMs": 3348,
+          "heroResponseEndMs": 5422,
+          "heroRequestAfterDocMs": 3348,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 3782,
+          "announcementHeight": 191,
+          "cls": 0.1308,
+          "shifts": [
+            {
+              "t": 3792,
               "value": 0.1308,
               "hadRecentInput": false,
               "sources": [
@@ -1430,52 +1921,20 @@
       ],
       "mobile": [
         {
-          "lcpMs": 716,
+          "lcpMs": 736,
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 72316,
-          "fcpMs": 96,
-          "heroRequestStartMs": 708,
-          "heroResponseEndMs": 709,
-          "heroRequestAfterDocMs": 707,
+          "fcpMs": 88,
+          "heroRequestStartMs": 713,
+          "heroResponseEndMs": 714,
+          "heroRequestAfterDocMs": 713,
           "heroInitialPriority": "Low",
           "heroRendered": {
             "w": 358,
             "h": 201
           },
-          "announcementAtMs": 2566,
-          "announcementHeight": 265,
-          "cls": 0.2373,
-          "shifts": [
-            {
-              "t": 2580,
-              "value": 0.2373,
-              "hadRecentInput": false,
-              "sources": [
-                {
-                  "node": "main",
-                  "from": 206,
-                  "to": 471
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "lcpMs": 716,
-          "lcpElement": "img#hero-image",
-          "lcpUrl": "hero-episode.jpg",
-          "lcpSize": 72316,
-          "fcpMs": 100,
-          "heroRequestStartMs": 707,
-          "heroResponseEndMs": 708,
-          "heroRequestAfterDocMs": 707,
-          "heroInitialPriority": "Low",
-          "heroRendered": {
-            "w": 358,
-            "h": 201
-          },
-          "announcementAtMs": 2566,
+          "announcementAtMs": 2571,
           "announcementHeight": 265,
           "cls": 0.2373,
           "shifts": [
@@ -1498,10 +1957,10 @@
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 72316,
-          "fcpMs": 100,
-          "heroRequestStartMs": 708,
-          "heroResponseEndMs": 709,
-          "heroRequestAfterDocMs": 708,
+          "fcpMs": 96,
+          "heroRequestStartMs": 712,
+          "heroResponseEndMs": 712,
+          "heroRequestAfterDocMs": 711,
           "heroInitialPriority": "Low",
           "heroRendered": {
             "w": 358,
@@ -1512,7 +1971,7 @@
           "cls": 0.2373,
           "shifts": [
             {
-              "t": 2584,
+              "t": 2581,
               "value": 0.2373,
               "hadRecentInput": false,
               "sources": [
@@ -1526,14 +1985,46 @@
           ]
         },
         {
-          "lcpMs": 712,
+          "lcpMs": 720,
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 72316,
-          "fcpMs": 96,
-          "heroRequestStartMs": 694,
-          "heroResponseEndMs": 695,
-          "heroRequestAfterDocMs": 693,
+          "fcpMs": 88,
+          "heroRequestStartMs": 710,
+          "heroResponseEndMs": 711,
+          "heroRequestAfterDocMs": 710,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 358,
+            "h": 201
+          },
+          "announcementAtMs": 2569,
+          "announcementHeight": 265,
+          "cls": 0.2373,
+          "shifts": [
+            {
+              "t": 2581,
+              "value": 0.2373,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 206,
+                  "to": 471
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lcpMs": 724,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 72316,
+          "fcpMs": 84,
+          "heroRequestStartMs": 709,
+          "heroResponseEndMs": 710,
+          "heroRequestAfterDocMs": 709,
           "heroInitialPriority": "Low",
           "heroRendered": {
             "w": 358,
@@ -1544,7 +2035,7 @@
           "cls": 0.2373,
           "shifts": [
             {
-              "t": 2576,
+              "t": 2585,
               "value": 0.2373,
               "hadRecentInput": false,
               "sources": [
@@ -1558,11 +2049,11 @@
           ]
         },
         {
-          "lcpMs": 716,
+          "lcpMs": 720,
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 72316,
-          "fcpMs": 96,
+          "fcpMs": 84,
           "heroRequestStartMs": 708,
           "heroResponseEndMs": 709,
           "heroRequestAfterDocMs": 708,
@@ -1598,12 +2089,168 @@
           "status": "1.686 baris cocok dengan “coding”.",
           "keysSeen": 6,
           "interactionCount": 6,
+          "worstInteractionMs": 40,
+          "worst": {
+            "name": "keydown",
+            "durationMs": 40,
+            "inputDelayMs": 8,
+            "processingMs": 1,
+            "presentationMs": 31
+          },
+          "interactionsMs": [
+            32,
+            40,
+            32,
+            32,
+            32,
+            24
+          ],
+          "lateShift": 0,
+          "trace": {
+            "maxParsesPerLayout": 2,
+            "totalsMs": {
+              "paint": 209,
+              "other": 1,
+              "script": 70,
+              "style": 71,
+              "layout": 311,
+              "gc": 16,
+              "parseHTML": 48
+            },
+            "longTaskCount": 0,
+            "longestTasks": []
+          }
+        },
+        {
+          "query": "coding",
+          "expected": 1686,
+          "shown": 1686,
+          "status": "1.686 baris cocok dengan “coding”.",
+          "keysSeen": 6,
+          "interactionCount": 6,
           "worstInteractionMs": 32,
           "worst": {
             "name": "keydown",
             "durationMs": 32,
             "inputDelayMs": 1,
             "processingMs": 1,
+            "presentationMs": 31
+          },
+          "interactionsMs": [
+            32,
+            32,
+            24,
+            32,
+            24,
+            32
+          ],
+          "lateShift": 0,
+          "trace": {
+            "maxParsesPerLayout": 2,
+            "totalsMs": {
+              "script": 72,
+              "style": 72,
+              "layout": 323,
+              "gc": 16,
+              "other": 1,
+              "parseHTML": 50,
+              "paint": 213
+            },
+            "longTaskCount": 0,
+            "longestTasks": []
+          }
+        },
+        {
+          "query": "coding",
+          "expected": 1686,
+          "shown": 1686,
+          "status": "1.686 baris cocok dengan “coding”.",
+          "keysSeen": 6,
+          "interactionCount": 6,
+          "worstInteractionMs": 40,
+          "worst": {
+            "name": "keydown",
+            "durationMs": 40,
+            "inputDelayMs": 10,
+            "processingMs": 0,
+            "presentationMs": 29
+          },
+          "interactionsMs": [
+            32,
+            40,
+            32,
+            24,
+            32,
+            24
+          ],
+          "lateShift": 0,
+          "trace": {
+            "maxParsesPerLayout": 2,
+            "totalsMs": {
+              "script": 80,
+              "style": 76,
+              "layout": 320,
+              "gc": 17,
+              "other": 3,
+              "parseHTML": 46,
+              "paint": 206
+            },
+            "longTaskCount": 0,
+            "longestTasks": []
+          }
+        },
+        {
+          "query": "coding",
+          "expected": 1686,
+          "shown": 1686,
+          "status": "1.686 baris cocok dengan “coding”.",
+          "keysSeen": 6,
+          "interactionCount": 6,
+          "worstInteractionMs": 32,
+          "worst": {
+            "name": "keydown",
+            "durationMs": 32,
+            "inputDelayMs": 0,
+            "processingMs": 1,
+            "presentationMs": 31
+          },
+          "interactionsMs": [
+            32,
+            32,
+            24,
+            32,
+            24,
+            32
+          ],
+          "lateShift": 0,
+          "trace": {
+            "maxParsesPerLayout": 2,
+            "totalsMs": {
+              "script": 72,
+              "style": 70,
+              "layout": 323,
+              "gc": 17,
+              "other": 3,
+              "parseHTML": 50,
+              "paint": 212
+            },
+            "longTaskCount": 0,
+            "longestTasks": []
+          }
+        },
+        {
+          "query": "coding",
+          "expected": 1686,
+          "shown": 1686,
+          "status": "1.686 baris cocok dengan “coding”.",
+          "keysSeen": 6,
+          "interactionCount": 6,
+          "worstInteractionMs": 32,
+          "worst": {
+            "name": "keydown",
+            "durationMs": 32,
+            "inputDelayMs": 1,
+            "processingMs": 0,
             "presentationMs": 31
           },
           "interactionsMs": [
@@ -1619,168 +2266,12 @@
             "maxParsesPerLayout": 2,
             "totalsMs": {
               "script": 75,
-              "style": 74,
-              "layout": 312,
-              "gc": 19,
-              "other": 3,
-              "parseHTML": 50,
-              "paint": 202
-            },
-            "longTaskCount": 0,
-            "longestTasks": []
-          }
-        },
-        {
-          "query": "coding",
-          "expected": 1686,
-          "shown": 1686,
-          "status": "1.686 baris cocok dengan “coding”.",
-          "keysSeen": 6,
-          "interactionCount": 6,
-          "worstInteractionMs": 32,
-          "worst": {
-            "name": "keydown",
-            "durationMs": 32,
-            "inputDelayMs": 0,
-            "processingMs": 1,
-            "presentationMs": 31
-          },
-          "interactionsMs": [
-            32,
-            32,
-            32,
-            24,
-            24,
-            32
-          ],
-          "lateShift": 0,
-          "trace": {
-            "maxParsesPerLayout": 2,
-            "totalsMs": {
-              "paint": 190,
-              "other": 1,
-              "script": 72,
-              "style": 71,
-              "layout": 299,
-              "gc": 17,
-              "parseHTML": 47
-            },
-            "longTaskCount": 0,
-            "longestTasks": []
-          }
-        },
-        {
-          "query": "coding",
-          "expected": 1686,
-          "shown": 1686,
-          "status": "1.686 baris cocok dengan “coding”.",
-          "keysSeen": 6,
-          "interactionCount": 6,
-          "worstInteractionMs": 32,
-          "worst": {
-            "name": "keydown",
-            "durationMs": 32,
-            "inputDelayMs": 0,
-            "processingMs": 0,
-            "presentationMs": 31
-          },
-          "interactionsMs": [
-            32,
-            32,
-            32,
-            24,
-            32,
-            32
-          ],
-          "lateShift": 0,
-          "trace": {
-            "maxParsesPerLayout": 2,
-            "totalsMs": {
-              "paint": 205,
-              "other": 3,
-              "script": 77,
-              "style": 70,
-              "layout": 308,
-              "gc": 19,
-              "parseHTML": 47
-            },
-            "longTaskCount": 0,
-            "longestTasks": []
-          }
-        },
-        {
-          "query": "coding",
-          "expected": 1686,
-          "shown": 1686,
-          "status": "1.686 baris cocok dengan “coding”.",
-          "keysSeen": 6,
-          "interactionCount": 6,
-          "worstInteractionMs": 32,
-          "worst": {
-            "name": "keydown",
-            "durationMs": 32,
-            "inputDelayMs": 0,
-            "processingMs": 1,
-            "presentationMs": 31
-          },
-          "interactionsMs": [
-            32,
-            32,
-            32,
-            24,
-            24,
-            32
-          ],
-          "lateShift": 0,
-          "trace": {
-            "maxParsesPerLayout": 2,
-            "totalsMs": {
-              "script": 70,
-              "style": 70,
-              "layout": 307,
+              "style": 73,
+              "layout": 323,
               "gc": 15,
+              "other": 1,
               "parseHTML": 48,
-              "paint": 198,
-              "other": 3
-            },
-            "longTaskCount": 0,
-            "longestTasks": []
-          }
-        },
-        {
-          "query": "coding",
-          "expected": 1686,
-          "shown": 1686,
-          "status": "1.686 baris cocok dengan “coding”.",
-          "keysSeen": 6,
-          "interactionCount": 6,
-          "worstInteractionMs": 32,
-          "worst": {
-            "name": "keydown",
-            "durationMs": 32,
-            "inputDelayMs": 1,
-            "processingMs": 1,
-            "presentationMs": 31
-          },
-          "interactionsMs": [
-            32,
-            32,
-            32,
-            24,
-            32,
-            32
-          ],
-          "lateShift": 0,
-          "trace": {
-            "maxParsesPerLayout": 2,
-            "totalsMs": {
-              "script": 80,
-              "style": 74,
-              "layout": 316,
-              "gc": 14,
-              "other": 3,
-              "parseHTML": 49,
-              "paint": 204
+              "paint": 207
             },
             "longTaskCount": 0,
             "longestTasks": []
@@ -1791,25 +2282,25 @@
     "inp-yield-only": {
       "load": [
         {
-          "lcpMs": 736,
+          "lcpMs": 724,
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 225704,
-          "fcpMs": 100,
-          "heroRequestStartMs": 714,
-          "heroResponseEndMs": 715,
-          "heroRequestAfterDocMs": 714,
+          "fcpMs": 88,
+          "heroRequestStartMs": 710,
+          "heroResponseEndMs": 711,
+          "heroRequestAfterDocMs": 710,
           "heroInitialPriority": "Low",
           "heroRendered": {
             "w": 634,
             "h": 356
           },
-          "announcementAtMs": 2567,
+          "announcementAtMs": 2568,
           "announcementHeight": 191,
           "cls": 0.1308,
           "shifts": [
             {
-              "t": 2584,
+              "t": 2573,
               "value": 0.1308,
               "hadRecentInput": false,
               "sources": [
@@ -1823,25 +2314,25 @@
           ]
         },
         {
-          "lcpMs": 720,
+          "lcpMs": 740,
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 225704,
-          "fcpMs": 84,
-          "heroRequestStartMs": 709,
-          "heroResponseEndMs": 710,
-          "heroRequestAfterDocMs": 709,
+          "fcpMs": 104,
+          "heroRequestStartMs": 719,
+          "heroResponseEndMs": 719,
+          "heroRequestAfterDocMs": 718,
           "heroInitialPriority": "Low",
           "heroRendered": {
             "w": 634,
             "h": 356
           },
-          "announcementAtMs": 2566,
+          "announcementAtMs": 2571,
           "announcementHeight": 191,
           "cls": 0.1308,
           "shifts": [
             {
-              "t": 2569,
+              "t": 2584,
               "value": 0.1308,
               "hadRecentInput": false,
               "sources": [
@@ -1859,16 +2350,16 @@
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 225704,
-          "fcpMs": 100,
-          "heroRequestStartMs": 714,
-          "heroResponseEndMs": 715,
-          "heroRequestAfterDocMs": 714,
+          "fcpMs": 96,
+          "heroRequestStartMs": 719,
+          "heroResponseEndMs": 720,
+          "heroRequestAfterDocMs": 719,
           "heroInitialPriority": "Low",
           "heroRendered": {
             "w": 634,
             "h": 356
           },
-          "announcementAtMs": 2567,
+          "announcementAtMs": 2572,
           "announcementHeight": 191,
           "cls": 0.1308,
           "shifts": [
@@ -1891,7 +2382,7 @@
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 225704,
-          "fcpMs": 84,
+          "fcpMs": 100,
           "heroRequestStartMs": 716,
           "heroResponseEndMs": 717,
           "heroRequestAfterDocMs": 716,
@@ -1900,12 +2391,12 @@
             "w": 634,
             "h": 356
           },
-          "announcementAtMs": 2566,
+          "announcementAtMs": 2568,
           "announcementHeight": 191,
           "cls": 0.1308,
           "shifts": [
             {
-              "t": 2582,
+              "t": 2584,
               "value": 0.1308,
               "hadRecentInput": false,
               "sources": [
@@ -1919,25 +2410,187 @@
           ]
         },
         {
-          "lcpMs": 720,
+          "lcpMs": 732,
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 225704,
-          "fcpMs": 100,
-          "heroRequestStartMs": 708,
-          "heroResponseEndMs": 709,
-          "heroRequestAfterDocMs": 708,
+          "fcpMs": 96,
+          "heroRequestStartMs": 718,
+          "heroResponseEndMs": 719,
+          "heroRequestAfterDocMs": 718,
           "heroInitialPriority": "Low",
           "heroRendered": {
             "w": 634,
             "h": 356
           },
-          "announcementAtMs": 2566,
+          "announcementAtMs": 2573,
           "announcementHeight": 191,
           "cls": 0.1308,
           "shifts": [
             {
-              "t": 2581,
+              "t": 2578,
+              "value": 0.1308,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 99,
+                  "to": 290
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "slow4g": [
+        {
+          "lcpMs": 5444,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 1292,
+          "heroRequestStartMs": 3357,
+          "heroResponseEndMs": 5430,
+          "heroRequestAfterDocMs": 3356,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 3782,
+          "announcementHeight": 191,
+          "cls": 0.1308,
+          "shifts": [
+            {
+              "t": 3792,
+              "value": 0.1308,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 99,
+                  "to": 290
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lcpMs": 5432,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 1284,
+          "heroRequestStartMs": 3348,
+          "heroResponseEndMs": 5422,
+          "heroRequestAfterDocMs": 3348,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 3781,
+          "announcementHeight": 191,
+          "cls": 0.1308,
+          "shifts": [
+            {
+              "t": 3798,
+              "value": 0.1308,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 99,
+                  "to": 290
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lcpMs": 5444,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 1296,
+          "heroRequestStartMs": 3366,
+          "heroResponseEndMs": 5439,
+          "heroRequestAfterDocMs": 3366,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 3790,
+          "announcementHeight": 191,
+          "cls": 0.1308,
+          "shifts": [
+            {
+              "t": 3795,
+              "value": 0.1308,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 99,
+                  "to": 290
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lcpMs": 5444,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 1296,
+          "heroRequestStartMs": 3359,
+          "heroResponseEndMs": 5431,
+          "heroRequestAfterDocMs": 3359,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 3782,
+          "announcementHeight": 191,
+          "cls": 0.1308,
+          "shifts": [
+            {
+              "t": 3794,
+              "value": 0.1308,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 99,
+                  "to": 290
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lcpMs": 5436,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 1300,
+          "heroRequestStartMs": 3356,
+          "heroResponseEndMs": 5429,
+          "heroRequestAfterDocMs": 3355,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 3787,
+          "announcementHeight": 191,
+          "cls": 0.1308,
+          "shifts": [
+            {
+              "t": 3800,
               "value": 0.1308,
               "hadRecentInput": false,
               "sources": [
@@ -1953,52 +2606,20 @@
       ],
       "mobile": [
         {
-          "lcpMs": 720,
+          "lcpMs": 736,
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 72316,
-          "fcpMs": 88,
-          "heroRequestStartMs": 708,
-          "heroResponseEndMs": 709,
-          "heroRequestAfterDocMs": 708,
+          "fcpMs": 100,
+          "heroRequestStartMs": 718,
+          "heroResponseEndMs": 719,
+          "heroRequestAfterDocMs": 718,
           "heroInitialPriority": "Low",
           "heroRendered": {
             "w": 358,
             "h": 201
           },
-          "announcementAtMs": 2566,
-          "announcementHeight": 265,
-          "cls": 0.2373,
-          "shifts": [
-            {
-              "t": 2569,
-              "value": 0.2373,
-              "hadRecentInput": false,
-              "sources": [
-                {
-                  "node": "main",
-                  "from": 206,
-                  "to": 471
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "lcpMs": 716,
-          "lcpElement": "img#hero-image",
-          "lcpUrl": "hero-episode.jpg",
-          "lcpSize": 72316,
-          "fcpMs": 96,
-          "heroRequestStartMs": 709,
-          "heroResponseEndMs": 710,
-          "heroRequestAfterDocMs": 709,
-          "heroInitialPriority": "Low",
-          "heroRendered": {
-            "w": 358,
-            "h": 201
-          },
-          "announcementAtMs": 2568,
+          "announcementAtMs": 2574,
           "announcementHeight": 265,
           "cls": 0.2373,
           "shifts": [
@@ -2022,15 +2643,79 @@
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 72316,
           "fcpMs": 88,
-          "heroRequestStartMs": 709,
-          "heroResponseEndMs": 710,
-          "heroRequestAfterDocMs": 708,
+          "heroRequestStartMs": 711,
+          "heroResponseEndMs": 713,
+          "heroRequestAfterDocMs": 711,
           "heroInitialPriority": "Low",
           "heroRendered": {
             "w": 358,
             "h": 201
           },
-          "announcementAtMs": 2568,
+          "announcementAtMs": 2570,
+          "announcementHeight": 265,
+          "cls": 0.2373,
+          "shifts": [
+            {
+              "t": 2583,
+              "value": 0.2373,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 206,
+                  "to": 471
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lcpMs": 736,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 72316,
+          "fcpMs": 100,
+          "heroRequestStartMs": 717,
+          "heroResponseEndMs": 718,
+          "heroRequestAfterDocMs": 717,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 358,
+            "h": 201
+          },
+          "announcementAtMs": 2573,
+          "announcementHeight": 265,
+          "cls": 0.2373,
+          "shifts": [
+            {
+              "t": 2582,
+              "value": 0.2373,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 206,
+                  "to": 471
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lcpMs": 732,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 72316,
+          "fcpMs": 96,
+          "heroRequestStartMs": 711,
+          "heroResponseEndMs": 712,
+          "heroRequestAfterDocMs": 711,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 358,
+            "h": 201
+          },
+          "announcementAtMs": 2569,
           "announcementHeight": 265,
           "cls": 0.2373,
           "shifts": [
@@ -2049,528 +2734,7 @@
           ]
         },
         {
-          "lcpMs": 736,
-          "lcpElement": "img#hero-image",
-          "lcpUrl": "hero-episode.jpg",
-          "lcpSize": 72316,
-          "fcpMs": 96,
-          "heroRequestStartMs": 714,
-          "heroResponseEndMs": 715,
-          "heroRequestAfterDocMs": 714,
-          "heroInitialPriority": "Low",
-          "heroRendered": {
-            "w": 358,
-            "h": 201
-          },
-          "announcementAtMs": 2567,
-          "announcementHeight": 265,
-          "cls": 0.2373,
-          "shifts": [
-            {
-              "t": 2582,
-              "value": 0.2373,
-              "hadRecentInput": false,
-              "sources": [
-                {
-                  "node": "main",
-                  "from": 206,
-                  "to": 471
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "lcpMs": 724,
-          "lcpElement": "img#hero-image",
-          "lcpUrl": "hero-episode.jpg",
-          "lcpSize": 72316,
-          "fcpMs": 92,
-          "heroRequestStartMs": 708,
-          "heroResponseEndMs": 709,
-          "heroRequestAfterDocMs": 707,
-          "heroInitialPriority": "Low",
-          "heroRendered": {
-            "w": 358,
-            "h": 201
-          },
-          "announcementAtMs": 2567,
-          "announcementHeight": 265,
-          "cls": 0.2373,
-          "shifts": [
-            {
-              "t": 2571,
-              "value": 0.2373,
-              "hadRecentInput": false,
-              "sources": [
-                {
-                  "node": "main",
-                  "from": 206,
-                  "to": 471
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "interaction": [
-        {
-          "query": "coding",
-          "expected": 1686,
-          "shown": 1686,
-          "status": "1.686 baris cocok dengan “coding”.",
-          "keysSeen": 6,
-          "interactionCount": 6,
-          "worstInteractionMs": 704,
-          "worst": {
-            "name": "keydown",
-            "durationMs": 704,
-            "inputDelayMs": 593,
-            "processingMs": 1,
-            "presentationMs": 110
-          },
-          "interactionsMs": [
-            32,
-            704,
-            584,
-            464,
-            344,
-            224
-          ],
-          "lateShift": 0,
-          "trace": {
-            "maxParsesPerLayout": 115,
-            "totalsMs": {
-              "script": 100,
-              "style": 137,
-              "layout": 612,
-              "gc": 12,
-              "other": 1,
-              "parseHTML": 85,
-              "paint": 34
-            },
-            "longTaskCount": 4,
-            "longestTasks": [
-              {
-                "ms": 644,
-                "style": 107,
-                "layout": 488,
-                "gc": 8,
-                "other": 0,
-                "script": 39,
-                "parseHTML": 1
-              },
-              {
-                "ms": 68,
-                "style": 12,
-                "layout": 55
-              },
-              {
-                "ms": 61,
-                "style": 10,
-                "layout": 38,
-                "paint": 9,
-                "other": 0
-              }
-            ]
-          }
-        },
-        {
-          "query": "coding",
-          "expected": 1686,
-          "shown": 1686,
-          "status": "1.686 baris cocok dengan “coding”.",
-          "keysSeen": 6,
-          "interactionCount": 6,
-          "worstInteractionMs": 416,
-          "worst": {
-            "name": "keydown",
-            "durationMs": 416,
-            "inputDelayMs": 330,
-            "processingMs": 1,
-            "presentationMs": 85
-          },
-          "interactionsMs": [
-            32,
-            72,
-            416,
-            296,
-            176,
-            56
-          ],
-          "lateShift": 0,
-          "trace": {
-            "maxParsesPerLayout": 60,
-            "totalsMs": {
-              "script": 88,
-              "style": 113,
-              "layout": 478,
-              "gc": 14,
-              "other": 2,
-              "parseHTML": 66,
-              "paint": 57
-            },
-            "longTaskCount": 4,
-            "longestTasks": [
-              {
-                "ms": 365,
-                "style": 61,
-                "layout": 269,
-                "gc": 9,
-                "other": 0,
-                "script": 25,
-                "parseHTML": 1
-              },
-              {
-                "ms": 121,
-                "style": 20,
-                "layout": 78,
-                "paint": 18,
-                "other": 0
-              },
-              {
-                "ms": 75,
-                "style": 12,
-                "layout": 47,
-                "paint": 10,
-                "other": 1
-              }
-            ]
-          }
-        },
-        {
-          "query": "coding",
-          "expected": 1686,
-          "shown": 1686,
-          "status": "1.686 baris cocok dengan “coding”.",
-          "keysSeen": 6,
-          "interactionCount": 6,
-          "worstInteractionMs": 616,
-          "worst": {
-            "name": "keydown",
-            "durationMs": 616,
-            "inputDelayMs": 501,
-            "processingMs": 1,
-            "presentationMs": 114
-          },
-          "interactionsMs": [
-            32,
-            616,
-            496,
-            376,
-            256,
-            136
-          ],
-          "lateShift": 0,
-          "trace": {
-            "maxParsesPerLayout": 93,
-            "totalsMs": {
-              "other": 1,
-              "script": 91,
-              "style": 123,
-              "layout": 540,
-              "gc": 18,
-              "parseHTML": 77,
-              "paint": 41
-            },
-            "longTaskCount": 3,
-            "longestTasks": [
-              {
-                "ms": 547,
-                "style": 90,
-                "layout": 406,
-                "gc": 14,
-                "other": 0,
-                "script": 35,
-                "parseHTML": 1
-              },
-              {
-                "ms": 90,
-                "style": 17,
-                "layout": 71
-              },
-              {
-                "ms": 64,
-                "script": 21,
-                "layout": 24,
-                "style": 7,
-                "parseHTML": 4,
-                "gc": 1,
-                "other": 0,
-                "paint": 7
-              }
-            ]
-          }
-        },
-        {
-          "query": "coding",
-          "expected": 1686,
-          "shown": 1686,
-          "status": "1.686 baris cocok dengan “coding”.",
-          "keysSeen": 6,
-          "interactionCount": 6,
-          "worstInteractionMs": 704,
-          "worst": {
-            "name": "keydown",
-            "durationMs": 704,
-            "inputDelayMs": 593,
-            "processingMs": 0,
-            "presentationMs": 111
-          },
-          "interactionsMs": [
-            32,
-            704,
-            584,
-            464,
-            344,
-            224
-          ],
-          "lateShift": 0,
-          "trace": {
-            "maxParsesPerLayout": 105,
-            "totalsMs": {
-              "script": 97,
-              "style": 139,
-              "layout": 606,
-              "gc": 15,
-              "parseHTML": 85,
-              "paint": 32,
-              "other": 2
-            },
-            "longTaskCount": 3,
-            "longestTasks": [
-              {
-                "ms": 645,
-                "style": 107,
-                "layout": 485,
-                "gc": 12,
-                "other": 0,
-                "script": 39,
-                "parseHTML": 1
-              },
-              {
-                "ms": 116,
-                "style": 22,
-                "layout": 92
-              },
-              {
-                "ms": 57,
-                "script": 17,
-                "layout": 21,
-                "style": 7,
-                "parseHTML": 4,
-                "gc": 0,
-                "other": 0,
-                "paint": 7
-              }
-            ]
-          }
-        },
-        {
-          "query": "coding",
-          "expected": 1686,
-          "shown": 1686,
-          "status": "1.686 baris cocok dengan “coding”.",
-          "keysSeen": 6,
-          "interactionCount": 6,
-          "worstInteractionMs": 704,
-          "worst": {
-            "name": "keydown",
-            "durationMs": 704,
-            "inputDelayMs": 597,
-            "processingMs": 0,
-            "presentationMs": 107
-          },
-          "interactionsMs": [
-            32,
-            704,
-            584,
-            472,
-            344,
-            224
-          ],
-          "lateShift": 0,
-          "trace": {
-            "maxParsesPerLayout": 105,
-            "totalsMs": {
-              "script": 95,
-              "style": 137,
-              "layout": 609,
-              "gc": 19,
-              "parseHTML": 85,
-              "paint": 30,
-              "other": 1
-            },
-            "longTaskCount": 3,
-            "longestTasks": [
-              {
-                "ms": 646,
-                "style": 106,
-                "layout": 487,
-                "gc": 13,
-                "other": 0,
-                "script": 38,
-                "parseHTML": 2
-              },
-              {
-                "ms": 114,
-                "style": 22,
-                "layout": 92
-              },
-              {
-                "ms": 58,
-                "script": 18,
-                "layout": 22,
-                "style": 6,
-                "parseHTML": 4,
-                "gc": 1,
-                "other": 0,
-                "paint": 6
-              }
-            ]
-          }
-        }
-      ]
-    },
-    "cls": {
-      "load": [
-        {
-          "lcpMs": 720,
-          "lcpElement": "img#hero-image",
-          "lcpUrl": "hero-episode.jpg",
-          "lcpSize": 225704,
-          "fcpMs": 84,
-          "heroRequestStartMs": 708,
-          "heroResponseEndMs": 709,
-          "heroRequestAfterDocMs": 708,
-          "heroInitialPriority": "Low",
-          "heroRendered": {
-            "w": 634,
-            "h": 356
-          },
-          "announcementAtMs": 2565,
-          "announcementHeight": 191,
-          "cls": 0,
-          "shifts": []
-        },
-        {
-          "lcpMs": 720,
-          "lcpElement": "img#hero-image",
-          "lcpUrl": "hero-episode.jpg",
-          "lcpSize": 225704,
-          "fcpMs": 88,
-          "heroRequestStartMs": 708,
-          "heroResponseEndMs": 709,
-          "heroRequestAfterDocMs": 708,
-          "heroInitialPriority": "Low",
-          "heroRendered": {
-            "w": 634,
-            "h": 356
-          },
-          "announcementAtMs": 2565,
-          "announcementHeight": 191,
-          "cls": 0,
-          "shifts": []
-        },
-        {
-          "lcpMs": 716,
-          "lcpElement": "img#hero-image",
-          "lcpUrl": "hero-episode.jpg",
-          "lcpSize": 225704,
-          "fcpMs": 96,
-          "heroRequestStartMs": 706,
-          "heroResponseEndMs": 707,
-          "heroRequestAfterDocMs": 706,
-          "heroInitialPriority": "Low",
-          "heroRendered": {
-            "w": 634,
-            "h": 356
-          },
-          "announcementAtMs": 2566,
-          "announcementHeight": 191,
-          "cls": 0,
-          "shifts": []
-        },
-        {
-          "lcpMs": 736,
-          "lcpElement": "img#hero-image",
-          "lcpUrl": "hero-episode.jpg",
-          "lcpSize": 225704,
-          "fcpMs": 84,
-          "heroRequestStartMs": 714,
-          "heroResponseEndMs": 715,
-          "heroRequestAfterDocMs": 714,
-          "heroInitialPriority": "Low",
-          "heroRendered": {
-            "w": 634,
-            "h": 356
-          },
-          "announcementAtMs": 2566,
-          "announcementHeight": 191,
-          "cls": 0,
-          "shifts": []
-        },
-        {
-          "lcpMs": 716,
-          "lcpElement": "img#hero-image",
-          "lcpUrl": "hero-episode.jpg",
-          "lcpSize": 225704,
-          "fcpMs": 84,
-          "heroRequestStartMs": 709,
-          "heroResponseEndMs": 711,
-          "heroRequestAfterDocMs": 709,
-          "heroInitialPriority": "Low",
-          "heroRendered": {
-            "w": 634,
-            "h": 356
-          },
-          "announcementAtMs": 2567,
-          "announcementHeight": 191,
-          "cls": 0,
-          "shifts": []
-        }
-      ],
-      "mobile": [
-        {
-          "lcpMs": 724,
-          "lcpElement": "img#hero-image",
-          "lcpUrl": "hero-episode.jpg",
-          "lcpSize": 72316,
-          "fcpMs": 92,
-          "heroRequestStartMs": 709,
-          "heroResponseEndMs": 710,
-          "heroRequestAfterDocMs": 709,
-          "heroInitialPriority": "Low",
-          "heroRendered": {
-            "w": 358,
-            "h": 201
-          },
-          "announcementAtMs": 2567,
-          "announcementHeight": 265,
-          "cls": 0,
-          "shifts": []
-        },
-        {
-          "lcpMs": 724,
-          "lcpElement": "img#hero-image",
-          "lcpUrl": "hero-episode.jpg",
-          "lcpSize": 72316,
-          "fcpMs": 88,
-          "heroRequestStartMs": 713,
-          "heroResponseEndMs": 714,
-          "heroRequestAfterDocMs": 712,
-          "heroInitialPriority": "Low",
-          "heroRendered": {
-            "w": 358,
-            "h": 201
-          },
-          "announcementAtMs": 2569,
-          "announcementHeight": 265,
-          "cls": 0,
-          "shifts": []
-        },
-        {
-          "lcpMs": 720,
+          "lcpMs": 732,
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 72316,
@@ -2585,24 +2749,578 @@
           },
           "announcementAtMs": 2569,
           "announcementHeight": 265,
+          "cls": 0.2373,
+          "shifts": [
+            {
+              "t": 2580,
+              "value": 0.2373,
+              "hadRecentInput": false,
+              "sources": [
+                {
+                  "node": "main",
+                  "from": 206,
+                  "to": 471
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "interaction": [
+        {
+          "query": "coding",
+          "expected": 1686,
+          "shown": 1686,
+          "status": "1.686 baris cocok dengan “coding”.",
+          "keysSeen": 6,
+          "interactionCount": 6,
+          "worstInteractionMs": 576,
+          "worst": {
+            "name": "keydown",
+            "durationMs": 576,
+            "inputDelayMs": 465,
+            "processingMs": 0,
+            "presentationMs": 111
+          },
+          "interactionsMs": [
+            32,
+            576,
+            456,
+            336,
+            216,
+            96
+          ],
+          "lateShift": 0,
+          "trace": {
+            "maxParsesPerLayout": 85,
+            "totalsMs": {
+              "script": 105,
+              "style": 116,
+              "layout": 512,
+              "gc": 18,
+              "parseHTML": 77,
+              "paint": 38,
+              "other": 1
+            },
+            "longTaskCount": 3,
+            "longestTasks": [
+              {
+                "ms": 510,
+                "style": 85,
+                "layout": 377,
+                "gc": 12,
+                "other": 0,
+                "script": 33,
+                "parseHTML": 2
+              },
+              {
+                "ms": 117,
+                "style": 22,
+                "layout": 94
+              },
+              {
+                "ms": 66,
+                "script": 24,
+                "layout": 25,
+                "style": 5,
+                "parseHTML": 3,
+                "gc": 1,
+                "other": 0,
+                "paint": 7
+              }
+            ]
+          }
+        },
+        {
+          "query": "coding",
+          "expected": 1686,
+          "shown": 1686,
+          "status": "1.686 baris cocok dengan “coding”.",
+          "keysSeen": 6,
+          "interactionCount": 6,
+          "worstInteractionMs": 544,
+          "worst": {
+            "name": "keydown",
+            "durationMs": 544,
+            "inputDelayMs": 429,
+            "processingMs": 0,
+            "presentationMs": 115
+          },
+          "interactionsMs": [
+            40,
+            544,
+            424,
+            304,
+            184,
+            88
+          ],
+          "lateShift": 0,
+          "trace": {
+            "maxParsesPerLayout": 84,
+            "totalsMs": {
+              "script": 109,
+              "style": 111,
+              "layout": 500,
+              "gc": 18,
+              "other": 2,
+              "parseHTML": 75,
+              "paint": 50
+            },
+            "longTaskCount": 4,
+            "longestTasks": [
+              {
+                "ms": 476,
+                "style": 75,
+                "layout": 352,
+                "gc": 13,
+                "other": 0,
+                "script": 34,
+                "parseHTML": 2
+              },
+              {
+                "ms": 92,
+                "style": 14,
+                "layout": 59,
+                "paint": 14,
+                "other": 0
+              },
+              {
+                "ms": 62,
+                "script": 18,
+                "layout": 24,
+                "style": 7,
+                "parseHTML": 3,
+                "gc": 2,
+                "other": 0,
+                "paint": 7
+              }
+            ]
+          }
+        },
+        {
+          "query": "coding",
+          "expected": 1686,
+          "shown": 1686,
+          "status": "1.686 baris cocok dengan “coding”.",
+          "keysSeen": 6,
+          "interactionCount": 6,
+          "worstInteractionMs": 664,
+          "worst": {
+            "name": "keydown",
+            "durationMs": 664,
+            "inputDelayMs": 552,
+            "processingMs": 0,
+            "presentationMs": 113
+          },
+          "interactionsMs": [
+            32,
+            664,
+            544,
+            424,
+            304,
+            184
+          ],
+          "lateShift": 0,
+          "trace": {
+            "maxParsesPerLayout": 107,
+            "totalsMs": {
+              "script": 103,
+              "style": 131,
+              "layout": 572,
+              "gc": 16,
+              "other": 2,
+              "parseHTML": 78,
+              "paint": 32
+            },
+            "longTaskCount": 3,
+            "longestTasks": [
+              {
+                "ms": 601,
+                "style": 100,
+                "layout": 449,
+                "gc": 11,
+                "other": 1,
+                "script": 38,
+                "parseHTML": 1
+              },
+              {
+                "ms": 116,
+                "style": 22,
+                "layout": 93
+              },
+              {
+                "ms": 59,
+                "script": 19,
+                "layout": 22,
+                "style": 6,
+                "parseHTML": 3,
+                "gc": 1,
+                "paint": 7,
+                "other": 0
+              }
+            ]
+          }
+        },
+        {
+          "query": "coding",
+          "expected": 1686,
+          "shown": 1686,
+          "status": "1.686 baris cocok dengan “coding”.",
+          "keysSeen": 6,
+          "interactionCount": 6,
+          "worstInteractionMs": 632,
+          "worst": {
+            "name": "keydown",
+            "durationMs": 632,
+            "inputDelayMs": 510,
+            "processingMs": 0,
+            "presentationMs": 122
+          },
+          "interactionsMs": [
+            32,
+            632,
+            512,
+            392,
+            272,
+            152
+          ],
+          "lateShift": 0,
+          "trace": {
+            "maxParsesPerLayout": 93,
+            "totalsMs": {
+              "paint": 38,
+              "other": 1,
+              "script": 102,
+              "style": 130,
+              "layout": 543,
+              "gc": 19,
+              "parseHTML": 80
+            },
+            "longTaskCount": 3,
+            "longestTasks": [
+              {
+                "ms": 560,
+                "style": 96,
+                "layout": 410,
+                "gc": 15,
+                "other": 0,
+                "script": 38,
+                "parseHTML": 1
+              },
+              {
+                "ms": 123,
+                "style": 24,
+                "layout": 98
+              },
+              {
+                "ms": 67,
+                "script": 21,
+                "layout": 26,
+                "style": 7,
+                "parseHTML": 4,
+                "gc": 0,
+                "other": 0,
+                "paint": 8
+              }
+            ]
+          }
+        },
+        {
+          "query": "coding",
+          "expected": 1686,
+          "shown": 1686,
+          "status": "1.686 baris cocok dengan “coding”.",
+          "keysSeen": 6,
+          "interactionCount": 6,
+          "worstInteractionMs": 656,
+          "worst": {
+            "name": "keydown",
+            "durationMs": 656,
+            "inputDelayMs": 538,
+            "processingMs": 0,
+            "presentationMs": 118
+          },
+          "interactionsMs": [
+            32,
+            656,
+            536,
+            416,
+            296,
+            176
+          ],
+          "lateShift": 0,
+          "trace": {
+            "maxParsesPerLayout": 93,
+            "totalsMs": {
+              "script": 106,
+              "style": 129,
+              "layout": 578,
+              "gc": 15,
+              "other": 1,
+              "parseHTML": 81,
+              "paint": 41
+            },
+            "longTaskCount": 4,
+            "longestTasks": [
+              {
+                "ms": 588,
+                "style": 95,
+                "layout": 442,
+                "gc": 11,
+                "other": 0,
+                "script": 40,
+                "parseHTML": 1
+              },
+              {
+                "ms": 88,
+                "style": 17,
+                "layout": 70
+              },
+              {
+                "ms": 68,
+                "script": 20,
+                "layout": 25,
+                "style": 8,
+                "parseHTML": 5,
+                "gc": 1,
+                "other": 0,
+                "paint": 7
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cls": {
+      "load": [
+        {
+          "lcpMs": 732,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 100,
+          "heroRequestStartMs": 719,
+          "heroResponseEndMs": 720,
+          "heroRequestAfterDocMs": 718,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 2571,
+          "announcementHeight": 191,
           "cls": 0,
           "shifts": []
         },
         {
-          "lcpMs": 720,
+          "lcpMs": 748,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 100,
+          "heroRequestStartMs": 729,
+          "heroResponseEndMs": 730,
+          "heroRequestAfterDocMs": 728,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 2574,
+          "announcementHeight": 191,
+          "cls": 0,
+          "shifts": []
+        },
+        {
+          "lcpMs": 736,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 88,
+          "heroRequestStartMs": 715,
+          "heroResponseEndMs": 716,
+          "heroRequestAfterDocMs": 715,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 2569,
+          "announcementHeight": 191,
+          "cls": 0,
+          "shifts": []
+        },
+        {
+          "lcpMs": 736,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 100,
+          "heroRequestStartMs": 720,
+          "heroResponseEndMs": 722,
+          "heroRequestAfterDocMs": 720,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 2575,
+          "announcementHeight": 191,
+          "cls": 0,
+          "shifts": []
+        },
+        {
+          "lcpMs": 740,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 92,
+          "heroRequestStartMs": 725,
+          "heroResponseEndMs": 726,
+          "heroRequestAfterDocMs": 725,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 2574,
+          "announcementHeight": 191,
+          "cls": 0,
+          "shifts": []
+        }
+      ],
+      "slow4g": [
+        {
+          "lcpMs": 5436,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 1300,
+          "heroRequestStartMs": 3356,
+          "heroResponseEndMs": 5428,
+          "heroRequestAfterDocMs": 3355,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 3787,
+          "announcementHeight": 191,
+          "cls": 0,
+          "shifts": []
+        },
+        {
+          "lcpMs": 5440,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 1304,
+          "heroRequestStartMs": 3357,
+          "heroResponseEndMs": 5431,
+          "heroRequestAfterDocMs": 3357,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 3792,
+          "announcementHeight": 191,
+          "cls": 0,
+          "shifts": []
+        },
+        {
+          "lcpMs": 5448,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 1296,
+          "heroRequestStartMs": 3359,
+          "heroResponseEndMs": 5430,
+          "heroRequestAfterDocMs": 3358,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 3785,
+          "announcementHeight": 191,
+          "cls": 0,
+          "shifts": []
+        },
+        {
+          "lcpMs": 5448,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 1288,
+          "heroRequestStartMs": 3358,
+          "heroResponseEndMs": 5429,
+          "heroRequestAfterDocMs": 3357,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 3785,
+          "announcementHeight": 191,
+          "cls": 0,
+          "shifts": []
+        },
+        {
+          "lcpMs": 5444,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 1284,
+          "heroRequestStartMs": 3357,
+          "heroResponseEndMs": 5431,
+          "heroRequestAfterDocMs": 3356,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 3783,
+          "announcementHeight": 191,
+          "cls": 0,
+          "shifts": []
+        }
+      ],
+      "mobile": [
+        {
+          "lcpMs": 756,
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 72316,
-          "fcpMs": 88,
-          "heroRequestStartMs": 707,
-          "heroResponseEndMs": 708,
-          "heroRequestAfterDocMs": 707,
+          "fcpMs": 116,
+          "heroRequestStartMs": 735,
+          "heroResponseEndMs": 736,
+          "heroRequestAfterDocMs": 735,
           "heroInitialPriority": "Low",
           "heroRendered": {
             "w": 358,
             "h": 201
           },
-          "announcementAtMs": 2566,
+          "announcementAtMs": 2583,
+          "announcementHeight": 265,
+          "cls": 0,
+          "shifts": []
+        },
+        {
+          "lcpMs": 732,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 72316,
+          "fcpMs": 96,
+          "heroRequestStartMs": 718,
+          "heroResponseEndMs": 719,
+          "heroRequestAfterDocMs": 718,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 358,
+            "h": 201
+          },
+          "announcementAtMs": 2573,
           "announcementHeight": 265,
           "cls": 0,
           "shifts": []
@@ -2612,16 +3330,54 @@
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 72316,
-          "fcpMs": 100,
-          "heroRequestStartMs": 710,
-          "heroResponseEndMs": 711,
-          "heroRequestAfterDocMs": 710,
+          "fcpMs": 84,
+          "heroRequestStartMs": 707,
+          "heroResponseEndMs": 708,
+          "heroRequestAfterDocMs": 706,
           "heroInitialPriority": "Low",
           "heroRendered": {
             "w": 358,
             "h": 201
           },
-          "announcementAtMs": 2568,
+          "announcementAtMs": 2567,
+          "announcementHeight": 265,
+          "cls": 0,
+          "shifts": []
+        },
+        {
+          "lcpMs": 736,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 72316,
+          "fcpMs": 100,
+          "heroRequestStartMs": 717,
+          "heroResponseEndMs": 718,
+          "heroRequestAfterDocMs": 717,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 358,
+            "h": 201
+          },
+          "announcementAtMs": 2576,
+          "announcementHeight": 265,
+          "cls": 0,
+          "shifts": []
+        },
+        {
+          "lcpMs": 720,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 72316,
+          "fcpMs": 88,
+          "heroRequestStartMs": 696,
+          "heroResponseEndMs": 697,
+          "heroRequestAfterDocMs": 696,
+          "heroInitialPriority": "Low",
+          "heroRendered": {
+            "w": 358,
+            "h": 201
+          },
+          "announcementAtMs": 2571,
           "announcementHeight": 265,
           "cls": 0,
           "shifts": []
@@ -2635,228 +3391,51 @@
           "status": "1.686 baris cocok dengan “coding”.",
           "keysSeen": 6,
           "interactionCount": 6,
-          "worstInteractionMs": 1864,
+          "worstInteractionMs": 1984,
           "worst": {
             "name": "keydown",
-            "durationMs": 1864,
+            "durationMs": 1984,
             "inputDelayMs": 1,
             "processingMs": 1,
-            "presentationMs": 1863
+            "presentationMs": 1983
           },
           "interactionsMs": [
+            1984,
             1864,
             1744,
             1624,
             1504,
-            1384,
-            1264
+            1384
           ],
           "lateShift": 0,
           "trace": {
             "maxParsesPerLayout": 2,
             "totalsMs": {
-              "script": 188,
-              "style": 273,
-              "layout": 1175,
+              "script": 205,
+              "style": 287,
+              "layout": 1250,
               "gc": 31,
               "other": 0,
-              "parseHTML": 158,
-              "paint": 23
+              "parseHTML": 169,
+              "paint": 26
             },
             "longTaskCount": 2,
             "longestTasks": [
               {
-                "ms": 1122,
-                "script": 148,
-                "layout": 671,
-                "style": 161,
-                "parseHTML": 95,
-                "gc": 15,
+                "ms": 1204,
+                "script": 162,
+                "layout": 716,
+                "style": 172,
+                "parseHTML": 103,
+                "gc": 17,
                 "other": 0,
-                "paint": 23
+                "paint": 24
               },
               {
-                "ms": 734,
-                "script": 38,
-                "style": 112,
-                "layout": 504,
-                "gc": 16,
-                "other": 0,
-                "parseHTML": 64
-              }
-            ]
-          }
-        },
-        {
-          "query": "coding",
-          "expected": 1686,
-          "shown": 1686,
-          "status": "1.686 baris cocok dengan “coding”.",
-          "keysSeen": 6,
-          "interactionCount": 6,
-          "worstInteractionMs": 1864,
-          "worst": {
-            "name": "keydown",
-            "durationMs": 1864,
-            "inputDelayMs": 0,
-            "processingMs": 1,
-            "presentationMs": 1863
-          },
-          "interactionsMs": [
-            1864,
-            1744,
-            1624,
-            1512,
-            1384,
-            1264
-          ],
-          "lateShift": 0,
-          "trace": {
-            "maxParsesPerLayout": 2,
-            "totalsMs": {
-              "script": 183,
-              "style": 272,
-              "layout": 1175,
-              "gc": 36,
-              "parseHTML": 163,
-              "other": 0,
-              "paint": 23
-            },
-            "longTaskCount": 2,
-            "longestTasks": [
-              {
-                "ms": 1123,
-                "script": 144,
-                "layout": 671,
-                "style": 158,
-                "parseHTML": 97,
-                "gc": 19,
-                "other": 0,
-                "paint": 22
-              },
-              {
-                "ms": 738,
-                "script": 37,
-                "style": 113,
-                "layout": 504,
-                "gc": 16,
-                "parseHTML": 66,
-                "other": 0
-              }
-            ]
-          }
-        },
-        {
-          "query": "coding",
-          "expected": 1686,
-          "shown": 1686,
-          "status": "1.686 baris cocok dengan “coding”.",
-          "keysSeen": 6,
-          "interactionCount": 6,
-          "worstInteractionMs": 1864,
-          "worst": {
-            "name": "keydown",
-            "durationMs": 1864,
-            "inputDelayMs": 1,
-            "processingMs": 1,
-            "presentationMs": 1863
-          },
-          "interactionsMs": [
-            1864,
-            1744,
-            1624,
-            1504,
-            1384,
-            1264
-          ],
-          "lateShift": 0,
-          "trace": {
-            "maxParsesPerLayout": 2,
-            "totalsMs": {
-              "script": 184,
-              "style": 269,
-              "layout": 1180,
-              "gc": 34,
-              "other": 0,
-              "parseHTML": 159,
-              "paint": 23
-            },
-            "longTaskCount": 2,
-            "longestTasks": [
-              {
-                "ms": 1120,
-                "script": 145,
-                "layout": 672,
-                "style": 157,
-                "parseHTML": 94,
-                "gc": 19,
-                "other": 0,
-                "paint": 23
-              },
-              {
-                "ms": 739,
-                "script": 38,
-                "style": 112,
-                "layout": 508,
-                "gc": 16,
-                "other": 0,
-                "parseHTML": 64
-              }
-            ]
-          }
-        },
-        {
-          "query": "coding",
-          "expected": 1686,
-          "shown": 1686,
-          "status": "1.686 baris cocok dengan “coding”.",
-          "keysSeen": 6,
-          "interactionCount": 6,
-          "worstInteractionMs": 1880,
-          "worst": {
-            "name": "keydown",
-            "durationMs": 1880,
-            "inputDelayMs": 0,
-            "processingMs": 1,
-            "presentationMs": 1879
-          },
-          "interactionsMs": [
-            1880,
-            1760,
-            1648,
-            1520,
-            1400,
-            1280
-          ],
-          "lateShift": 0,
-          "trace": {
-            "maxParsesPerLayout": 2,
-            "totalsMs": {
-              "script": 185,
-              "style": 275,
-              "layout": 1189,
-              "gc": 33,
-              "other": 0,
-              "parseHTML": 162,
-              "paint": 22
-            },
-            "longTaskCount": 2,
-            "longestTasks": [
-              {
-                "ms": 1135,
-                "script": 146,
-                "layout": 680,
-                "style": 161,
-                "gc": 20,
-                "other": 0,
-                "parseHTML": 96,
-                "paint": 22
-              },
-              {
-                "ms": 742,
-                "script": 38,
-                "style": 114,
-                "layout": 510,
+                "ms": 772,
+                "script": 41,
+                "style": 115,
+                "layout": 534,
                 "gc": 14,
                 "other": 0,
                 "parseHTML": 67
@@ -2871,54 +3450,231 @@
           "status": "1.686 baris cocok dengan “coding”.",
           "keysSeen": 6,
           "interactionCount": 6,
-          "worstInteractionMs": 1856,
+          "worstInteractionMs": 1968,
           "worst": {
             "name": "keydown",
-            "durationMs": 1856,
-            "inputDelayMs": 1,
+            "durationMs": 1968,
+            "inputDelayMs": 0,
             "processingMs": 1,
-            "presentationMs": 1855
+            "presentationMs": 1967
           },
           "interactionsMs": [
-            1856,
-            1736,
-            1616,
-            1496,
-            1376,
-            1256
+            1968,
+            1848,
+            1728,
+            1608,
+            1488,
+            1368
           ],
           "lateShift": 0,
           "trace": {
             "maxParsesPerLayout": 2,
             "totalsMs": {
-              "script": 183,
-              "style": 272,
-              "layout": 1173,
-              "gc": 31,
+              "script": 204,
+              "style": 283,
+              "layout": 1229,
+              "gc": 34,
+              "other": 1,
+              "parseHTML": 176,
+              "paint": 27
+            },
+            "longTaskCount": 2,
+            "longestTasks": [
+              {
+                "ms": 1190,
+                "script": 161,
+                "layout": 699,
+                "style": 165,
+                "parseHTML": 103,
+                "gc": 21,
+                "other": 0,
+                "paint": 26
+              },
+              {
+                "ms": 774,
+                "script": 40,
+                "style": 117,
+                "layout": 530,
+                "gc": 13,
+                "other": 0,
+                "parseHTML": 72
+              }
+            ]
+          }
+        },
+        {
+          "query": "coding",
+          "expected": 1686,
+          "shown": 1686,
+          "status": "1.686 baris cocok dengan “coding”.",
+          "keysSeen": 6,
+          "interactionCount": 6,
+          "worstInteractionMs": 2208,
+          "worst": {
+            "name": "keydown",
+            "durationMs": 2208,
+            "inputDelayMs": 0,
+            "processingMs": 1,
+            "presentationMs": 2207
+          },
+          "interactionsMs": [
+            2208,
+            2088,
+            1968,
+            1848,
+            1728,
+            1608
+          ],
+          "lateShift": 0,
+          "trace": {
+            "maxParsesPerLayout": 2,
+            "totalsMs": {
               "other": 0,
-              "parseHTML": 159,
+              "script": 211,
+              "style": 301,
+              "layout": 1420,
+              "gc": 39,
+              "parseHTML": 195,
               "paint": 24
             },
             "longTaskCount": 2,
             "longestTasks": [
               {
-                "ms": 1120,
-                "script": 145,
-                "layout": 667,
-                "style": 160,
-                "parseHTML": 96,
+                "ms": 1291,
+                "script": 158,
+                "layout": 800,
+                "style": 170,
+                "parseHTML": 104,
                 "gc": 20,
                 "other": 0,
-                "paint": 23
+                "paint": 24
               },
               {
-                "ms": 731,
-                "script": 37,
-                "style": 112,
-                "layout": 506,
-                "gc": 12,
+                "ms": 910,
+                "script": 50,
+                "style": 130,
+                "layout": 620,
+                "gc": 19,
                 "other": 0,
-                "parseHTML": 64
+                "parseHTML": 91
+              }
+            ]
+          }
+        },
+        {
+          "query": "coding",
+          "expected": 1686,
+          "shown": 1686,
+          "status": "1.686 baris cocok dengan “coding”.",
+          "keysSeen": 6,
+          "interactionCount": 6,
+          "worstInteractionMs": 2072,
+          "worst": {
+            "name": "keydown",
+            "durationMs": 2072,
+            "inputDelayMs": 0,
+            "processingMs": 1,
+            "presentationMs": 2071
+          },
+          "interactionsMs": [
+            2072,
+            1952,
+            1832,
+            1712,
+            1592,
+            1472
+          ],
+          "lateShift": 0,
+          "trace": {
+            "maxParsesPerLayout": 2,
+            "totalsMs": {
+              "script": 215,
+              "style": 296,
+              "layout": 1289,
+              "gc": 43,
+              "parseHTML": 180,
+              "other": 0,
+              "paint": 27
+            },
+            "longTaskCount": 2,
+            "longestTasks": [
+              {
+                "ms": 1271,
+                "script": 168,
+                "layout": 751,
+                "style": 175,
+                "parseHTML": 106,
+                "gc": 27,
+                "other": 0,
+                "paint": 27
+              },
+              {
+                "ms": 793,
+                "script": 43,
+                "style": 121,
+                "layout": 538,
+                "gc": 16,
+                "parseHTML": 74,
+                "other": 0
+              }
+            ]
+          }
+        },
+        {
+          "query": "coding",
+          "expected": 1686,
+          "shown": 1686,
+          "status": "1.686 baris cocok dengan “coding”.",
+          "keysSeen": 6,
+          "interactionCount": 6,
+          "worstInteractionMs": 1992,
+          "worst": {
+            "name": "keydown",
+            "durationMs": 1992,
+            "inputDelayMs": 0,
+            "processingMs": 1,
+            "presentationMs": 1991
+          },
+          "interactionsMs": [
+            1992,
+            1872,
+            1752,
+            1632,
+            1512,
+            1392
+          ],
+          "lateShift": 0,
+          "trace": {
+            "maxParsesPerLayout": 2,
+            "totalsMs": {
+              "script": 204,
+              "style": 289,
+              "layout": 1247,
+              "gc": 33,
+              "other": 0,
+              "parseHTML": 174,
+              "paint": 27
+            },
+            "longTaskCount": 2,
+            "longestTasks": [
+              {
+                "ms": 1210,
+                "script": 158,
+                "layout": 715,
+                "style": 171,
+                "parseHTML": 105,
+                "gc": 20,
+                "other": 0,
+                "paint": 26
+              },
+              {
+                "ms": 775,
+                "script": 42,
+                "style": 117,
+                "layout": 532,
+                "gc": 14,
+                "other": 0,
+                "parseHTML": 70
               }
             ]
           }
@@ -2928,31 +3684,31 @@
     "final": {
       "load": [
         {
-          "lcpMs": 88,
+          "lcpMs": 92,
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 225704,
-          "fcpMs": 88,
-          "heroRequestStartMs": 10,
-          "heroResponseEndMs": 11,
+          "fcpMs": 92,
+          "heroRequestStartMs": 11,
+          "heroResponseEndMs": 12,
           "heroRequestAfterDocMs": 10,
           "heroInitialPriority": "High",
           "heroRendered": {
             "w": 634,
             "h": 356
           },
-          "announcementAtMs": 2569,
+          "announcementAtMs": 2573,
           "announcementHeight": 191,
           "cls": 0,
           "shifts": []
         },
         {
-          "lcpMs": 100,
+          "lcpMs": 88,
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 225704,
-          "fcpMs": 100,
-          "heroRequestStartMs": 10,
+          "fcpMs": 88,
+          "heroRequestStartMs": 11,
           "heroResponseEndMs": 13,
           "heroRequestAfterDocMs": 10,
           "heroInitialPriority": "High",
@@ -2960,7 +3716,26 @@
             "w": 634,
             "h": 356
           },
-          "announcementAtMs": 2564,
+          "announcementAtMs": 2570,
+          "announcementHeight": 191,
+          "cls": 0,
+          "shifts": []
+        },
+        {
+          "lcpMs": 84,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 84,
+          "heroRequestStartMs": 10,
+          "heroResponseEndMs": 11,
+          "heroRequestAfterDocMs": 10,
+          "heroInitialPriority": "High",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 2566,
           "announcementHeight": 191,
           "cls": 0,
           "shifts": []
@@ -2971,9 +3746,9 @@
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 225704,
           "fcpMs": 88,
-          "heroRequestStartMs": 9,
-          "heroResponseEndMs": 12,
-          "heroRequestAfterDocMs": 9,
+          "heroRequestStartMs": 10,
+          "heroResponseEndMs": 11,
+          "heroRequestAfterDocMs": 10,
           "heroInitialPriority": "High",
           "heroRendered": {
             "w": 634,
@@ -2985,11 +3760,11 @@
           "shifts": []
         },
         {
-          "lcpMs": 84,
+          "lcpMs": 96,
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 225704,
-          "fcpMs": 84,
+          "fcpMs": 96,
           "heroRequestStartMs": 10,
           "heroResponseEndMs": 12,
           "heroRequestAfterDocMs": 10,
@@ -2998,26 +3773,104 @@
             "w": 634,
             "h": 356
           },
-          "announcementAtMs": 2567,
+          "announcementAtMs": 2568,
+          "announcementHeight": 191,
+          "cls": 0,
+          "shifts": []
+        }
+      ],
+      "slow4g": [
+        {
+          "lcpMs": 2344,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 1352,
+          "heroRequestStartMs": 589,
+          "heroResponseEndMs": 2338,
+          "heroRequestAfterDocMs": 589,
+          "heroInitialPriority": "High",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 3794,
           "announcementHeight": 191,
           "cls": 0,
           "shifts": []
         },
         {
-          "lcpMs": 84,
+          "lcpMs": 2344,
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 225704,
-          "fcpMs": 84,
-          "heroRequestStartMs": 10,
-          "heroResponseEndMs": 12,
-          "heroRequestAfterDocMs": 10,
+          "fcpMs": 1352,
+          "heroRequestStartMs": 589,
+          "heroResponseEndMs": 2339,
+          "heroRequestAfterDocMs": 589,
           "heroInitialPriority": "High",
           "heroRendered": {
             "w": 634,
             "h": 356
           },
-          "announcementAtMs": 2567,
+          "announcementAtMs": 3794,
+          "announcementHeight": 191,
+          "cls": 0,
+          "shifts": []
+        },
+        {
+          "lcpMs": 2260,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 1344,
+          "heroRequestStartMs": 588,
+          "heroResponseEndMs": 2254,
+          "heroRequestAfterDocMs": 588,
+          "heroInitialPriority": "High",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 3840,
+          "announcementHeight": 191,
+          "cls": 0,
+          "shifts": []
+        },
+        {
+          "lcpMs": 2344,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 1344,
+          "heroRequestStartMs": 588,
+          "heroResponseEndMs": 2339,
+          "heroRequestAfterDocMs": 588,
+          "heroInitialPriority": "High",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 3792,
+          "announcementHeight": 191,
+          "cls": 0,
+          "shifts": []
+        },
+        {
+          "lcpMs": 2344,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 225704,
+          "fcpMs": 1344,
+          "heroRequestStartMs": 588,
+          "heroResponseEndMs": 2337,
+          "heroRequestAfterDocMs": 588,
+          "heroInitialPriority": "High",
+          "heroRendered": {
+            "w": 634,
+            "h": 356
+          },
+          "announcementAtMs": 3793,
           "announcementHeight": 191,
           "cls": 0,
           "shifts": []
@@ -3025,30 +3878,30 @@
       ],
       "mobile": [
         {
-          "lcpMs": 88,
+          "lcpMs": 96,
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 72316,
-          "fcpMs": 88,
+          "fcpMs": 96,
           "heroRequestStartMs": 11,
-          "heroResponseEndMs": 12,
-          "heroRequestAfterDocMs": 11,
+          "heroResponseEndMs": 13,
+          "heroRequestAfterDocMs": 10,
           "heroInitialPriority": "High",
           "heroRendered": {
             "w": 358,
             "h": 201
           },
-          "announcementAtMs": 2568,
+          "announcementAtMs": 2574,
           "announcementHeight": 265,
           "cls": 0,
           "shifts": []
         },
         {
-          "lcpMs": 84,
+          "lcpMs": 92,
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 72316,
-          "fcpMs": 84,
+          "fcpMs": 92,
           "heroRequestStartMs": 9,
           "heroResponseEndMs": 11,
           "heroRequestAfterDocMs": 9,
@@ -3057,187 +3910,70 @@
             "w": 358,
             "h": 201
           },
-          "announcementAtMs": 2565,
+          "announcementAtMs": 2571,
           "announcementHeight": 265,
           "cls": 0,
           "shifts": []
         },
         {
-          "lcpMs": 84,
+          "lcpMs": 88,
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 72316,
-          "fcpMs": 84,
-          "heroRequestStartMs": 11,
-          "heroResponseEndMs": 12,
-          "heroRequestAfterDocMs": 11,
-          "heroInitialPriority": "High",
-          "heroRendered": {
-            "w": 358,
-            "h": 201
-          },
-          "announcementAtMs": 2567,
-          "announcementHeight": 265,
-          "cls": 0,
-          "shifts": []
-        },
-        {
-          "lcpMs": 84,
-          "lcpElement": "img#hero-image",
-          "lcpUrl": "hero-episode.jpg",
-          "lcpSize": 72316,
-          "fcpMs": 84,
+          "fcpMs": 88,
           "heroRequestStartMs": 11,
           "heroResponseEndMs": 14,
-          "heroRequestAfterDocMs": 11,
+          "heroRequestAfterDocMs": 10,
           "heroInitialPriority": "High",
           "heroRendered": {
             "w": 358,
             "h": 201
           },
-          "announcementAtMs": 2568,
+          "announcementAtMs": 2569,
           "announcementHeight": 265,
           "cls": 0,
           "shifts": []
         },
         {
-          "lcpMs": 84,
+          "lcpMs": 88,
           "lcpElement": "img#hero-image",
           "lcpUrl": "hero-episode.jpg",
           "lcpSize": 72316,
-          "fcpMs": 84,
+          "fcpMs": 88,
           "heroRequestStartMs": 10,
-          "heroResponseEndMs": 11,
-          "heroRequestAfterDocMs": 9,
+          "heroResponseEndMs": 12,
+          "heroRequestAfterDocMs": 10,
           "heroInitialPriority": "High",
           "heroRendered": {
             "w": 358,
             "h": 201
           },
-          "announcementAtMs": 2567,
+          "announcementAtMs": 2569,
+          "announcementHeight": 265,
+          "cls": 0,
+          "shifts": []
+        },
+        {
+          "lcpMs": 88,
+          "lcpElement": "img#hero-image",
+          "lcpUrl": "hero-episode.jpg",
+          "lcpSize": 72316,
+          "fcpMs": 88,
+          "heroRequestStartMs": 10,
+          "heroResponseEndMs": 12,
+          "heroRequestAfterDocMs": 10,
+          "heroInitialPriority": "High",
+          "heroRendered": {
+            "w": 358,
+            "h": 201
+          },
+          "announcementAtMs": 2570,
           "announcementHeight": 265,
           "cls": 0,
           "shifts": []
         }
       ],
       "interaction": [
-        {
-          "query": "coding",
-          "expected": 1686,
-          "shown": 1686,
-          "status": "1.686 baris cocok dengan “coding”.",
-          "keysSeen": 6,
-          "interactionCount": 6,
-          "worstInteractionMs": 32,
-          "worst": {
-            "name": "keydown",
-            "durationMs": 32,
-            "inputDelayMs": 0,
-            "processingMs": 1,
-            "presentationMs": 31
-          },
-          "interactionsMs": [
-            32,
-            32,
-            32,
-            32,
-            24,
-            32
-          ],
-          "lateShift": 0,
-          "trace": {
-            "maxParsesPerLayout": 2,
-            "totalsMs": {
-              "other": 1,
-              "script": 71,
-              "style": 66,
-              "layout": 307,
-              "gc": 17,
-              "parseHTML": 46,
-              "paint": 207
-            },
-            "longTaskCount": 0,
-            "longestTasks": []
-          }
-        },
-        {
-          "query": "coding",
-          "expected": 1686,
-          "shown": 1686,
-          "status": "1.686 baris cocok dengan “coding”.",
-          "keysSeen": 6,
-          "interactionCount": 6,
-          "worstInteractionMs": 32,
-          "worst": {
-            "name": "keydown",
-            "durationMs": 32,
-            "inputDelayMs": 0,
-            "processingMs": 1,
-            "presentationMs": 31
-          },
-          "interactionsMs": [
-            32,
-            32,
-            24,
-            24,
-            32,
-            24
-          ],
-          "lateShift": 0,
-          "trace": {
-            "maxParsesPerLayout": 2,
-            "totalsMs": {
-              "script": 73,
-              "style": 71,
-              "layout": 310,
-              "gc": 13,
-              "other": 1,
-              "parseHTML": 47,
-              "paint": 201
-            },
-            "longTaskCount": 0,
-            "longestTasks": []
-          }
-        },
-        {
-          "query": "coding",
-          "expected": 1686,
-          "shown": 1686,
-          "status": "1.686 baris cocok dengan “coding”.",
-          "keysSeen": 6,
-          "interactionCount": 6,
-          "worstInteractionMs": 32,
-          "worst": {
-            "name": "keydown",
-            "durationMs": 32,
-            "inputDelayMs": 1,
-            "processingMs": 0,
-            "presentationMs": 31
-          },
-          "interactionsMs": [
-            32,
-            32,
-            24,
-            24,
-            24,
-            32
-          ],
-          "lateShift": 0,
-          "trace": {
-            "maxParsesPerLayout": 2,
-            "totalsMs": {
-              "script": 73,
-              "style": 72,
-              "layout": 321,
-              "gc": 15,
-              "other": 4,
-              "parseHTML": 50,
-              "paint": 202
-            },
-            "longTaskCount": 0,
-            "longestTasks": []
-          }
-        },
         {
           "query": "coding",
           "expected": 1686,
@@ -3256,22 +3992,22 @@
           "interactionsMs": [
             32,
             32,
-            24,
-            24,
-            24,
+            32,
+            32,
+            32,
             32
           ],
           "lateShift": 0,
           "trace": {
             "maxParsesPerLayout": 2,
             "totalsMs": {
-              "script": 72,
-              "style": 67,
-              "layout": 317,
-              "gc": 13,
-              "other": 1,
-              "parseHTML": 48,
-              "paint": 202
+              "script": 76,
+              "style": 78,
+              "layout": 329,
+              "gc": 19,
+              "other": 2,
+              "parseHTML": 50,
+              "paint": 218
             },
             "longTaskCount": 0,
             "longestTasks": []
@@ -3288,29 +4024,146 @@
           "worst": {
             "name": "keydown",
             "durationMs": 40,
-            "inputDelayMs": 11,
+            "inputDelayMs": 10,
             "processingMs": 0,
-            "presentationMs": 29
+            "presentationMs": 30
           },
           "interactionsMs": [
             32,
+            32,
+            32,
             40,
-            32,
-            32,
-            32,
-            40
+            24,
+            32
           ],
           "lateShift": 0,
           "trace": {
             "maxParsesPerLayout": 2,
             "totalsMs": {
-              "script": 96,
-              "style": 84,
-              "layout": 370,
-              "gc": 18,
-              "other": 5,
+              "gc": 17,
+              "other": 3,
+              "script": 80,
+              "style": 73,
+              "layout": 305,
+              "parseHTML": 45,
+              "paint": 200
+            },
+            "longTaskCount": 0,
+            "longestTasks": []
+          }
+        },
+        {
+          "query": "coding",
+          "expected": 1686,
+          "shown": 1686,
+          "status": "1.686 baris cocok dengan “coding”.",
+          "keysSeen": 6,
+          "interactionCount": 6,
+          "worstInteractionMs": 32,
+          "worst": {
+            "name": "keydown",
+            "durationMs": 32,
+            "inputDelayMs": 0,
+            "processingMs": 1,
+            "presentationMs": 31
+          },
+          "interactionsMs": [
+            32,
+            32,
+            24,
+            32,
+            24,
+            32
+          ],
+          "lateShift": 0,
+          "trace": {
+            "maxParsesPerLayout": 2,
+            "totalsMs": {
+              "script": 80,
+              "style": 79,
+              "layout": 330,
+              "gc": 16,
+              "parseHTML": 46,
+              "paint": 224,
+              "other": 1
+            },
+            "longTaskCount": 0,
+            "longestTasks": []
+          }
+        },
+        {
+          "query": "coding",
+          "expected": 1686,
+          "shown": 1686,
+          "status": "1.686 baris cocok dengan “coding”.",
+          "keysSeen": 6,
+          "interactionCount": 6,
+          "worstInteractionMs": 32,
+          "worst": {
+            "name": "keydown",
+            "durationMs": 32,
+            "inputDelayMs": 0,
+            "processingMs": 1,
+            "presentationMs": 31
+          },
+          "interactionsMs": [
+            32,
+            32,
+            32,
+            24,
+            32,
+            32
+          ],
+          "lateShift": 0,
+          "trace": {
+            "maxParsesPerLayout": 2,
+            "totalsMs": {
+              "gc": 14,
+              "script": 78,
+              "style": 72,
+              "layout": 323,
               "parseHTML": 49,
-              "paint": 234
+              "paint": 200,
+              "other": 1
+            },
+            "longTaskCount": 0,
+            "longestTasks": []
+          }
+        },
+        {
+          "query": "coding",
+          "expected": 1686,
+          "shown": 1686,
+          "status": "1.686 baris cocok dengan “coding”.",
+          "keysSeen": 6,
+          "interactionCount": 6,
+          "worstInteractionMs": 40,
+          "worst": {
+            "name": "keydown",
+            "durationMs": 40,
+            "inputDelayMs": 10,
+            "processingMs": 0,
+            "presentationMs": 30
+          },
+          "interactionsMs": [
+            32,
+            32,
+            32,
+            32,
+            40,
+            32
+          ],
+          "lateShift": 0,
+          "trace": {
+            "maxParsesPerLayout": 2,
+            "totalsMs": {
+              "script": 76,
+              "style": 70,
+              "layout": 317,
+              "gc": 23,
+              "other": 1,
+              "parseHTML": 48,
+              "paint": 197
             },
             "longTaskCount": 0,
             "longestTasks": []

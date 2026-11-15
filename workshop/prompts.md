@@ -29,17 +29,21 @@ These controls come from https://antigravity.google/docs/plan/ and https://antig
 
 ## Case 1: LCP, the main image shows up late
 
+Before you record, open the Performance panel's capture settings (the gear icon) and set **Network** to **Slow 4G** and **CPU** to **4x slowdown**. On localhost every request is instant, so without throttling the late image hardly shows. Slow 4G is closer to what a visitor on a phone gets.
+
 ```text
-LCP case. Open http://127.0.0.1:4173/starter/ and record a reload.
-Find the LCP element and when its download starts.
-Use Modern Web Guidance on loading the hero image early.
-Explain why it shows up late and propose the smallest fix.
-Keep the same image at the same size.
+LCP case. Open http://127.0.0.1:4173/starter/ and record a reload
+with Slow 4G network throttling. Find the LCP element and when
+its download starts. Use Modern Web Guidance on loading the hero
+image early. Explain why it shows up late and propose the smallest
+fix. Keep the same image at the same size.
 ```
 
 Expected guide: `optimize-image-priority`.
 
 ## Case 2: INP, typing in search feels stuck
+
+Set **Network** back to **No throttling** first. With Slow 4G the 1.9 MB transcript takes about 11 seconds to load, and search stays disabled until it arrives. Keep CPU at 4x slowdown. Case 3 also runs without network throttling.
 
 ```text
 INP case. Open http://127.0.0.1:4173/starter/, record typing

@@ -108,7 +108,7 @@ Run <code>npm run sample:serve</code>, open 127.0.0.1:4173/starter/
 **Point:** feel the three problems before we name them.
 
 - Show: open 127.0.0.1:4173/starter/ in Chrome. Attendees start it with the command in the footer.
-- Show: reload. The big episode image arrives after the rest of the page.
+- Show: in DevTools, set the network to Slow 4G, then reload. The big episode image arrives seconds after the rest of the page. Set it back to No throttling for the next two.
 - Show: click the search box and type "coding". The page lags behind your typing.
 - Show: reload and keep your hands off. A couple of seconds in, a yellow announcement drops in at the top and pushes everything down.
 - Three problems, three labels. The next slide says what the labels mean.
@@ -382,13 +382,14 @@ split: 4fr 7fr
 ::default::
 
 1. DevTools, **Performance** panel
-2. Record and reload
-3. Find the **LCP** marker: which element, and when did its download start?
+2. Network: **Slow 4G**
+3. Record and reload
+4. Find the **LCP**: which element, and when did its download start?
 
 ::right::
 <figure class="df-shot">
-  <img src="/captures/lcp-measure.png" width="840" height="383" alt="Chrome DevTools Performance panel after a reload of the starter: LCP 0.67 s, and the LCP breakdown insight shows 652 ms of resource load delay before the hero image download starts">
-  <Credit>Own capture, Chrome 157 DevTools, 4x CPU slowdown</Credit>
+  <img src="/captures/lcp-measure.png" width="840" height="383" alt="Chrome DevTools Performance panel after a reload of the starter on Slow 4G: LCP 5.40 s, and the LCP breakdown insight shows 2,763 ms of resource load delay before the hero image download starts">
+  <Credit>Own capture, Chrome 157 DevTools, Slow 4G, 4x CPU slowdown</Credit>
 </figure>
 
 ::foot::
@@ -399,10 +400,11 @@ Watch first, then do the same.
 
 **Point:** the Performance panel tells you which element is the LCP and why it was late.
 
-- Show: DevTools, Performance panel. The circular arrow at the top is Record and reload. Click it and wait until it stops.
-- Insights on the left: LCP is 0.67 seconds. That's under 2.5, so why bother? Because about 650 ms of it is waiting. This is localhost on a fast laptop. On a real network and a slower phone, that wait grows.
-- Click LCP breakdown. It splits LCP into four parts. "Resource load delay" is about 650 ms: time before the browser even asked for the image.
-- The timeline marks the same gap. The small blue mark at the far right of the Network track is the image request, near the end.
+- Show: DevTools, Performance panel. Open the gear for capture settings and set Network to Slow 4G. On localhost every request is instant, so without this the problem hardly shows. Slow 4G is closer to a visitor on a phone.
+- The circular arrow at the top is Record and reload. Click it and wait until it stops.
+- Insights on the left: LCP is 5.4 seconds, in red. Good is 2.5, poor starts at 4.
+- Click LCP breakdown. It splits LCP into four parts. "Resource load delay" is about 2.8 seconds: time before the browser even asked for the image.
+- Read the Network track left to right: the page, then app.js and the stylesheet, then featured.json, and only then hero-episode.jpg. The image waits for a script, which waits for a data file.
 - Ask the room: why would the browser wait so long to fetch the most important image?
 - Before the event: check the panel names match the Chrome on screen.
 -->
@@ -418,11 +420,11 @@ split: 1fr
 ::default::
 
 ```text
-LCP case. Open http://127.0.0.1:4173/starter/ and record a reload.
-Find the LCP element and when its download starts.
-Use Modern Web Guidance on loading the hero image early.
-Explain why it shows up late and propose the smallest fix.
-Keep the same image at the same size.
+LCP case. Open http://127.0.0.1:4173/starter/ and record a reload
+with Slow 4G network throttling. Find the LCP element and when
+its download starts. Use Modern Web Guidance on loading the hero
+image early. Explain why it shows up late and propose the smallest
+fix. Keep the same image at the same size.
 ```
 
 ::foot::
@@ -493,7 +495,7 @@ split: 4fr 7fr
 ::default::
 <div class="df-checks">
 
-- Same recording, fresh reload
+- Same recording, Slow 4G, fresh reload
 - The image download starts right away
 - Same image, same size
 
@@ -504,16 +506,16 @@ split: 4fr 7fr
   <div class="df-shot-pair">
     <div>
       <p class="df-shot-cap">Before</p>
-      <img src="/captures/lcp-before.png" width="222" height="114" alt="LCP breakdown before the fix: resource load delay 650 ms">
+      <img src="/captures/lcp-before.png" width="222" height="114" alt="LCP breakdown before the fix on Slow 4G: resource load delay 2,782 ms">
     </div>
     <div>
       <p class="df-shot-cap">After</p>
-      <img src="/captures/lcp-after.png" width="222" height="114" alt="LCP breakdown after the fix: resource load delay 9 ms">
+      <img src="/captures/lcp-after.png" width="222" height="114" alt="LCP breakdown after the fix on Slow 4G: resource load delay 23 ms">
     </div>
   </div>
-  <Credit>LCP breakdown, own capture, Chrome 157 DevTools</Credit>
+  <Credit>LCP breakdown, own capture, Chrome 157 DevTools, Slow 4G</Credit>
 </figure>
-<LabValue compact value="720 → 96 ms" what="LCP, before → after" />
+<LabValue compact value="5.4 → 2.4 s" what="LCP, before → after" source="Lab, headless Chromium, Slow 4G, 4x CPU, median of 5" />
 
 ::foot::
 Your machine helps find the cause. Real visitors decide the score.
@@ -524,9 +526,11 @@ Your machine helps find the cause. Real visitors decide the score.
 **Point:** the second recording proves the fix, and a laptop number is not the real-visitor score.
 
 - Ask the agent: "Measure again the same way and show before and after." Then record it yourself too.
-- Left table before, right table after. Resource load delay drops from about 650 ms to under 10. The image request now starts with the page.
+- Keep Network on Slow 4G for this recording, or the comparison means nothing.
+- Left table before, right table after. Resource load delay drops from about 2.8 seconds to about 20 ms. The image request now starts right after the HTML.
+- What's left is mostly downloading the image itself, about 1.7 seconds on Slow 4G. If asked: a smaller image is the next fix, and DevTools already suggests it under "Improve image delivery".
 - Check the page by eye: same image, same size.
-- Yellow box: my practice runs, median of five, slower CPU. The tables are one run with DevTools open, so the numbers differ a little. Yours will too. Look at the size of the change.
+- Yellow box: my practice runs, Slow 4G, median of five: 5.4 seconds, poor, down to 2.4, good. The tables are one run with DevTools open, so the numbers differ a little. Yours will too. Look at the size of the change.
 - Footer, say it clearly once: this is a lab number from your machine, good for finding causes. The score Google uses comes from real visitors, over the weeks after you ship.
 -->
 
@@ -545,6 +549,7 @@ subhead: 'INP: how long the page takes to react to a tap or a key.'
 **Point:** second case, INP. Two rounds, and the first one fails.
 
 - Same loop, but the problem happens when you type, not when the page loads.
+- Set Network back to No throttling now. With Slow 4G the 1.9 MB search data takes about 11 seconds to arrive, and search stays off until then. Keep the CPU at 4x.
 - Heads up: two rounds. The first fix follows the guide and still isn't enough. That's the most useful moment of the hour.
 -->
 
@@ -677,7 +682,7 @@ split: 4fr 7fr
   <img src="/captures/inp-round1.png" width="840" height="383" alt="Round 1 interaction trace: INP 630 ms, and one long Layout block still sits under the key press, so the next key waits 514 ms">
   <Credit>Own capture, Chrome 157 DevTools, 4x CPU slowdown</Credit>
 </figure>
-<LabValue compact value="704 ms" what="slowest key press, round 1" />
+<LabValue compact value="632 ms" what="slowest key press, round 1" />
 
 ::foot::
 A fix in the diff is a guess until the trace confirms it.
@@ -690,7 +695,7 @@ A fix in the diff is a guess until the trace confirms it.
 - Record the same typing on a fresh reload.
 - In the capture: processing is now 0 ms, so our code did break up. But there's still one long purple Layout bar, and the next key press waited 514 ms behind it. That wait is the input delay.
 - What happened: the batches went into the page faster than the browser drew them. They piled up and were laid out together, in one long pass.
-- Yellow box: slowest key press 704 ms in practice runs, down from about 1,860. Better, still far from 200. The capture shows 630 ms from one run with DevTools open.
+- Yellow box: slowest key press 632 ms in practice runs, down from about 1,940. Better, still far from 200. The capture shows 630 ms from one run with DevTools open.
 - Say what today's trace shows. Don't turn it into "scheduler.yield() doesn't work". It worked. It wasn't enough here.
 - Check: same result count, every line still there.
 -->
@@ -727,7 +732,7 @@ Round 2 prompt: workshop/prompts.md
 - /plan with the round 2 prompt. It asks the agent whether the browser gets to draw between batches.
 - The code: same batches, one new line. await nextFrame() waits until the browser draws a frame, then we yield. Each batch reaches the screen before the next one starts.
 - Same three checks: every result, latest search only, guide named. Proceed, read the diff, record the same typing.
-- Yellow box: 32 ms in practice runs, from 704 in round 1.
+- Yellow box: 32 ms in practice runs, from 632 in round 1.
 - If asked about the trade-off: long lists now fill in over many frames. The first rows show right away, the last ones a moment later.
 - If the run stalls: open sample/reference/inp/ and say it's prepared.
 -->
@@ -778,7 +783,7 @@ A click or a key press right before a shift stops it counting.
 
 **Point:** find what moved and what pushed it, without touching the page.
 
-- Same recording as LCP: Record and reload. Then hands off the mouse and keyboard.
+- Same recording as LCP, with Network still on No throttling: Record and reload. Then hands off the mouse and keyboard.
 - Why hands off: a shift right after a click or key press doesn't count toward CLS. Touch the page and you hide the problem from yourself.
 - Open "Layout shift culprits" in Insights, then hover the purple diamond on the Layout shifts track. DevTools plays the shift on a small screenshot.
 - Score 0.1308, at about 2.5 seconds. The yellow announcement lands at the top and pushes the episode down.
@@ -931,25 +936,51 @@ Each time, the second recording decided.
 -->
 
 ---
-layout: presenter
+layout: trace
+split: 7fr 4fr
 ---
 
+::title::
 # Take the loop home
 
-- Repo: github.com/ivankristianto/<br>google-devfest-2026
-- Prompts: `workshop/prompts.md`
-- Video: youtu.be/PsrHq5F_BAc
-- Notes: ivankristianto.com
+::default::
+<div class="df-found home-points">
+  <p><span class="df-label blue">1</span><span><b>Record twice.</b> Before the change and after it. The second recording decides.</span></p>
+  <p><span class="df-label yellow">2</span><span><b>Read the plan.</b> Guidance improves the agent. You check it against your page.</span></p>
+  <p><span class="df-label red">3</span><span><b>Lab finds, field decides.</b> Your laptop finds the cause. Real visitors set the score.</span></p>
+</div>
 
-Measure, ask, check, apply, measure again.
+::right::
+<figure class="home-qr">
+  <img src="/qr-repo.svg" width="300" height="300" alt="QR code linking to github.com/ivankristianto/google-devfest-2026">
+  <figcaption>Sample, prompts and agent rules<br><span class="df-mono">github.com/ivankristianto/<br>google-devfest-2026</span></figcaption>
+</figure>
+
+::foot::
+Notes: ivankristianto.com
+
+<style>
+.home-points { gap: 26px; }
+.home-points p { grid-template-columns: 64px 1fr; font-size: 30px; line-height: 1.25; }
+.home-points .df-label { text-align: center; padding: 2px 0; }
+.home-qr { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.home-qr img {
+  display: block; width: 260px; height: 260px;
+  border: var(--df-stroke) solid var(--df-ink); border-radius: 20px; padding: 10px; background: #fff;
+}
+.home-qr figcaption { text-align: center; font-size: 22px; line-height: 1.3; }
+.home-qr .df-mono { font-size: 20px; }
+</style>
 
 <!--
 49:00 to 50:00, then questions until 60:00
 
-**Point:** what to try on your own site next week.
+**Point:** three habits to keep, and the repo to practise with.
 
-- The repo has the site, the prompts and the rules file. Redo all three cases at your own pace, round 2 included.
-- On your own site: pick one slow thing a visitor would notice. Record it. Ask for a plan with guidance. Check it with the three questions. Apply. Record again.
-- After you ship, watch real-visitor data. Your laptop finds the cause; visitors decide the score.
+- Leave the QR code up while you talk. People scan it during the first bullet. The repo has the site, the prompts and the rules file, so they can redo all three cases at their own pace, round 2 included.
+- Record twice: before and after every change. Today the second recording caught a fix that looked right and wasn't.
+- Read the plan: the guide made the agent's advice better each time, but it never saw our page. That check is your job.
+- Lab finds, field decides: your laptop is where you find causes. After you ship, real-visitor data tells you if it worked.
+- On your own site next week: pick one slow thing a visitor would notice and run the loop once.
 - Questions until the hour. If a case ran over, finish it here from its prepared folder.
 -->

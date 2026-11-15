@@ -45,7 +45,8 @@ The sample's faults are real and measurable, and the lesson includes the case wh
 - Agent surface: Antigravity App (desktop) is the main surface; Antigravity CLI (`agy`) is the fallback. Documented controls as of 2026-11-13: `/plan` plus a goal, then Proceed, in the App; `agy --mode=plan` or Shift+Tab in the CLI. On a personal account the App's agent uses a built-in browser rather than Chrome DevTools MCP, so whether it can record performance traces is unverified.
 - Code redemption is handled by the organizer before the event starts; the deck doesn't cover it.
 - Repo: https://github.com/ivankristianto/google-devfest-2026 (must be public before the event).
-- Undecided: throttle presets and whether Q&A counts inside the hour.
+- Throttling: CPU 4x slowdown in every case. Network Slow 4G for the LCP case only, because localhost hides the late image; INP and CLS run without network throttling (the 1.9 MB transcript would take about 11 s under Slow 4G).
+- Undecided: whether Q&A counts inside the hour.
 
 ## Brand Commitments
 
