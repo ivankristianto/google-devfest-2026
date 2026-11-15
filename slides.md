@@ -49,7 +49,7 @@ split: 7fr 5fr
     <tr><th>Day job</th><td>Senior Web Engineer, Human Made</td></tr>
     <tr><th>GDE since</th><td>2018</td></tr>
     <tr><th>Podcast</th><td>Co-host of <i>ngobrolin web</i></td></tr>
-    <tr><th>CLS today</th><td>0, I'll stay in frame</td></tr>
+    <tr><th>Middle name</th><td>Performance</td></tr>
   </tbody>
 </table>
 
@@ -60,7 +60,7 @@ split: 7fr 5fr
 </figure>
 
 ::foot::
-My first guided fix left the page slow. Today you'll see why.
+My AI agent's first fix looked right. The page stayed slow.
 
 <style>
 .intro-role { font-size: 32px; line-height: 1.2; }
@@ -81,15 +81,51 @@ My first guided fix left the page slow. Today you'll see why.
 </style>
 
 <!--
-00:30 to 02:00
+00:30 to 01:30
 
-**Point:** who's talking, and a first taste of the words LCP and CLS.
+**Point:** who's talking, and a first taste of the word LCP.
 
 - I'm Ivan. GDE for Web Performance since 2018, web engineer at Human Made, and co-host of the ngobrolin web podcast. The page we fix today is a copy of that podcast's site.
+- Middle name: Performance. It's a joke, but making pages fast is what I've done since 2018. The next slide has the proof.
 - The photo is the biggest thing on this slide. Browsers call the biggest thing on screen the LCP element. Remember the word, it's back in ten minutes.
-- "CLS today: 0" is a joke about content jumping around. It'll make sense by the end.
-- Footer: the first time I gave an agent expert guidance to fix a slow page, the code looked right and the page stayed slow. You'll watch that happen in the second case, and see how we caught it.
+- Footer: the first time my AI agent fixed a slow page, the code looked right and the page stayed slow. You'll watch that happen in the second case, and see how we caught it.
 - How we work: I do each step on my screen, then you do it on yours. Fall behind? Just watch. Everything is in the repo to redo later.
+-->
+
+---
+
+# Proof: 100 on mobile
+
+<figure class="df-shot psi-shots">
+  <div class="df-shot-pair">
+    <div>
+      <p class="df-shot-cap">ivankristianto.com</p>
+      <img src="/captures/psi-ivankristianto.png" width="640" height="424" alt="PageSpeed Insights report for www.ivankristianto.com on Mobile: real users No Data, and 100 for Performance, Accessibility, Best Practices and SEO">
+    </div>
+    <div>
+      <p class="df-shot-cap">ngobrol.in, the podcast</p>
+      <img src="/captures/psi-ngobrolin.png" width="640" height="424" alt="PageSpeed Insights report for ngobrol.in on Mobile: real users No Data, and 100 for Performance, Accessibility, Best Practices and SEO">
+    </div>
+  </div>
+  <Credit>PageSpeed Insights, Mobile, 15 November 2026. Lighthouse lab test, one run each.</Credit>
+</figure>
+
+::foot::
+Lab test only. No real-visitor data.
+
+<style>
+.psi-shots .df-shot-pair { max-width: 980px; }
+</style>
+
+<!--
+01:30 to 02:00
+
+**Point:** the loop works on real sites, and a lab score is only half the story.
+
+- My site and the podcast's site, tested in PageSpeed Insights with Mobile selected. 100 in all four.
+- Mobile here means a mid-range phone on a slow mobile connection, simulated. That's a lab test, the same kind we run today.
+- Look above the scores: "Discover what your real users are experiencing" says No Data. Too few visitors in Chrome's real-user data so far. Keep that in mind, it comes back at the end.
+- Today you take a slow copy of the podcast site and make it fast, step by step.
 -->
 
 ---
@@ -157,15 +193,16 @@ codeSize: 18px
 
 ::default::
 
-- Coding agents learned from years of old web code. Some of it is out of date.
-- Written by web experts, with Chrome, Edge, Firefox, MDN and the community taking part.
+- AI coding agents learned from years of old web code. Some of it is out of date.
+- Short guides by web experts from Chrome, Edge, Firefox and MDN.
 - Version 1.0 came out on 10 November 2026, with 203 guides.
-- It installs into your project as a skill. The agent picks it up on its own.
+- One command adds it to your project. The agent finds it by itself.
 
 ::right::
 <div class="df-box yellow df-quote">
-  <p class="df-mono df-small">From the skill's own description:</p>
+  <p class="df-mono df-small">In its own words:</p>
   <p>"web APIs evolve rapidly and training weights contain obsolete patterns"</p>
+  <p class="df-small">Plainly: browsers change fast, and what the AI learned gets old.</p>
 </div>
 
 ```bash
@@ -176,14 +213,14 @@ npx modern-web-guidance@latest install
 Overview video: youtu.be/PsrHq5F_BAc (Chrome for Developers, 7 min)
 
 <!--
-05:00 to 06:30 (slides 5 to 7: about 5 minutes on guidance)
+05:00 to 06:30 (slides 6 to 8: about 5 minutes on guidance)
 
 **Point:** why an agent needs guidance, and how you add it to a project.
 
-- Coding agents learned from years of web code. Much of it is old. Ask for a fix and you often get the most common answer, not the current one.
+- AI coding agents learned from years of web code. Much of it is old. Ask for a fix and you often get the most common answer, not the current one.
 - Modern Web Guidance is a set of short guides written by web experts, one per task. People from Chrome, Edge, Firefox and MDN worked on it. Version 1.0 has 203 guides.
-- The yellow box is the skill describing itself: browsers change fast, and what the model learned goes stale.
-- The command installs it into your project. The agent finds it there by itself, so you don't have to mention it in every prompt.
+- The yellow box is the guidance describing itself. "Training weights" is what the AI learned. The last line says it plainly.
+- The command adds it to your project as a "skill", a folder of instructions the agent reads. The agent finds it there by itself, so you don't have to mention it in every prompt.
 - Footer: a seven-minute overview video from Chrome, for later.
 - If asked about the count: the list command shows 208 entries because it also counts a few broad topic guides.
 -->
@@ -193,13 +230,13 @@ Overview video: youtu.be/PsrHq5F_BAc (Chrome for Developers, 7 min)
 # How the agent uses a guide
 
 <div class="df-flow df-flow-4">
-  <div class="df-box blue"><b>Search</b><span>a short phrase about the task</span></div>
+  <div class="df-box blue"><b>Search</b><span>a few words about the task</span></div>
   <FlowArrow />
-  <div class="df-box yellow"><b>Retrieve</b><span>one guide, read in full</span></div>
+  <div class="df-box yellow"><b>Read</b><span>one guide, all of it</span></div>
   <FlowArrow />
   <div class="df-box green"><b>Check</b><span>its code against the guide</span></div>
   <FlowArrow />
-  <div class="df-box red"><b>Credit</b><span>names the guide it used</span></div>
+  <div class="df-box red"><b>Tell</b><span>which guide it used</span></div>
 </div>
 
 ```bash
@@ -208,7 +245,7 @@ npx -y modern-web-guidance@latest search "prioritize hero image"
 ```
 
 ::foot::
-After a change, the agent's answer ends by naming each guide it used.
+No guide named? Then no guide was used.
 
 <!--
 06:30 to 08:00
@@ -216,10 +253,10 @@ After a change, the agent's answer ends by naming each guide it used.
 **Point:** the agent looks things up before it writes code, and tells you what it used.
 
 - Walk the four boxes left to right.
-- Search: the agent turns your task into a short phrase. The command under the boxes is the same search, and you can run it yourself. For "prioritize hero image", the first result is optimize-image-priority.
-- Retrieve: it reads that one guide in full, not the whole library.
+- Search: the agent turns your task into a few words. The command under the boxes is the same search, and you can run it yourself. For "prioritize hero image", the first result is optimize-image-priority.
+- Read: it reads that one guide from start to end, not the whole library.
 - Check: before it finishes, it compares its code with the guide's rules.
-- Credit: it names each guide it used. No guide named means no guide used. That's your fastest check later.
+- Tell: its answer ends by naming each guide it used. Footer: no guide named means no guide used. That's your fastest check later.
 - Before the event: rerun the search, results can change between releases.
 -->
 
@@ -254,7 +291,7 @@ Chrome 103, Edge 103, Firefox 132, Safari 17.2
 ```
 
 ::foot::
-Shortened from optimize-image-priority. The guide can't see our page; we measure first.
+Shortened from the optimize-image-priority guide. It can't see our page, so we measure first.
 
 <!--
 08:00 to 09:30
@@ -270,7 +307,7 @@ Shortened from optimize-image-priority. The guide can't see our page; we measure
 
 [click]
 
-- Browser support: which browsers have the feature, and what happens in the others. Here, older browsers ignore the attribute. Nothing breaks.
+- Browser support: which browsers have the feature, and what happens in the others. "Baseline" means it works in all the major browsers, here since October 2024. Older browsers ignore the attribute. Nothing breaks.
 - Footer, the catch: the guide says "raise the priority". It doesn't know our page only sets the image from JavaScript, late. A measurement shows that. That's why we always measure first.
 -->
 
@@ -287,7 +324,7 @@ Shortened from optimize-image-priority. The guide can't see our page; we measure
   <FlowArrow />
   <div class="df-box red"><b>Apply</b><span>click Proceed</span></div>
   <FlowArrow />
-  <div class="df-box blue"><b>Again</b><span>same recording</span></div>
+  <div class="df-box blue"><b>Again</b><span>record the same way</span></div>
 </div>
 
 <div class="df-small df-questions">
@@ -300,7 +337,7 @@ Shortened from optimize-image-priority. The guide can't see our page; we measure
 </div>
 
 ::foot::
-CLI fallback: <code>agy --mode=plan</code>
+No App? In a terminal: <code>agy --mode=plan</code>
 
 <!--
 09:30 to 11:00
@@ -310,11 +347,11 @@ CLI fallback: <code>agy --mode=plan</code>
 - Measure: record the problem in Chrome DevTools before anyone touches code. That's our "before".
 - Ask: in Antigravity, type /plan, then the prompt. The agent reads the page and the guide and writes a plan. No code changes yet.
 - Check: read the plan together with the three questions on screen. Read them out.
-- Apply: if the plan passes, click Proceed. The agent edits the code and shows the diff.
+- Apply: if the plan passes, click Proceed. The agent edits the code and shows the diff, the lines it changed.
 - Again: same recording, same way, fresh reload. That's our "after".
 - Why we read before Proceed: plan mode is not a promise that nothing gets edited. Reading the plan is the human part of the job.
 - Why the prompts are short: the repo has a rules file, AGENTS.md, that the agent reads every turn. Only edit the starter folder, measure before and after, say so when you can't see the page.
-- Footer: in the terminal version, agy --mode=plan does the same. Shift+Tab switches modes.
+- Footer: no App? The terminal version, agy, does the same with agy --mode=plan. Shift+Tab switches modes.
 -->
 
 ---
@@ -329,8 +366,8 @@ split: 6fr 5fr
 <div class="df-checks">
 
 - Antigravity App open and signed in
-- Gemini 4 Hydrogen in the model selector
-- `.agents/skills/modern-web-guidance` exists
+- Model set to Gemini 4 Hydrogen
+- Guidance installed: `.agents/skills/modern-web-guidance`
 - Sample running at 127.0.0.1:4173/starter/
 - The agent can open the sample
 
@@ -385,9 +422,9 @@ split: 4fr 7fr
 ::default::
 
 1. DevTools, **Performance** panel
-2. Network: **Slow 4G**
-3. Record and reload
-4. Find the **LCP**: which element, and when did its download start?
+2. Network: **Slow 4G**, like a phone
+3. Click Record and reload
+4. Find the **LCP**: which image, and when did it start downloading?
 
 ::right::
 <figure class="df-shot">
@@ -518,7 +555,7 @@ split: 4fr 7fr
   </div>
   <Credit>LCP breakdown, own capture, Chrome 157 DevTools, Slow 4G</Credit>
 </figure>
-<LabValue compact value="5.4 → 2.4 s" what="LCP, before → after" source="Lab, headless Chromium, Slow 4G, 4x CPU, median of 5" />
+<LabValue compact value="5.4 → 2.4 s" what="LCP, before → after" source="Lab, headless Chromium, Slow 4G, 4x slower CPU, middle of 5 runs" />
 
 ::foot::
 Your machine helps find the cause. Real visitors decide the score.
@@ -533,7 +570,7 @@ Your machine helps find the cause. Real visitors decide the score.
 - Left table before, right table after. Resource load delay drops from about 2.8 seconds to about 20 ms. The image request now starts right after the HTML.
 - What's left is mostly downloading the image itself, about 1.7 seconds on Slow 4G. If asked: a smaller image is the next fix, and DevTools already suggests it under "Improve image delivery".
 - Check the page by eye: same image, same size.
-- Yellow box: my practice runs, Slow 4G, median of five: 5.4 seconds, poor, down to 2.4, good. The tables are one run with DevTools open, so the numbers differ a little. Yours will too. Look at the size of the change.
+- Yellow box: my practice runs, Slow 4G, the middle result of five: 5.4 seconds, poor, down to 2.4, good. The tables are one run with DevTools open, so the numbers differ a little. Yours will too. Look at the size of the change.
 - Footer, say it clearly once: this is a lab number from your machine, good for finding causes. The score Google uses comes from real visitors, over the weeks after you ship.
 -->
 
@@ -568,7 +605,7 @@ split: 4fr 7fr
 
 1. Reload and wait
 2. Record, type **coding**, stop
-3. Find the **interaction**: what runs under it?
+3. Find the **key press**: what work runs under it?
 
 ::right::
 <figure class="df-shot">
@@ -582,14 +619,14 @@ INP needs a real key press. A reload alone won't show it.
 <!--
 24:00 to 26:00
 
-**Point:** INP needs a real key press, and the trace shows where the time goes.
+**Point:** INP needs a real key press, and the recording shows where the time goes.
 
 - A different recording, no reload. Reload first and let the page settle. Click the search box, press Record, type "coding", press Stop.
 - Insights: INP about 970 ms. Good is 200.
 - Click INP breakdown. Three parts: input delay, processing, presentation. Processing is over 800 ms of work under one key press.
-- Under it in the flame chart: the short yellow part on the left is our code, renderResults. The long purple bar is Layout, the browser working out where every result row goes. "coding" matches 1,686 lines; the first letter alone matches over 8,000.
+- Under it, the chart shows what the page was busy with, as stacked bars. The short yellow part on the left is our code, renderResults. The long purple bar is Layout, the browser working out where every result row goes. "coding" matches 1,686 lines; the first letter alone matches over 8,000.
 - So our JavaScript isn't the expensive part. Putting the rows on the page is.
-- A Lighthouse load test or Total Blocking Time won't show this. INP needs a real interaction.
+- A page-load test like Lighthouse won't show this. INP needs a real key press.
 -->
 
 ---
@@ -675,8 +712,8 @@ split: 4fr 7fr
 <div class="df-checks">
 
 - Same typing, fresh reload
-- The diff has <code>scheduler.yield()</code>
-- The trace still shows one long block
+- The code now has <code>scheduler.yield()</code>
+- The recording still shows one long block
 
 </div>
 
@@ -688,18 +725,18 @@ split: 4fr 7fr
 <LabValue compact value="632 ms" what="slowest key press, round 1" />
 
 ::foot::
-A fix in the diff is a guess until the trace confirms it.
+Code that looks right is only a guess until you measure it.
 
 <!--
 30:00 to 32:00
 
-**Point:** code that follows the guide can still leave the page slow. Only the trace tells you.
+**Point:** code that follows the guide can still leave the page slow. Only the recording tells you.
 
 - Record the same typing on a fresh reload.
-- In the capture: processing is now 0 ms, so our code did break up. But there's still one long purple Layout bar, and the next key press waited 514 ms behind it. That wait is the input delay.
+- In the capture: processing is now 0 ms, so our code did break up. But there's still one long purple Layout bar, and the next key press waited 514 ms behind it. DevTools calls that wait the input delay.
 - What happened: the batches went into the page faster than the browser drew them. They piled up and were laid out together, in one long pass.
 - Yellow box: slowest key press 632 ms in practice runs, down from about 1,940. Better, still far from 200. The capture shows 630 ms from one run with DevTools open.
-- Say what today's trace shows. Don't turn it into "scheduler.yield() doesn't work". It worked. It wasn't enough here.
+- Say what today's recording shows. Don't turn it into "scheduler.yield() doesn't work". It worked. It wasn't enough here.
 - Check: same result count, every line still there.
 -->
 
@@ -714,7 +751,7 @@ codeSize: 20px
 
 ::default::
 
-Wait for the next frame, then pause. Each batch now reaches the screen.
+Let the browser draw each batch before starting the next one.
 
 <span class="df-label outline">I lead this one</span>
 
@@ -729,11 +766,11 @@ Round 2 prompt: workshop/prompts.md
 <!--
 32:00 to 37:00
 
-**Point:** give the browser a frame to draw each batch.
+**Point:** give the browser a moment to draw each batch.
 
 - I drive this round. You watch, and repeat it later from workshop/prompts.md.
 - /plan with the round 2 prompt. It asks the agent whether the browser gets to draw between batches.
-- The code: same batches, one new line. await nextFrame() waits until the browser draws a frame, then we yield. Each batch reaches the screen before the next one starts.
+- The code: same batches, one new line. await nextFrame() waits until the browser has drawn the screen once, then we pause. Each batch is on screen before the next one starts.
 - Same three checks: every result, latest search only, guide named. Proceed, read the diff, record the same typing.
 - Yellow box: 32 ms in practice runs, from 632 in round 1.
 - If asked about the trade-off: long lists now fill in over many frames. The first rows show right away, the last ones a moment later.
@@ -779,7 +816,7 @@ split: 4fr 7fr
 </figure>
 
 ::foot::
-A click or a key press right before a shift stops it counting.
+Touch the page and the shift won't count. Hands off.
 
 <!--
 37:00 to 39:00
@@ -787,10 +824,10 @@ A click or a key press right before a shift stops it counting.
 **Point:** find what moved and what pushed it, without touching the page.
 
 - Same recording as LCP, with Network still on No throttling: Record and reload. Then hands off the mouse and keyboard.
-- Why hands off: a shift right after a click or key press doesn't count toward CLS. Touch the page and you hide the problem from yourself.
+- Footer, why hands off: a shift right after a click or key press doesn't count toward CLS, because the visitor expects the page to change then. Touch the page and you hide the problem from yourself.
 - Open "Layout shift culprits" in Insights, then hover the purple diamond on the Layout shifts track. DevTools plays the shift on a small screenshot.
 - Score 0.1308, at about 2.5 seconds. The yellow announcement lands at the top and pushes the episode down.
-- The things that moved are the victims. The announcement is the cause.
+- The episode moved, but it did nothing wrong. The announcement pushed it. Fix the thing that pushes.
 - The insight found no culprit for this shift. The preview shows the cause anyway.
 -->
 
@@ -882,7 +919,7 @@ split: 4fr 7fr
 
 - Same recording, hands off
 - No shift when it arrives
-- Phone width too (lab: 0.237 → 0)
+- Phone width too (0.237 → 0 in the lab)
 
 </div>
 
@@ -896,7 +933,7 @@ split: 4fr 7fr
   </div>
   <Credit>Own capture, Chrome 157 DevTools, 4x CPU slowdown</Credit>
 </figure>
-<LabValue compact value="0.131 → 0" what="CLS at 1280 px wide" />
+<LabValue compact value="0.131 → 0" what="CLS, desktop width" />
 
 ::foot::
 The announcement still shows. It just has its own space now.
@@ -949,8 +986,8 @@ split: 7fr 4fr
 ::default::
 <div class="df-found home-points">
   <p><span class="df-label blue">1</span><span><b>Record twice.</b> Before the change and after it. The second recording decides.</span></p>
-  <p><span class="df-label yellow">2</span><span><b>Read the plan.</b> Guidance improves the agent. You check it against your page.</span></p>
-  <p><span class="df-label red">3</span><span><b>Lab finds, field decides.</b> Your laptop finds the cause. Real visitors set the score.</span></p>
+  <p><span class="df-label yellow">2</span><span><b>Read the plan.</b> The guide makes the agent better. Only you can check it against your page.</span></p>
+  <p><span class="df-label red">3</span><span><b>Laptop finds, visitors decide.</b> Find the cause on your machine. Real visitors set the score.</span></p>
 </div>
 
 ::right::
@@ -983,7 +1020,7 @@ Notes: ivankristianto.com
 - Leave the QR code up while you talk. People scan it during the first bullet. The repo has the site, the prompts and the rules file, so they can redo all three cases at their own pace, round 2 included.
 - Record twice: before and after every change. Today the second recording caught a fix that looked right and wasn't.
 - Read the plan: the guide made the agent's advice better each time, but it never saw our page. That check is your job.
-- Lab finds, field decides: your laptop is where you find causes. After you ship, real-visitor data tells you if it worked.
+- Laptop finds, visitors decide: your laptop is where you find causes. After you ship, real-visitor data tells you if it worked. Remember the "No Data" on the two sites at the start: a 100 in the lab is not the same as real visitors having a fast page.
 - On your own site next week: pick one slow thing a visitor would notice and run the loop once.
 - Questions until the hour. If a case ran over, finish it here from its prepared folder.
 -->

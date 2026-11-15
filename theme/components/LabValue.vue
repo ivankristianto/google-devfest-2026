@@ -4,7 +4,7 @@ withDefaults(defineProps<{
   what: string
   source?: string
   compact?: boolean
-}>(), { source: 'Lab, headless Chromium, 4x CPU, median of 5' })
+}>(), { source: 'Lab, headless Chromium, 4x slower CPU, middle of 5 runs' })
 </script>
 
 <template>
