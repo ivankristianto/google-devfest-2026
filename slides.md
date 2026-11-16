@@ -386,7 +386,10 @@ split: 6fr 5fr
 </div>
 
 ::right::
-<Placeholder label="Antigravity App: model selector, a /plan prompt and the Proceed button" note="Capture from the rehearsed version. Credit: own capture." />
+<figure class="df-shot">
+  <img src="/captures/antigravity-new-chat.png" width="1070" height="400" alt="Antigravity App new chat: a prompt box reading 'Ask anything, @ to mention, / for actions', with the model selector under it">
+  <Credit>Antigravity App, from antigravity.google</Credit>
+</figure>
 
 ::foot::
 Stuck? Watch my screen. You can repeat it all after the session.
