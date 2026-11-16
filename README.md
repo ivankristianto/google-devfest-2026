@@ -4,7 +4,7 @@
 
 Welcome. This is the material from a one-hour hands-on workshop at Google DevFest Online on 18 November 2026, run by Ivan Kristianto (GDE, Web Performance).
 
-You get a small copy of the [Ngobrolin WEB](https://github.com/ngobrolin/landing) podcast site with three performance problems built in. You fix each one with an AI agent ([Antigravity](https://antigravity.google/)) and [Modern Web Guidance](https://developer.chrome.com/blog/modern-web-guidance-v1), and you measure in Chrome DevTools before and after every change. The slides are in here too.
+You get a small copy of the [Ngobrolin WEB](https://github.com/ngobrolin/landing) podcast site with three performance problems built in. You fix each one with an AI agent ([Antigravity](https://antigravity.google/)) and [Modern Web Guidance](https://developer.chrome.com/blog/modern-web-guidance-v1), and you measure in Chrome DevTools before and after every change. The slides are in here too, and [online](https://talks.ivankristianto.com/google-devfest-2026/).
 
 You can follow along live, or work through it on your own at any time.
 
@@ -63,6 +63,8 @@ Each case has a prepared fix you can open and measure:
 Each folder fixes only its own case and leaves the other two problems in place, so you can measure one at a time.
 
 ### The slides
+
+The deck is online at https://talks.ivankristianto.com/google-devfest-2026/ ([PDF](https://talks.ivankristianto.com/google-devfest-2026/slidev-exported.pdf)). To run it locally:
 
 ```bash
 npm run slides:dev      # http://localhost:3030
