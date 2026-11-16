@@ -7,6 +7,7 @@ These are the prompts from the slides, word for word. Ivan runs each step on the
 1. Run `npm run sample:serve` and open http://127.0.0.1:4173/starter/ in Chrome.
 2. Open the repo folder in the Antigravity App and pick **Gemini 4 Hydrogen** in the model selector under the prompt box.
 3. Check that `.agents/skills/modern-web-guidance/` exists. If it doesn't, run `npx modern-web-guidance@latest install` in the repo root.
+4. Run `agy plugin list` and check that `modern-web-guidance` is listed. If it isn't, run `agy plugin install https://github.com/GoogleChrome/modern-web-guidance`.
 
 The repo's `AGENTS.md` holds the ground rules the agent reads on every turn: edit only `sample/starter/`, measure before and after, keep the page working, and say so when it can't see the page. That's why the prompts below can stay short.
 

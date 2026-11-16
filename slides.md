@@ -196,7 +196,7 @@ codeSize: 18px
 - AI coding agents learned from years of old web code. Some of it is out of date.
 - Short guides by web experts from Chrome, Edge, Firefox and MDN.
 - Version 1.0 came out on 10 November 2026, with 203 guides.
-- One command adds it to your project. The agent finds it by itself.
+- Two commands: one adds it to your project, one to Antigravity. The agent finds it by itself.
 
 ::right::
 <div class="df-box yellow df-quote">
@@ -205,22 +205,33 @@ codeSize: 18px
   <p class="df-small">Plainly: browsers change fast, and what the AI learned gets old.</p>
 </div>
 
+<div class="mwg-install">
+
 ```bash
 npx modern-web-guidance@latest install
+agy plugin install \
+https://github.com/GoogleChrome/modern-web-guidance
 ```
+
+</div>
 
 ::foot::
 Overview video: youtu.be/PsrHq5F_BAc (Chrome for Developers, 7 min)
 
+<style>
+/* The full URL has to fit the right column: attendees copy it from the screen. */
+.mwg-install pre, .mwg-install code { font-size: 14px !important; }
+</style>
+
 <!--
 05:00 to 06:30 (slides 6 to 8: about 5 minutes on guidance)
 
-**Point:** why an agent needs guidance, and how you add it to a project.
+**Point:** why an agent needs guidance, and how you add it.
 
 - AI coding agents learned from years of web code. Much of it is old. Ask for a fix and you often get the most common answer, not the current one.
 - Modern Web Guidance is a set of short guides written by web experts, one per task. People from Chrome, Edge, Firefox and MDN worked on it. Version 1.0 has 203 guides.
 - The yellow box is the guidance describing itself. "Training weights" is what the AI learned. The last line says it plainly.
-- The command adds it to your project as a "skill", a folder of instructions the agent reads. The agent finds it there by itself, so you don't have to mention it in every prompt.
+- Run both commands. The npx one puts it in your project, in .agents/skills. The agy one installs it as an Antigravity plugin. Either way it arrives as "skills", folders of instructions the agent reads. The agent finds them by itself, so you don't have to mention the guidance in every prompt.
 - Footer: a seven-minute overview video from Chrome, for later.
 - If asked about the count: the list command shows 208 entries because it also counts a few broad topic guides.
 -->
@@ -367,7 +378,8 @@ split: 6fr 5fr
 
 - Antigravity App open and signed in
 - Model set to Gemini 4 Hydrogen
-- Guidance installed: `.agents/skills/modern-web-guidance`
+- Guidance in `.agents/skills/`
+- Guidance in `agy plugin list`
 - Sample running at 127.0.0.1:4173/starter/
 - The agent can open the sample
 
@@ -387,6 +399,7 @@ Stuck? Watch my screen. You can repeat it all after the session.
 - Go down the five checks. Hands up, or a reaction in chat, when all five are done.
 - The model selector is under the prompt box. Pick Gemini 4 Hydrogen.
 - No .agents/skills/modern-web-guidance folder? Run npx modern-web-guidance@latest install in the repo folder.
+- Not in agy plugin list? Run agy plugin install https://github.com/GoogleChrome/modern-web-guidance. That one installs once per machine, not per project.
 - Last check: ask the agent to open 127.0.0.1:4173/starter/ and tell you the page title.
 - App won't start? Use the terminal version, agy, with the same sign-in.
 - For me: personal accounts use the App's built-in browser. Business accounts and agy use /browser with Chrome.

@@ -44,7 +44,7 @@ The sample's search code is adapted from https://github.com/ivankristianto/mwg-l
 
 ## Writing slides and docs
 
-- Don't make up Antigravity commands, keyboard shortcuts, mode names, model IDs or redemption steps. The only documented ones in use are the Antigravity App's `/plan` then Proceed and model selector, and the CLI's `agy --mode=plan` and Shift+Tab (https://antigravity.google/docs/plan/, https://antigravity.google/docs/cli/modes/). Confirm them in rehearsal. Code redemption is handled by the organizer before the event and stays out of the deck.
+- Don't make up Antigravity commands, keyboard shortcuts, mode names, model IDs or redemption steps. The only documented ones in use are the Antigravity App's `/plan` then Proceed and model selector, the CLI's `agy --mode=plan` and Shift+Tab, and `agy plugin install https://github.com/GoogleChrome/modern-web-guidance`, which adds the guidance plugin to the user's Antigravity config (check with `agy plugin list`). Attendees also run `npx modern-web-guidance@latest install`, which adds the skill to `.agents/skills/` in the repo. Keep both (https://antigravity.google/docs/plan/, https://antigravity.google/docs/cli/modes/). Confirm them in rehearsal. Code redemption is handled by the organizer before the event and stays out of the deck.
 - Don't invent Modern Web Guidance guide IDs. Known real ones: `break-up-long-tasks`, `optimize-image-priority`, `performance`. Check with `npx -y modern-web-guidance@latest search "<query>"`.
 - Local DevTools traces are diagnostic only. Never present them as field Core Web Vitals, and never present TBT as INP.
 

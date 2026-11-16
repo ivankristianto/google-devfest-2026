@@ -28,13 +28,14 @@ The INP case has a twist: the first fix follows the guide and the page is still 
 
 ## Get started
 
-You need Node.js 22.12 or newer, Chrome, and the Antigravity App (or its terminal version, `agy`) for the agent part.
+You need Node.js 22.12 or newer, Chrome, and the Antigravity App for the agent part. You also need its terminal command, `agy`, to install the guidance plugin.
 
 ```bash
 git clone https://github.com/ivankristianto/google-devfest-2026.git
 cd google-devfest-2026
 npm ci
 npx modern-web-guidance@latest install   # adds the guidance skill to .agents/skills/
+agy plugin install https://github.com/GoogleChrome/modern-web-guidance   # adds the guidance to Antigravity, once per machine
 npm run sample:serve
 ```
 
