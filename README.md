@@ -1,8 +1,8 @@
 # Measure, guide, fix: Core Web Vitals with an AI agent
 
-![Cover slide: Measure, guide, fix: Core Web Vitals with an AI agent. Ivan Kristianto, GDE Web Performance, DevFest Online, Wednesday 18 November 2026](docs/cover.png)
+![Cover slide: Measure, guide, fix: Core Web Vitals with an AI agent. Ivan Kristianto, GDE Web Performance, DevFest Online](docs/cover.png)
 
-Welcome. This is the material from a one-hour hands-on workshop at Google DevFest Online on 18 November 2026, run by Ivan Kristianto (GDE, Web Performance).
+Welcome. This is the material from a one-hour hands-on workshop at Google DevFest Online, run by Ivan Kristianto (GDE, Web Performance).
 
 You get a small copy of the [Ngobrolin WEB](https://github.com/ngobrolin/landing) podcast site with three performance problems built in. You fix each one with an AI agent ([Antigravity](https://antigravity.google/)) and [Modern Web Guidance](https://developer.chrome.com/blog/modern-web-guidance-v1), and you measure in Chrome DevTools before and after every change. The slides are in here too, and [online](https://talks.ivankristianto.com/google-devfest-2026/).
 

@@ -19,7 +19,6 @@ layout: cover
 location: Online
 name: Ivan Kristianto
 role: 'GDE Web Performance'
-date: 'Wednesday 18 November 2026'
 ---
 
 # Measure, guide, fix: Core Web Vitals with an AI agent
