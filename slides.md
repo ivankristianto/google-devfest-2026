@@ -386,8 +386,8 @@ split: 6fr 5fr
 
 ::right::
 <figure class="df-shot">
-  <img src="/captures/antigravity-new-chat.png" width="1070" height="400" alt="Antigravity App new chat: a prompt box reading 'Ask anything, @ to mention, / for actions', with the model selector under it">
-  <Credit>Antigravity App, from antigravity.google</Credit>
+  <img src="/captures/antigravity-model-selector.jpg" width="2000" height="1020" alt="Antigravity App model selector open with Gemini 4 Hydrogen Medium selected">
+  <Credit>Antigravity App</Credit>
 </figure>
 
 ::foot::
